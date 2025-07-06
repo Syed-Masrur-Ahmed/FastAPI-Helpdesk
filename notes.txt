@@ -39,4 +39,4 @@
 - Searching using:
 	SELECT id, title, question, answer
 	FROM helpdesk_kbitem
-	WHERE ts @@ phraseto_tsquery('english', 'search')
+	WHERE ts @@ phraseto_tsquery('english', 'search');

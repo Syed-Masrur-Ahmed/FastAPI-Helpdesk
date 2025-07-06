@@ -112,3 +112,25 @@ async def read_all_items():
         if conn:
             cur.close()
             conn.close()
+
+@app.get("/search/")
+async def search_knowledge_base(phrase: str):
+    """Returns search results in title, question and answer"""
+    conn = None
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute(
+            sql.SQL("SELECT id, title, question, answer FROM helpdesk_kbitem WHERE ts @@ phraseto_tsquery('english', %s);"),
+            (phrase,)
+        )
+        items = []
+        for row in cur.fetchall():
+            items.append({"id": row[0], "title": row[1], "question": row[2], "answer": row[3]})
+        return items
+    except psycopg2.Error as e:
+        raise HTTPException(status_code=500, detail=f"Database error: {e}")
+    finally:
+        if conn:
+            cur.close()
+            conn.close()
