@@ -1,3 +1,5 @@
+notes.txt
+
 # Environment variables
 .env
 
@@ -17,5 +19,4 @@ __pycache__/
 .envrc
 *.sqlite3 # If you were using SQLite databases
 
-notes.txt
 django_helpdesk/
