@@ -59,7 +59,7 @@ async def create_item(item: Item):
         cur = conn.cursor()
         cur.execute(
             sql.SQL("INSERT INTO helpdesk_kbitem (title, question, answer, votes, recommendations, last_updated, enabled, category_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s) RETURNING id;"),
-            (item.title, item.question, item.question, item.answer, item.votes, item.recommendations, item.last_updated, item.enabled, item.category_id)
+            (item.title, item.question, item.answer, item.votes, item.recommendations, item.last_updated, item.enabled, item.category_id)
         )
         item_id = cur.fetchone()[0]
         conn.commit()
@@ -81,12 +81,12 @@ async def read_item(item_id: int):
         cur = conn.cursor()
         cur.execute(
             sql.SQL("SELECT id, title, question, answer FROM helpdesk_kbitem WHERE id = %s;"),
-            (item_id)
+            (item_id,)
         )
         item = cur.fetchone()
         if item is None:
             raise HTTPException(status_code=404, detail="Item not found")
-        return {"id": item[0], "name": item[1], "description": item[2]}
+        return {"id": item[0], "title": item[1], "question": item[2], "answer": item[3]}
     except psycopg2.Error as e:
         raise HTTPException(status_code=500, detail=f"Database error: {e}")
     finally:

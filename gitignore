@@ -1,0 +1,21 @@
+# Environment variables
+.env
+
+# Docker volumes/data
+db-data/
+pgadmin-data/
+
+# Python virtual environment
+venv/
+
+# Python compilation artifacts and temporary files
+__pycache__/
+*.pyc
+*.log
+.pytest_cache/
+.mypy_cache/
+.envrc
+*.sqlite3 # If you were using SQLite databases
+
+notes.txt
+django_helpdesk/
