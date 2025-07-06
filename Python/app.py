@@ -5,31 +5,7 @@ from psycopg2 import sql
 from contextlib import asynccontextmanager
 import os
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    """Creates the 'items' table if it doesn't exist."""
-    conn = None
-    try:
-        conn = get_db_connection()
-        cur = conn.cursor()
-        cur.execute("""
-            CREATE TABLE IF NOT EXISTS items (
-                id SERIAL PRIMARY KEY,
-                name VARCHAR(255) NOT NULL,
-                description TEXT
-            );
-        """)
-        conn.commit()
-        print("Table 'items' checked/created successfully.")
-    except psycopg2.Error as e:
-        print(f"Error creating table: {e}")
-    finally:
-        if conn:
-            cur.close()
-            conn.close()
-    yield
-
-app = FastAPI(lifespan=lifespan)
+app = FastAPI()
 
 DB_HOST = "localhost"
 DB_PORT = "15432" 
