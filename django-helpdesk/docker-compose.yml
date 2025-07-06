@@ -1,0 +1,24 @@
+# Define named volumes
+volumes:
+  helpdesk_data:
+  postgres_data:
+
+services:
+  django-helpdesk:
+    image: djangohelpdesk/standalone
+    user: root
+    ports:
+      - "4000:8000"
+    volumes:
+      - helpdesk_data:/data
+      - ./custom_navigation_header.html:/opt/django-helpdesk/helpdesk/templates/helpdesk/custom_navigation_header.html:ro
+    env_file: docker.env
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:${POSTGRES_MAJOR_VERSION:-17}-bullseye
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file: docker.env
+
