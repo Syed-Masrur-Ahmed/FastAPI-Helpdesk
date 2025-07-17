@@ -1,136 +1,155 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-import psycopg2
-from psycopg2 import sql
-from contextlib import asynccontextmanager
+from fastapi import FastAPI, HTTPException, Depends
+from typing import Optional, List, Generator
+import sqlalchemy as sa
+from sqlmodel import Field, SQLModel, create_engine, Session, select
 import os
+from dotenv import load_dotenv 
+from datetime import datetime, timezone
+
+load_dotenv() 
+
+DB_HOST = os.environ.get("DB_HOST", "localhost")
+DB_PORT = os.environ.get("DB_PORT", "15432")
+DB_NAME = os.environ.get("DB_NAME", "test")
+DB_USER = os.environ.get("DB_USER", "postgres")
+DB_PASSWORD = os.environ.get("DB_PASSWORD", "password") 
+
+DATABASE_URL = (
+    f"postgresql://{DB_USER}:{DB_PASSWORD}@"
+    f"{DB_HOST}:{DB_PORT}/{DB_NAME}"
+)
+
+engine = create_engine(DATABASE_URL)
+
+def get_session() -> Generator[Session, None, None]:
+    with Session(engine) as session:
+        yield session
+
+class HelpdeskKBItemBase(SQLModel):
+    title: str = Field(max_length=255)
+    question: str
+    answer: str
+    votes: int = Field(default=0)
+    recommendations: int = Field(default=0)
+    last_updated: datetime
+    category_id: int
+    enabled: bool = Field(default=True)
+    team_id: Optional[int] = None
+    order: Optional[int] = None
+
+class HelpdeskKBItem(HelpdeskKBItemBase, table=True):
+    __tablename__ = "helpdesk_kbitem"
+    id: Optional[int] = Field(default=None, primary_key=True)
+
+
+class HelpdeskKBItemCreate(HelpdeskKBItemBase):
+    pass
+
+class HelpdeskKBItemRead(HelpdeskKBItemBase):
+    id: int 
+
 
 app = FastAPI()
 
-DB_HOST = "localhost"
-DB_PORT = "15432" 
-DB_NAME = os.getenv("POSTGRES_DB", "test") 
-DB_USER = os.getenv("POSTGRES_USER", "postgres")  
-DB_PASSWORD = os.getenv("POSTGRES_PASSWORD", "password")
 
-# Fallback to default if .env not loaded (less ideal for production, but good for quick test)
-if DB_NAME == "postgres":
-    print("WARNING: Database credentials not properly loaded from .env. Using fallback defaults.")
-
-
-# Pydantic model for request body validation
-class Item(BaseModel):
-    title: str
-    question: str
-    answer: str
-    votes: int
-    recommendations: int
-    last_updated: str
-    category_id: int
-    enabled: bool
-
-def get_db_connection():
-    """Establishes and returns a database connection."""
+@app.post("/items/", response_model=HelpdeskKBItemRead)
+async def create_item(*, item: HelpdeskKBItemCreate, session: Session = Depends(get_session)):
+    # Convert the Pydantic input model to the SQLModel table instance
+    db_item = HelpdeskKBItem.model_validate(item)
     try:
-        conn = psycopg2.connect(
-            host=DB_HOST,
-            port=DB_PORT,
-            database=DB_NAME,
-            user=DB_USER,
-            password=DB_PASSWORD
+        session.add(db_item)
+        session.commit()
+        session.refresh(db_item) # Refresh to get the auto-generated ID from the database
+        return db_item
+    except Exception as e:
+        session.rollback()
+        # Log the full exception for debugging, but return a generic message to client
+        print(f"Error creating item: {e}")
+        raise HTTPException(status_code=500, detail="Failed to create item due to a database error.")
+
+@app.get("/items/{item_id}", response_model=HelpdeskKBItemRead)
+async def read_item(*, item_id: int, session: Session = Depends(get_session)):
+    # Ensure all fields required by HelpdeskKBItemRead are selected
+    query = sa.text(
+        "SELECT id, title, question, answer, votes, recommendations, last_updated, enabled, category_id, team_id, \"order\" "
+        "FROM helpdesk_kbitem WHERE id = :item_id"
+    )
+    # Use .first() to get a single Row object
+    result = session.exec(query.params(item_id=item_id)).first()
+
+    if not result:
+        raise HTTPException(status_code=404, detail="Item not found")
+
+    return HelpdeskKBItemRead.model_validate(result._asdict())
+
+@app.get("/items/", response_model=List[HelpdeskKBItemRead])
+async def read_all_items(*, session: Session = Depends(get_session)):
+    # Ensure all fields required by HelpdeskKBItemRead are selected
+    query = sa.text(
+        "SELECT id, title, question, answer, votes, recommendations, last_updated, enabled, category_id, team_id, \"order\" "
+        "FROM helpdesk_kbitem"
+    )
+    # Use .all() to get a list of Row objects
+    results = session.exec(query).all()
+
+    # Convert each SQLAlchemy Row object to a dictionary and then validate with Pydantic model
+    return [HelpdeskKBItemRead.model_validate(row._asdict()) for row in results]
+
+@app.get("/search/", response_model=List[HelpdeskKBItemRead])
+async def search_knowledge_base(*, phrase: str, session: Session = Depends(get_session)):
+    try:
+        # Corrected the missing comma and ensured all fields for HelpdeskKBItemRead are selected
+        search_query = sa.text(
+            "SELECT id, title, question, answer, votes, recommendations, last_updated, enabled, category_id, team_id, \"order\" "
+            "FROM helpdesk_kbitem WHERE ts @@ phraseto_tsquery('english', :phrase)"
         )
-        cur = conn.cursor()
-        cur.execute("SELECT current_database();")
-        connected_db_name = cur.fetchone()[0]
-        print(f"Successfully connected to database: '{connected_db_name}' as user '{DB_USER}'")
-        cur.close() 
-        return conn
-    except psycopg2.Error as e:
-        print(f"Database connection error: {e}")
-        raise HTTPException(status_code=500, detail="Could not connect to the database.")
+        results = session.exec(search_query.params(phrase=phrase)).all()
+        return [HelpdeskKBItemRead.model_validate(row._asdict()) for row in results]
+    except Exception as e:
+        # Log the full exception for debugging
+        print(f"Error during search: {e}")
+        raise HTTPException(status_code=500, detail=f"Search error: {e}. Ensure 'ts' column is a tsvector and 'phraseto_tsquery' is available.")
+    
+@app.put("/items/{item_id}", response_model=HelpdeskKBItemRead)
+async def update_item(*, item_id: int, item_update: HelpdeskKBItemCreate, session: Session = Depends(get_session)):
+    # Find the existing item in the database
+    db_item = session.get(HelpdeskKBItem, item_id)
+    if not db_item:
+        raise HTTPException(status_code=404, detail="Item not found")
 
+    # Get the incoming data and update the database object's fields
+    update_data = item_update.model_dump()
+    for key, value in update_data.items():
+        setattr(db_item, key, value)
+        
+    # Automatically update the last_updated timestamp to now
+    db_item.last_updated = datetime.now(timezone.utc)
 
-@app.post("/items/")
-async def create_item(item: Item):
-    """Creates a new item in the database."""
-    conn = None
     try:
-        conn = get_db_connection()
-        cur = conn.cursor()
-        cur.execute(
-            sql.SQL("INSERT INTO helpdesk_kbitem (title, question, answer, votes, recommendations, last_updated, enabled, category_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s) RETURNING id;"),
-            (item.title, item.question, item.answer, item.votes, item.recommendations, item.last_updated, item.enabled, item.category_id)
-        )
-        item_id = cur.fetchone()[0]
-        conn.commit()
-        return {"id": item_id, **item.model_dump()}
-    except psycopg2.Error as e:
-        conn.rollback()
-        raise HTTPException(status_code=500, detail=f"Database error: {e}")
-    finally:
-        if conn:
-            cur.close()
-            conn.close()
+        session.add(db_item)
+        session.commit()
+        session.refresh(db_item)
+        return db_item
+    except Exception as e:
+        session.rollback()
+        # Log the full exception for debugging
+        print(f"Error updating item: {e}")
+        raise HTTPException(status_code=500, detail="Failed to update item.")
 
-@app.get("/items/{item_id}")
-async def read_item(item_id: int):
-    """Retrieves an item by its ID."""
-    conn = None
-    try:
-        conn = get_db_connection()
-        cur = conn.cursor()
-        cur.execute(
-            sql.SQL("SELECT id, title, question, answer FROM helpdesk_kbitem WHERE id = %s;"),
-            (item_id,)
-        )
-        item = cur.fetchone()
-        if item is None:
-            raise HTTPException(status_code=404, detail="Item not found")
-        return {"id": item[0], "title": item[1], "question": item[2], "answer": item[3]}
-    except psycopg2.Error as e:
-        raise HTTPException(status_code=500, detail=f"Database error: {e}")
-    finally:
-        if conn:
-            cur.close()
-            conn.close()
 
-@app.get("/items/")
-async def read_all_items():
-    """Retrieves all items from the database."""
-    conn = None
+@app.delete("/items/{item_id}", response_model=dict)
+async def delete_item(*, item_id: int, session: Session = Depends(get_session)):
+    # Find the existing item in the database
+    db_item = session.get(HelpdeskKBItem, item_id)
+    if not db_item:
+        raise HTTPException(status_code=404, detail="Item not found")
+    
     try:
-        conn = get_db_connection()
-        cur = conn.cursor()
-        cur.execute(sql.SQL("SELECT id, title, question, answer FROM helpdesk_kbitem;"))
-        items = []
-        for row in cur.fetchall():
-            items.append({"id": row[0], "title": row[1], "question": row[2], "answer": row[3]})
-        return items
-    except psycopg2.Error as e:
-        raise HTTPException(status_code=500, detail=f"Database error: {e}")
-    finally:
-        if conn:
-            cur.close()
-            conn.close()
-
-@app.get("/search/")
-async def search_knowledge_base(phrase: str):
-    """Returns search results in title, question and answer"""
-    conn = None
-    try:
-        conn = get_db_connection()
-        cur = conn.cursor()
-        cur.execute(
-            sql.SQL("SELECT id, title, question, answer FROM helpdesk_kbitem WHERE ts @@ phraseto_tsquery('english', %s);"),
-            (phrase,)
-        )
-        items = []
-        for row in cur.fetchall():
-            items.append({"id": row[0], "title": row[1], "question": row[2], "answer": row[3]})
-        return items
-    except psycopg2.Error as e:
-        raise HTTPException(status_code=500, detail=f"Database error: {e}")
-    finally:
-        if conn:
-            cur.close()
-            conn.close()
+        session.delete(db_item)
+        session.commit()
+        return {"detail": "Item deleted successfully"}
+    except Exception as e:
+        session.rollback()
+        # Log the full exception for debugging
+        print(f"Error deleting item: {e}")
+        raise HTTPException(status_code=500, detail="Failed to delete item.")
