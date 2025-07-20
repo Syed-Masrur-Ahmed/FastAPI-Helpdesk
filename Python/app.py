@@ -13,38 +13,27 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer, util
 import torch
 
-# --- This function uses a pre-trained model ---
 def find_similar_items_embeddings(phrase: str, all_items: list, top_n: int = 5):
     if not all_items:
         return []
-
-    # --- 1. Load a pre-trained model ---
+    
     print("Loading sentence-transformer model...")
     model = SentenceTransformer('all-MiniLM-L6-v2')
     print("Model loaded.")
 
-    # --- 2. Create the corpus of text to compare against ---
     corpus = [item.title + " " + item.question + " " + item.answer for item in all_items]
 
-    # --- 3. Generate embeddings for the corpus and the search phrase ---
-    # An embedding is the numerical vector that represents the meaning of the text.
     print("Generating embeddings for database items...")
     corpus_embeddings = model.encode(corpus, convert_to_tensor=True)
     
     print("Generating embedding for the search phrase...")
     phrase_embedding = model.encode(phrase, convert_to_tensor=True)
 
-    # --- 4. Calculate cosine similarity between the phrase and all items ---
-    # This is done very efficiently using the sentence-transformers utility function.
     print("Calculating similarity scores...")
     cosine_scores = util.cos_sim(phrase_embedding, corpus_embeddings)
 
-    # --- 5. Find the top N most similar items ---
-    # The 'top_k' parameter gives us the top N results directly.
-    # The output is a list of tuples, each containing (score, corpus_index).
     top_results = torch.topk(cosine_scores, k=min(top_n, len(all_items)))
 
-    # --- 6. Collect and return the results ---
     similar_items = []
     print("\nTop similarity scores:")
     for score, idx in zip(top_results[0][0], top_results[1][0]):
