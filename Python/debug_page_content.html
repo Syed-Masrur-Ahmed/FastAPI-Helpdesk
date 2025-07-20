@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta content="information" name="page-type"/>
+  <meta content="max-image-preview:large" name="robots">
+   <style>
+    img:is([sizes="auto" i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+   </style>
+   <script>
+    (function (w, d, s, l, i) {
+w[l] = w[l] || [];
+w[l].push({
+'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+});
+var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+j.async = true;
+j.src =
+'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-K9KZXTH');
+   </script>
+   <script>
+    window.dataLayer = window.dataLayer || [];
+function gtag() {
+dataLayer.push(arguments);
+}
+gtag('js', new Date());
+(function (window) {
+let originalWindowErrorCallback = window.onerror;
+window.onerror = function customErrorHandler(errorMessage, url, lineNumber, columnNumber, errorObject) {
+if (typeof gtag === 'function') {
+let exceptionDescription = errorMessage;
+if (typeof errorObject !== 'undefined' && errorObject !== null && typeof errorObject.message !== 'undefined') {
+exceptionDescription = errorObject.message;
+}
+exceptionDescription += ' @ ' + url + ':' + lineNumber + ':' + columnNumber;
+gtag('event', 'exception', {
+'exDescription': exceptionDescription
+});
+}
+if (typeof originalWindowErrorCallback === 'function') {
+return originalWindowErrorCallback(errorMessage, url, lineNumber, columnNumber, errorObject);
+}
+return false;
+};
+})(window);
+   </script>
+   <noscript>
+    <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-K9KZXTH" style="display:none;visibility:hidden" width="0">
+    </iframe>
+   </noscript>
+   <link href="https://hostadvice.com/web-hosting-coupons/feed/" rel="alternate" title="HostAdvice Coupons Feed" type="application/rss+xml"/>
+   <link href="https://hostadvice.com/blog/feed/" rel="alternate" title="HostAdvice Blog Feed" type="application/rss+xml"/>
+   <link href="https://hostadvice.com/how-to/feed/" rel="alternate" title="HostAdvice HowTo Feed" type="application/rss+xml"/>
+   <link href="https://hostadvice.com/hosting-company/feed/" rel="alternate" title="HostAdvice Hosting Companies Feed" type="application/rss+xml"/>
+   <link href="https://chrome.google.com/webstore/detail/jojicnfhgajfeddfalfahidfeicmmdgo" rel="chrome-webstore-item"/>
+   <link href="https://cdn.hostadvice.com/2021/11/cropped-favicon-32x32.png" rel="icon" sizes="32x32">
+    <link href="https://cdn.hostadvice.com/2021/11/cropped-favicon-192x192.png" rel="icon" sizes="192x192"/>
+    <link href="https://cdn.hostadvice.com/2021/11/cropped-favicon-180x180.png" rel="apple-touch-icon"/>
+    <meta content="https://cdn.hostadvice.com/2021/11/cropped-favicon-270x270.png" name="msapplication-TileImage"/>
+    <title>
+     Frequently Asked Questions About Hosting | Host Advice
+    </title>
+    <link href="https://hostadvice.com/faq/" rel="canonical"/>
+    <link href="https://www.facebook.com/hostadvice/" rel="publisher"/>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <meta content="Read frequently asked questions about Web Hosting. Concise and short, yet surprisingly exhaustive." name="description"/>
+    <meta content="1620716398209793" property="fb:app_id"/>
+    <meta content="en_US" property="og:locale"/>
+    <meta content="website" property="og:type"/>
+    <meta content="Frequently Asked Questions About Hosting | Host Advice" property="og:title"/>
+    <meta content="Read frequently asked questions about Web Hosting. Concise and short, yet surprisingly exhaustive." property="og:description"/>
+    <meta content="https://hostadvice.com/faq/" property="og:url"/>
+    <meta content="HostAdvice" property="og:site_name"/>
+    <meta content="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/img/share-default.jpg" property="og:image"/>
+    <meta content="summary" property="twitter:card"/>
+    <meta content="Read frequently asked questions about Web Hosting. Concise and short, yet surprisingly exhaustive." property="twitter:description"/>
+    <meta content="Frequently Asked Questions About Hosting | Host Advice" property="twitter:title"/>
+    <meta content="@hostadvicecom" property="twitter:site"/>
+    <meta content="@hostadvicecom" property="twitter:creator"/>
+    <meta content="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/img/share-default.jpg" property="twitter:image"/>
+    <script>
+     window.dataLayer ? dataLayer.push({
+"page": {
+"currency": "USD",
+"language": "en"
+}
+}) : '';
+    </script>
+    <link href="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/css/common-page.css?ver=0.2.92" rel="stylesheet" type="text/css"/>
+    <link as="style" href="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/css/deferred.css?ver=0.2.92" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+    <noscript>
+     <link href="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/css/deferred.css?ver=0.2.92" rel="stylesheet"/>
+    </noscript>
+    <style>
+     *,*::before,*::after{box-sizing:border-box}@media(prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}hr{margin:16px 0;color:inherit;border:0;border-top:var(--bs-border-width) solid;opacity:.25}h5,h4,h3,h2,h1{margin-top:0;margin-bottom:8px;font-weight:500;line-height:1.2;color:var(--bs-heading-color)}h1{font-size:calc(1.375rem + 1.5vw)}@media(min-width:1200px){h1{font-size:2.5rem}}h2{font-size:calc(1.325rem + 0.9vw)}@media(min-width:1200px){h2{font-size:2rem}}h3{font-size:calc(1.3rem + 0.6vw)}@media(min-width:1200px){h3{font-size:1.75rem}}h4{font-size:calc(1.275rem + 0.3vw)}@media(min-width:1200px){h4{font-size:1.5rem}}h5{font-size:1.25rem}p{margin-top:0;margin-bottom:1rem}address{margin-bottom:1rem;font-style:normal;line-height:inherit}ul{padding-left:2rem}ul,dl{margin-top:0;margin-bottom:1rem}ul ul{margin-bottom:0}blockquote{margin:0 0 1rem}b,strong{font-weight:bolder}small{font-size:0.875em}mark{padding:.1875em;color:var(--bs-highlight-color);background-color:var(--bs-highlight-bg)}sub,sup{position:relative;font-size:0.75em;line-height:0;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}a{color:rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));text-decoration:underline}a:hover{--bs-link-color-rgb:var(--bs-link-hover-color-rgb)}a:not([href]):not([class]),a:not([href]):not([class]):hover{color:inherit;text-decoration:none}pre,code{font-family:var(--bs-font-monospace);font-size:1em}pre{display:block;margin-top:0;margin-bottom:1rem;overflow:auto;font-size:0.875em}pre code{font-size:inherit;color:inherit;word-break:normal}code{font-size:0.875em;color:var(--bs-code-color);word-wrap:break-word}a>code{color:inherit}figure{margin:0 0 1rem}img,svg{vertical-align:middle}table{caption-side:bottom;border-collapse:collapse}caption{padding-top:.5rem;padding-bottom:.5rem;color:var(--bs-secondary-color);text-align:left}th{text-align:inherit;text-align:-webkit-match-parent}thead,tbody,tr,td,th{border-color:inherit;border-style:solid;border-width:0}label{display:inline-block}button{border-radius:0}button:focus:not(:focus-visible){outline:0}input,button,select,optgroup,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,select{text-transform:none}[role=button]{cursor:pointer}select{word-wrap:normal}select:disabled{opacity:1}[list]:not([type=date]):not([type=datetime-local]):not([type=month]):not([type=week]):not([type=time])::-webkit-calendar-picker-indicator{display:none !important}button,[type=button],[type=submit]{-webkit-appearance:button}button:not(:disabled),[type=button]:not(:disabled),[type=submit]:not(:disabled){cursor:pointer}::-moz-focus-inner{padding:0;border-style:none}textarea{resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{float:left;width:100%;padding:0;margin-bottom:.5rem;font-size:calc(1.275rem + 0.3vw);line-height:inherit}@media(min-width:1200px){legend{font-size:1.5rem}}legend+*{clear:left}::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-text,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}::file-selector-button{font:inherit;-webkit-appearance:button}iframe{border:0}summary{display:list-item;cursor:pointer}progress{vertical-align:baseline}[hidden]{display:none !important}.container{--bs-gutter-x:32px;--bs-gutter-y:0;width:100%;padding-right:calc(var(--bs-gutter-x)*.5);padding-left:calc(var(--bs-gutter-x)*.5);margin-right:auto;margin-left:auto}@media(min-width:580px){.container{max-width:564px}}@media(min-width:992px){.container{max-width:880px}}@media(min-width:1200px){.container{max-width:1104px}}@media(min-width:1440px){.container{max-width:1344px}}:root{--bs-breakpoint-xs:0;--bs-breakpoint-sm:580px;--bs-breakpoint-md:992px;--bs-breakpoint-lg:1200px;--bs-breakpoint-xl:1440px;--bs-breakpoint-xxl:1600px}.row{--bs-gutter-x:32px;--bs-gutter-y:0;display:flex;flex-wrap:wrap;margin-top:calc(-1*var(--bs-gutter-y));margin-right:calc(-0.5*var(--bs-gutter-x));margin-left:calc(-0.5*var(--bs-gutter-x))}.row>*{flex-shrink:0;width:100%;max-width:100%;padding-right:calc(var(--bs-gutter-x)*.5);padding-left:calc(var(--bs-gutter-x)*.5);margin-top:var(--bs-gutter-y)}.col{flex:1 0 0%}.col-12{flex:0 0 auto;width:100%}@media(min-width:580px){.col-sm-4{flex:0 0 auto;width:33.33333333%}.col-sm-6{flex:0 0 auto;width:50%}}@media(min-width:992px){.col-md-3{flex:0 0 auto;width:25%}.col-md-6{flex:0 0 auto;width:50%}}@media(min-width:1200px){.col-lg-3{flex:0 0 auto;width:25%}.col-lg-4{flex:0 0 auto;width:33.33333333%}.col-lg-8{flex:0 0 auto;width:66.66666667%}.col-lg-12{flex:0 0 auto;width:100%}}<!-- bootstrap.css Size:5 KB -->
+    </style>
+    <style>
+     @font-face{font-family:"Lato";font-style:italic;font-weight:400;font-display:swap;src:url(/wp-content/themes/bestwh/v3/dist/fonts/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Lato";font-style:italic;font-weight:400;font-display:swap;src:url(/wp-content/themes/bestwh/v3/dist/fonts/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Lato";font-style:italic;font-weight:700;font-display:swap;src:url(/wp-content/themes/bestwh/v3/dist/fonts/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Lato";font-style:italic;font-weight:700;font-display:swap;src:url(/wp-content/themes/bestwh/v3/dist/fonts/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Lato";font-style:normal;font-weight:300;font-display:swap;src:url(/wp-content/themes/bestwh/v3/dist/fonts/S6u9w4BMUTPHh7USSwaPGQ3q5d0N7w.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Lato";font-style:normal;font-weight:300;font-display:swap;src:url(/wp-content/themes/bestwh/v3/dist/fonts/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Lato";font-style:normal;font-weight:400;font-display:swap;src:url(/wp-content/themes/bestwh/v3/dist/fonts/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Lato";font-style:normal;font-weight:400;font-display:swap;src:url(/wp-content/themes/bestwh/v3/dist/fonts/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Lato";font-style:normal;font-weight:700;font-display:swap;src:url(/wp-content/themes/bestwh/v3/dist/fonts/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Lato";font-style:normal;font-weight:700;font-display:swap;src:url(/wp-content/themes/bestwh/v3/dist/fonts/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}body{font-family:"Lato",sans-serif;color:#0b0c0f;accent-color:#0d80f2;font-weight:400;font-size:16px;line-height:24px}@media(min-width:992px){body{font-weight:400;font-size:18px;line-height:28px}}a{color:#0d80f2;text-decoration:none}a:hover{color:#0a66c2}h1{font-weight:700;font-size:28px;line-height:36px}@media(min-width:992px){h1{font-weight:700;font-size:32px;line-height:40px}}h2{font-weight:700;font-size:24px;line-height:32px}@media(min-width:992px){h2{font-weight:700;font-size:28px;line-height:36px}}h3{font-weight:700;font-size:20px;line-height:28px}@media(min-width:992px){h3{font-weight:700;font-size:24px;line-height:32px}}h4{font-weight:700;font-size:18px;line-height:24px}@media(min-width:992px){h4{font-weight:700;font-size:20px;line-height:28px}}h5{font-weight:700;font-size:16px;line-height:20px}@media(min-width:992px){h5{font-weight:700;font-size:18px;line-height:24px}}h6{font-weight:700;font-size:14px;line-height:16px}@media(min-width:992px){h6{font-weight:700;font-size:16px;line-height:20px}}fieldset{border:0}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;user-select:none;white-space:nowrap;cursor:pointer}.btn[disabled]{cursor:default;pointer-events:none;opacity:.5}.btn>*{pointer-events:none}.btn .icon{flex-shrink:0}.btn.fill{background-color:#0d80f2;color:#f6f7f8}.btn.fill .icon{background-color:#f6f7f8}.btn.fill:hover,.btn.fill.active{background-color:#0a66c2}.btn.stroke{color:#0d80f2;box-shadow:0 0 0 1px #0d80f2 inset}.btn.stroke .icon{background-color:#0d80f2}.btn.stroke:hover,.btn.stroke.active{box-shadow:0 0 0 1px #0a66c2 inset;color:#0a66c2}.btn.stroke:hover .icon,.btn.stroke.active .icon{background-color:#0a66c2}.btn.stroke-gray{color:rgba(22,24,29,.7);box-shadow:0 0 0 1px #e2e5ea inset}.btn.stroke-gray .icon{background-color:rgba(22,24,29,.7)}.btn.stroke-gray:hover,.btn.stroke-gray.active{box-shadow:0 0 0 1px #0a66c2 inset;color:#0a66c2}.btn.stroke-gray:hover .icon,.btn.stroke-gray.active .icon{background-color:#0a66c2}.btn.ghost{color:#0d80f2}.btn.ghost .icon{background-color:#0d80f2}.btn.ghost:hover,.btn.ghost.active{background-color:#f6f7f8;color:#0a66c2}.btn.ghost:hover .icon,.btn.ghost.active .icon{background-color:#0a66c2}.btn.ghost-gray{color:rgba(22,24,29,.7)}.btn.ghost-gray .icon{background-color:rgba(22,24,29,.7)}.btn.ghost-gray:hover,.btn.ghost-gray.active{background-color:rgba(13,128,242,.05);color:#0a66c2}.btn.ghost-gray:hover .icon,.btn.ghost-gray.active .icon{background-color:#0a66c2}.btn-push.large,.btn-pulldown.large{font-weight:700;font-size:18px;line-height:24px;padding:12px 24px;border-radius:48px}body.is-ltr .btn-push.large.btn-icon-left,body.is-ltr .btn-pulldown.large.btn-icon-left{padding-left:22px}body.is-rtl .btn-push.large.btn-icon-left,body.is-rtl .btn-pulldown.large.btn-icon-left{padding-right:22px}.btn-push.large.btn-icon-left .icon:first-child,.btn-pulldown.large.btn-icon-left .icon:first-child{width:24px;height:24px}body.is-ltr .btn-push.large.btn-icon-left .icon:first-child,body.is-ltr .btn-pulldown.large.btn-icon-left .icon:first-child{margin-right:10px}body.is-rtl .btn-push.large.btn-icon-left .icon:first-child,body.is-rtl .btn-pulldown.large.btn-icon-left .icon:first-child{margin-left:10px}body.is-ltr .btn-push.large.btn-icon-right,body.is-ltr .btn-pulldown.large.btn-icon-right{padding-right:22px}body.is-rtl .btn-push.large.btn-icon-right,body.is-rtl .btn-pulldown.large.btn-icon-right{padding-left:22px}.btn-push.large.btn-icon-right .icon:last-child,.btn-pulldown.large.btn-icon-right .icon:last-child{width:24px;height:24px}body.is-ltr .btn-push.large.btn-icon-right .icon:last-child,body.is-ltr .btn-pulldown.large.btn-icon-right .icon:last-child{margin-left:10px}body.is-rtl .btn-push.large.btn-icon-right .icon:last-child,body.is-rtl .btn-pulldown.large.btn-icon-right .icon:last-child{margin-right:10px}.btn-push.medium,.btn-pulldown.medium{font-weight:700;font-size:16px;line-height:20px;padding:10px 20px;border-radius:40px}body.is-ltr .btn-push.medium.btn-icon-left,body.is-ltr .btn-pulldown.medium.btn-icon-left{padding-left:18px}body.is-rtl .btn-push.medium.btn-icon-left,body.is-rtl .btn-pulldown.medium.btn-icon-left{padding-right:18px}.btn-push.medium.btn-icon-left .icon:first-child,.btn-pulldown.medium.btn-icon-left .icon:first-child{width:20px;height:20px}body.is-ltr .btn-push.medium.btn-icon-left .icon:first-child,body.is-ltr .btn-pulldown.medium.btn-icon-left .icon:first-child{margin-right:8px}body.is-rtl .btn-push.medium.btn-icon-left .icon:first-child,body.is-rtl .btn-pulldown.medium.btn-icon-left .icon:first-child{margin-left:8px}body.is-ltr .btn-push.medium.btn-icon-right,body.is-ltr .btn-pulldown.medium.btn-icon-right{padding-right:18px}body.is-rtl .btn-push.medium.btn-icon-right,body.is-rtl .btn-pulldown.medium.btn-icon-right{padding-left:18px}.btn-push.medium.btn-icon-right .icon:last-child,.btn-pulldown.medium.btn-icon-right .icon:last-child{width:20px;height:20px}body.is-ltr .btn-push.medium.btn-icon-right .icon:last-child,body.is-ltr .btn-pulldown.medium.btn-icon-right .icon:last-child{margin-left:8px}body.is-rtl .btn-push.medium.btn-icon-right .icon:last-child,body.is-rtl .btn-pulldown.medium.btn-icon-right .icon:last-child{margin-right:8px}.btn-push.small,.btn-pulldown.small{font-weight:700;font-size:14px;line-height:16px;padding:8px 16px;border-radius:32px}body.is-ltr .btn-push.small.btn-icon-left,body.is-ltr .btn-pulldown.small.btn-icon-left{padding-left:14px}body.is-rtl .btn-push.small.btn-icon-left,body.is-rtl .btn-pulldown.small.btn-icon-left{padding-right:14px}.btn-push.small.btn-icon-left .icon:first-child,.btn-pulldown.small.btn-icon-left .icon:first-child{width:16px;height:16px}body.is-ltr .btn-push.small.btn-icon-left .icon:first-child,body.is-ltr .btn-pulldown.small.btn-icon-left .icon:first-child{margin-right:6px}body.is-rtl .btn-push.small.btn-icon-left .icon:first-child,body.is-rtl .btn-pulldown.small.btn-icon-left .icon:first-child{margin-left:6px}body.is-ltr .btn-push.small.btn-icon-right,body.is-ltr .btn-pulldown.small.btn-icon-right{padding-right:14px}body.is-rtl .btn-push.small.btn-icon-right,body.is-rtl .btn-pulldown.small.btn-icon-right{padding-left:14px}.btn-push.small.btn-icon-right .icon:last-child,.btn-pulldown.small.btn-icon-right .icon:last-child{width:16px;height:16px}body.is-ltr .btn-push.small.btn-icon-right .icon:last-child,body.is-ltr .btn-pulldown.small.btn-icon-right .icon:last-child{margin-left:6px}body.is-rtl .btn-push.small.btn-icon-right .icon:last-child,body.is-rtl .btn-pulldown.small.btn-icon-right .icon:last-child{margin-right:6px}.btn-push.xsmall,.btn-pulldown.xsmall{font-weight:700;font-size:12px;line-height:16px;padding:5px 10px;border-radius:26px}body.is-ltr .btn-push.xsmall.btn-icon-left,body.is-ltr .btn-pulldown.xsmall.btn-icon-left{padding-left:10px}body.is-rtl .btn-push.xsmall.btn-icon-left,body.is-rtl .btn-pulldown.xsmall.btn-icon-left{padding-right:10px}.btn-push.xsmall.btn-icon-left .icon:first-child,.btn-pulldown.xsmall.btn-icon-left .icon:first-child{width:16px;height:16px}body.is-ltr .btn-push.xsmall.btn-icon-left .icon:first-child,body.is-ltr .btn-pulldown.xsmall.btn-icon-left .icon:first-child{margin-right:4px}body.is-rtl .btn-push.xsmall.btn-icon-left .icon:first-child,body.is-rtl .btn-pulldown.xsmall.btn-icon-left .icon:first-child{margin-left:4px}body.is-ltr .btn-push.xsmall.btn-icon-right,body.is-ltr .btn-pulldown.xsmall.btn-icon-right{padding-right:10px}body.is-rtl .btn-push.xsmall.btn-icon-right,body.is-rtl .btn-pulldown.xsmall.btn-icon-right{padding-left:10px}.btn-push.xsmall.btn-icon-right .icon:last-child,.btn-pulldown.xsmall.btn-icon-right .icon:last-child{width:16px;height:16px}body.is-ltr .btn-push.xsmall.btn-icon-right .icon:last-child,body.is-ltr .btn-pulldown.xsmall.btn-icon-right .icon:last-child{margin-left:4px}body.is-rtl .btn-push.xsmall.btn-icon-right .icon:last-child,body.is-rtl .btn-pulldown.xsmall.btn-icon-right .icon:last-child{margin-right:4px}@media(min-width:580px){.btn-push.sm-large,.btn-pulldown.sm-large{font-weight:700;font-size:18px;line-height:24px;padding:12px 24px;border-radius:48px}body.is-ltr .btn-push.sm-large.btn-icon-left,body.is-ltr .btn-pulldown.sm-large.btn-icon-left{padding-left:22px}body.is-rtl .btn-push.sm-large.btn-icon-left,body.is-rtl .btn-pulldown.sm-large.btn-icon-left{padding-right:22px}.btn-push.sm-large.btn-icon-left .icon:first-child,.btn-pulldown.sm-large.btn-icon-left .icon:first-child{width:24px;height:24px}body.is-ltr .btn-push.sm-large.btn-icon-left .icon:first-child,body.is-ltr .btn-pulldown.sm-large.btn-icon-left .icon:first-child{margin-right:10px}body.is-rtl .btn-push.sm-large.btn-icon-left .icon:first-child,body.is-rtl .btn-pulldown.sm-large.btn-icon-left .icon:first-child{margin-left:10px}body.is-ltr .btn-push.sm-large.btn-icon-right,body.is-ltr .btn-pulldown.sm-large.btn-icon-right{padding-right:22px}body.is-rtl .btn-push.sm-large.btn-icon-right,body.is-rtl .btn-pulldown.sm-large.btn-icon-right{padding-left:22px}.btn-push.sm-large.btn-icon-right .icon:last-child,.btn-pulldown.sm-large.btn-icon-right .icon:last-child{width:24px;height:24px}body.is-ltr .btn-push.sm-large.btn-icon-right .icon:last-child,body.is-ltr .btn-pulldown.sm-large.btn-icon-right .icon:last-child{margin-left:10px}body.is-rtl .btn-push.sm-large.btn-icon-right .icon:last-child,body.is-rtl .btn-pulldown.sm-large.btn-icon-right .icon:last-child{margin-right:10px}}@media(min-width:580px){.btn-push.sm-medium,.btn-pulldown.sm-medium{font-weight:700;font-size:16px;line-height:20px;padding:10px 20px;border-radius:40px}body.is-ltr .btn-push.sm-medium.btn-icon-left,body.is-ltr .btn-pulldown.sm-medium.btn-icon-left{padding-left:18px}body.is-rtl .btn-push.sm-medium.btn-icon-left,body.is-rtl .btn-pulldown.sm-medium.btn-icon-left{padding-right:18px}.btn-push.sm-medium.btn-icon-left .icon:first-child,.btn-pulldown.sm-medium.btn-icon-left .icon:first-child{width:20px;height:20px}body.is-ltr .btn-push.sm-medium.btn-icon-left .icon:first-child,body.is-ltr .btn-pulldown.sm-medium.btn-icon-left .icon:first-child{margin-right:8px}body.is-rtl .btn-push.sm-medium.btn-icon-left .icon:first-child,body.is-rtl .btn-pulldown.sm-medium.btn-icon-left .icon:first-child{margin-left:8px}body.is-ltr .btn-push.sm-medium.btn-icon-right,body.is-ltr .btn-pulldown.sm-medium.btn-icon-right{padding-right:18px}body.is-rtl .btn-push.sm-medium.btn-icon-right,body.is-rtl .btn-pulldown.sm-medium.btn-icon-right{padding-left:18px}.btn-push.sm-medium.btn-icon-right .icon:last-child,.btn-pulldown.sm-medium.btn-icon-right .icon:last-child{width:20px;height:20px}body.is-ltr .btn-push.sm-medium.btn-icon-right .icon:last-child,body.is-ltr .btn-pulldown.sm-medium.btn-icon-right .icon:last-child{margin-left:8px}body.is-rtl .btn-push.sm-medium.btn-icon-right .icon:last-child,body.is-rtl .btn-pulldown.sm-medium.btn-icon-right .icon:last-child{margin-right:8px}}@media(min-width:580px){.btn-push.sm-small,.btn-pulldown.sm-small{font-weight:700;font-size:14px;line-height:16px;padding:8px 16px;border-radius:32px}body.is-ltr .btn-push.sm-small.btn-icon-left,body.is-ltr .btn-pulldown.sm-small.btn-icon-left{padding-left:14px}body.is-rtl .btn-push.sm-small.btn-icon-left,body.is-rtl .btn-pulldown.sm-small.btn-icon-left{padding-right:14px}.btn-push.sm-small.btn-icon-left .icon:first-child,.btn-pulldown.sm-small.btn-icon-left .icon:first-child{width:16px;height:16px}body.is-ltr .btn-push.sm-small.btn-icon-left .icon:first-child,body.is-ltr .btn-pulldown.sm-small.btn-icon-left .icon:first-child{margin-right:6px}body.is-rtl .btn-push.sm-small.btn-icon-left .icon:first-child,body.is-rtl .btn-pulldown.sm-small.btn-icon-left .icon:first-child{margin-left:6px}body.is-ltr .btn-push.sm-small.btn-icon-right,body.is-ltr .btn-pulldown.sm-small.btn-icon-right{padding-right:14px}body.is-rtl .btn-push.sm-small.btn-icon-right,body.is-rtl .btn-pulldown.sm-small.btn-icon-right{padding-left:14px}.btn-push.sm-small.btn-icon-right .icon:last-child,.btn-pulldown.sm-small.btn-icon-right .icon:last-child{width:16px;height:16px}body.is-ltr .btn-push.sm-small.btn-icon-right .icon:last-child,body.is-ltr .btn-pulldown.sm-small.btn-icon-right .icon:last-child{margin-left:6px}body.is-rtl .btn-push.sm-small.btn-icon-right .icon:last-child,body.is-rtl .btn-pulldown.sm-small.btn-icon-right .icon:last-child{margin-right:6px}}@media(min-width:992px){.btn-push.md-medium,.btn-pulldown.md-medium{font-weight:700;font-size:16px;line-height:20px;padding:10px 20px;border-radius:40px}body.is-ltr .btn-push.md-medium.btn-icon-left,body.is-ltr .btn-pulldown.md-medium.btn-icon-left{padding-left:18px}body.is-rtl .btn-push.md-medium.btn-icon-left,body.is-rtl .btn-pulldown.md-medium.btn-icon-left{padding-right:18px}.btn-push.md-medium.btn-icon-left .icon:first-child,.btn-pulldown.md-medium.btn-icon-left .icon:first-child{width:20px;height:20px}body.is-ltr .btn-push.md-medium.btn-icon-left .icon:first-child,body.is-ltr .btn-pulldown.md-medium.btn-icon-left .icon:first-child{margin-right:8px}body.is-rtl .btn-push.md-medium.btn-icon-left .icon:first-child,body.is-rtl .btn-pulldown.md-medium.btn-icon-left .icon:first-child{margin-left:8px}body.is-ltr .btn-push.md-medium.btn-icon-right,body.is-ltr .btn-pulldown.md-medium.btn-icon-right{padding-right:18px}body.is-rtl .btn-push.md-medium.btn-icon-right,body.is-rtl .btn-pulldown.md-medium.btn-icon-right{padding-left:18px}.btn-push.md-medium.btn-icon-right .icon:last-child,.btn-pulldown.md-medium.btn-icon-right .icon:last-child{width:20px;height:20px}body.is-ltr .btn-push.md-medium.btn-icon-right .icon:last-child,body.is-ltr .btn-pulldown.md-medium.btn-icon-right .icon:last-child{margin-left:8px}body.is-rtl .btn-push.md-medium.btn-icon-right .icon:last-child,body.is-rtl .btn-pulldown.md-medium.btn-icon-right .icon:last-child{margin-right:8px}}@media(min-width:992px){.btn-push.md-large,.btn-pulldown.md-large{font-weight:700;font-size:18px;line-height:24px;padding:12px 24px;border-radius:48px}body.is-ltr .btn-push.md-large.btn-icon-left,body.is-ltr .btn-pulldown.md-large.btn-icon-left{padding-left:22px}body.is-rtl .btn-push.md-large.btn-icon-left,body.is-rtl .btn-pulldown.md-large.btn-icon-left{padding-right:22px}.btn-push.md-large.btn-icon-left .icon:first-child,.btn-pulldown.md-large.btn-icon-left .icon:first-child{width:24px;height:24px}body.is-ltr .btn-push.md-large.btn-icon-left .icon:first-child,body.is-ltr .btn-pulldown.md-large.btn-icon-left .icon:first-child{margin-right:10px}body.is-rtl .btn-push.md-large.btn-icon-left .icon:first-child,body.is-rtl .btn-pulldown.md-large.btn-icon-left .icon:first-child{margin-left:10px}body.is-ltr .btn-push.md-large.btn-icon-right,body.is-ltr .btn-pulldown.md-large.btn-icon-right{padding-right:22px}body.is-rtl .btn-push.md-large.btn-icon-right,body.is-rtl .btn-pulldown.md-large.btn-icon-right{padding-left:22px}.btn-push.md-large.btn-icon-right .icon:last-child,.btn-pulldown.md-large.btn-icon-right .icon:last-child{width:24px;height:24px}body.is-ltr .btn-push.md-large.btn-icon-right .icon:last-child,body.is-ltr .btn-pulldown.md-large.btn-icon-right .icon:last-child{margin-left:10px}body.is-rtl .btn-push.md-large.btn-icon-right .icon:last-child,body.is-rtl .btn-pulldown.md-large.btn-icon-right .icon:last-child{margin-right:10px}}@media(min-width:1200px){.btn-push.lg-medium,.btn-pulldown.lg-medium{font-weight:700;font-size:16px;line-height:20px;padding:10px 20px;border-radius:40px}body.is-ltr .btn-push.lg-medium.btn-icon-left,body.is-ltr .btn-pulldown.lg-medium.btn-icon-left{padding-left:18px}body.is-rtl .btn-push.lg-medium.btn-icon-left,body.is-rtl .btn-pulldown.lg-medium.btn-icon-left{padding-right:18px}.btn-push.lg-medium.btn-icon-left .icon:first-child,.btn-pulldown.lg-medium.btn-icon-left .icon:first-child{width:20px;height:20px}body.is-ltr .btn-push.lg-medium.btn-icon-left .icon:first-child,body.is-ltr .btn-pulldown.lg-medium.btn-icon-left .icon:first-child{margin-right:8px}body.is-rtl .btn-push.lg-medium.btn-icon-left .icon:first-child,body.is-rtl .btn-pulldown.lg-medium.btn-icon-left .icon:first-child{margin-left:8px}body.is-ltr .btn-push.lg-medium.btn-icon-right,body.is-ltr .btn-pulldown.lg-medium.btn-icon-right{padding-right:18px}body.is-rtl .btn-push.lg-medium.btn-icon-right,body.is-rtl .btn-pulldown.lg-medium.btn-icon-right{padding-left:18px}.btn-push.lg-medium.btn-icon-right .icon:last-child,.btn-pulldown.lg-medium.btn-icon-right .icon:last-child{width:20px;height:20px}body.is-ltr .btn-push.lg-medium.btn-icon-right .icon:last-child,body.is-ltr .btn-pulldown.lg-medium.btn-icon-right .icon:last-child{margin-left:8px}body.is-rtl .btn-push.lg-medium.btn-icon-right .icon:last-child,body.is-rtl .btn-pulldown.lg-medium.btn-icon-right .icon:last-child{margin-right:8px}}@media(min-width:1440px){.btn-push.xl-medium,.btn-pulldown.xl-medium{font-weight:700;font-size:16px;line-height:20px;padding:10px 20px;border-radius:40px}body.is-ltr .btn-push.xl-medium.btn-icon-left,body.is-ltr .btn-pulldown.xl-medium.btn-icon-left{padding-left:18px}body.is-rtl .btn-push.xl-medium.btn-icon-left,body.is-rtl .btn-pulldown.xl-medium.btn-icon-left{padding-right:18px}.btn-push.xl-medium.btn-icon-left .icon:first-child,.btn-pulldown.xl-medium.btn-icon-left .icon:first-child{width:20px;height:20px}body.is-ltr .btn-push.xl-medium.btn-icon-left .icon:first-child,body.is-ltr .btn-pulldown.xl-medium.btn-icon-left .icon:first-child{margin-right:8px}body.is-rtl .btn-push.xl-medium.btn-icon-left .icon:first-child,body.is-rtl .btn-pulldown.xl-medium.btn-icon-left .icon:first-child{margin-left:8px}body.is-ltr .btn-push.xl-medium.btn-icon-right,body.is-ltr .btn-pulldown.xl-medium.btn-icon-right{padding-right:18px}body.is-rtl .btn-push.xl-medium.btn-icon-right,body.is-rtl .btn-pulldown.xl-medium.btn-icon-right{padding-left:18px}.btn-push.xl-medium.btn-icon-right .icon:last-child,.btn-pulldown.xl-medium.btn-icon-right .icon:last-child{width:20px;height:20px}body.is-ltr .btn-push.xl-medium.btn-icon-right .icon:last-child,body.is-ltr .btn-pulldown.xl-medium.btn-icon-right .icon:last-child{margin-left:8px}body.is-rtl .btn-push.xl-medium.btn-icon-right .icon:last-child,body.is-rtl .btn-pulldown.xl-medium.btn-icon-right .icon:last-child{margin-right:8px}}@media(min-width:1440px){.btn-push.xl-large,.btn-pulldown.xl-large{font-weight:700;font-size:18px;line-height:24px;padding:12px 24px;border-radius:48px}body.is-ltr .btn-push.xl-large.btn-icon-left,body.is-ltr .btn-pulldown.xl-large.btn-icon-left{padding-left:22px}body.is-rtl .btn-push.xl-large.btn-icon-left,body.is-rtl .btn-pulldown.xl-large.btn-icon-left{padding-right:22px}.btn-push.xl-large.btn-icon-left .icon:first-child,.btn-pulldown.xl-large.btn-icon-left .icon:first-child{width:24px;height:24px}body.is-ltr .btn-push.xl-large.btn-icon-left .icon:first-child,body.is-ltr .btn-pulldown.xl-large.btn-icon-left .icon:first-child{margin-right:10px}body.is-rtl .btn-push.xl-large.btn-icon-left .icon:first-child,body.is-rtl .btn-pulldown.xl-large.btn-icon-left .icon:first-child{margin-left:10px}body.is-ltr .btn-push.xl-large.btn-icon-right,body.is-ltr .btn-pulldown.xl-large.btn-icon-right{padding-right:22px}body.is-rtl .btn-push.xl-large.btn-icon-right,body.is-rtl .btn-pulldown.xl-large.btn-icon-right{padding-left:22px}.btn-push.xl-large.btn-icon-right .icon:last-child,.btn-pulldown.xl-large.btn-icon-right .icon:last-child{width:24px;height:24px}body.is-ltr .btn-push.xl-large.btn-icon-right .icon:last-child,body.is-ltr .btn-pulldown.xl-large.btn-icon-right .icon:last-child{margin-left:10px}body.is-rtl .btn-push.xl-large.btn-icon-right .icon:last-child,body.is-rtl .btn-pulldown.xl-large.btn-icon-right .icon:last-child{margin-right:10px}}.btn-icon{border-radius:50%}.btn-icon.large{padding:12px}.btn-icon.large .icon{width:24px;height:24px}.btn-icon.medium{padding:10px}.btn-icon.medium .icon{width:20px;height:20px}.btn-icon.small{padding:8px}.btn-icon.small .icon{width:16px;height:16px}.btn-icon.xsmall{padding:6px}.btn-icon.xsmall .icon{width:16px;height:16px}.btn-pulldown .icon-chevron-down{position:relative}.btn-pulldown.fill .icon-chevron-down{background-color:rgba(246,247,248,.7)}.btn-pulldown .show-more{pointer-events:none;display:inline-block}.btn-pulldown .show-less{pointer-events:none;display:none}.btn-pulldown.active .show-more{display:none}.btn-pulldown.active .show-less{display:inline-block}.btn-pulldown.active.stroke{box-shadow:0 0 0 1px #0d80f2 inset;color:#0d80f2}.btn-pulldown.active.stroke .icon{background-color:#0d80f2}.btn-pulldown.active.stroke-gray{box-shadow:0 0 0 1px #0d80f2 inset;color:#0d80f2}.btn-pulldown.active.stroke-gray .icon{background-color:#0d80f2}.btn-pulldown.active.stroke-gray .icon-chevron-down{background-color:rgba(13,128,242,.4)}.btn-pulldown.active.ghost{background-color:#f6f7f8;color:#0d80f2}.btn-pulldown.active.ghost .icon{background-color:#0d80f2}.btn-pulldown.active .icon-chevron-down{rotate:180deg}.btn-pulldown.active.ghost-gray{background-color:#f6f7f8;color:rgba(13,128,242,.7)}.btn-pulldown.active.ghost-gray .icon{background-color:rgba(13,128,242,.7)}.btn-coupon{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;user-select:none;white-space:nowrap;color:rgba(22,24,29,.7)}.btn-coupon[disabled]{cursor:default;pointer-events:none;opacity:.5}.btn-coupon .count{background-color:#55b946;color:#f6f7f8;border-radius:40px;display:flex;align-items:center;justify-content:center}.btn-coupon:hover{color:#0b0c0f}.btn-coupon.stroke{box-shadow:0 0 0 1px #e2e5ea inset}.btn-coupon.stroke:hover{box-shadow:0 0 0 1px #a7afbe inset}.btn-coupon.ghost:hover{background:rgba(13,128,242,.05)}.btn-coupon.large{font-weight:700;font-size:18px;line-height:24px;border-radius:48px}body.is-ltr .btn-coupon.large{padding:10px 10px 10px 24px}body.is-rtl .btn-coupon.large{padding:10px 24px 10px 10px}.btn-coupon.large .count{padding:2px 9px;min-width:28px}body.is-ltr .btn-coupon.large .count{margin-left:10px}body.is-rtl .btn-coupon.large .count{margin-right:10px}.btn-coupon.medium{font-weight:700;font-size:16px;line-height:20px;border-radius:40px}body.is-ltr .btn-coupon.medium{padding:8px 8px 8px 20px}body.is-rtl .btn-coupon.medium{padding:8px 20px 8px 8px}.btn-coupon.medium .count{padding:2px 7px;min-width:24px}body.is-ltr .btn-coupon.medium .count{margin-left:8px}body.is-rtl .btn-coupon.medium .count{margin-right:8px}.btn-coupon.small{font-weight:700;font-size:14px;line-height:16px;border-radius:32px}body.is-ltr .btn-coupon.small{padding:6px 6px 6px 16px}body.is-rtl .btn-coupon.small{padding:6px 16px 6px 6px}.btn-coupon.small .count{padding:2px 6px;min-width:20px}body.is-ltr .btn-coupon.small .count{margin-left:6px}body.is-rtl .btn-coupon.small .count{margin-right:6px}.btn-coupon.xsmall{font-weight:700;font-size:12px;line-height:16px;border-radius:26px}body.is-ltr .btn-coupon.xsmall{padding:4px 4px 4px 12px}body.is-rtl .btn-coupon.xsmall{padding:4px 12px 4px 4px}.btn-coupon.xsmall .count{padding:1px 6px;min-width:18px}body.is-ltr .btn-coupon.xsmall .count{margin-left:4px}body.is-rtl .btn-coupon.xsmall .count{margin-right:4px}@media(min-width:580px){.btn-coupon.sm-large{font-weight:700;font-size:18px;line-height:24px;border-radius:48px}body.is-ltr .btn-coupon.sm-large{padding:10px 10px 10px 24px}body.is-rtl .btn-coupon.sm-large{padding:10px 24px 10px 10px}.btn-coupon.sm-large .count{padding:2px 9px;min-width:28px}body.is-ltr .btn-coupon.sm-large .count{margin-left:10px}body.is-rtl .btn-coupon.sm-large .count{margin-right:10px}}@media(min-width:992px){.btn-coupon.md-medium{font-weight:700;font-size:16px;line-height:20px;border-radius:40px}body.is-ltr .btn-coupon.md-medium{padding:8px 8px 8px 20px}body.is-rtl .btn-coupon.md-medium{padding:8px 20px 8px 8px}.btn-coupon.md-medium .count{padding:2px 7px;min-width:24px}body.is-ltr .btn-coupon.md-medium .count{margin-left:8px}body.is-rtl .btn-coupon.md-medium .count{margin-right:8px}}.btn-pagination{color:rgba(22,24,29,.4);box-shadow:0 0 0 1px rgba(22,24,29,.4) inset;border-radius:40px}.btn-pagination.large{font-weight:700;font-size:18px;line-height:24px;padding:8px 24px}.btn-pagination.small{font-weight:700;font-size:16px;line-height:20px;padding:6px 18px}.btn-pagination:hover{box-shadow:0 0 0 1px #0d80f2 inset;color:#0d80f2}.btn-pagination.active{box-shadow:0 0 0 1px #0d80f2 inset;background-color:#0d80f2;color:#f6f7f8}.link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;user-select:none;white-space:nowrap}.link>*{pointer-events:none}.link[disabled]{cursor:default;pointer-events:none;opacity:.5}.link.color{color:#0d80f2}.link.color .icon{background-color:#0d80f2}.link.color:hover{color:#0a66c2}.link.color:hover .icon{background-color:#0a66c2}.link.gray{color:rgba(22,24,29,.7)}.link.gray .icon{background-color:rgba(22,24,29,.7)}.link.gray:hover{color:#0d80f2}.link.gray:hover .icon{background-color:#0d80f2}.link.large{font-weight:700;font-size:18px;line-height:24px}.link.large .icon{width:20px;height:20px}body.is-ltr .link.large.icon-left .icon:first-of-type{margin-right:12px}body.is-rtl .link.large.icon-left .icon:first-of-type{margin-left:12px}body.is-ltr .link.large.icon-right .icon:last-of-type{margin-left:12px}body.is-rtl .link.large.icon-right .icon:last-of-type{margin-right:12px}.link.medium{font-weight:700;font-size:16px;line-height:20px}.link.medium .icon{width:20px;height:20px}body.is-ltr .link.medium.icon-left .icon:first-of-type{margin-right:8px}body.is-rtl .link.medium.icon-left .icon:first-of-type{margin-left:8px}body.is-ltr .link.medium.icon-right .icon:last-of-type{margin-left:8px}body.is-rtl .link.medium.icon-right .icon:last-of-type{margin-right:8px}.link.small{font-weight:700;font-size:14px;line-height:16px}.link.small .icon{width:16px;height:16px}body.is-ltr .link.small.icon-left .icon:first-of-type{margin-right:6px}body.is-rtl .link.small.icon-left .icon:first-of-type{margin-left:6px}body.is-ltr .link.small.icon-right .icon:last-of-type{margin-left:6px}body.is-rtl .link.small.icon-right .icon:last-of-type{margin-right:6px}.link.xsmall{font-weight:700;font-size:12px;line-height:16px}.link.xsmall .icon{width:16px;height:16px}body.is-ltr .link.xsmall.icon-left .icon:first-of-type{margin-right:4px}body.is-rtl .link.xsmall.icon-left .icon:first-of-type{margin-left:4px}body.is-ltr .link.xsmall.icon-right .icon:last-of-type{margin-left:4px}body.is-rtl .link.xsmall.icon-right .icon:last-of-type{margin-right:4px}@media(min-width:580px){.link.sm-large{font-weight:700;font-size:18px;line-height:24px}.link.sm-large .icon{width:20px;height:20px}body.is-ltr .link.sm-large.icon-left .icon:first-of-type{margin-right:12px}body.is-rtl .link.sm-large.icon-left .icon:first-of-type{margin-left:12px}body.is-ltr .link.sm-large.icon-right .icon:last-of-type{margin-left:12px}body.is-rtl .link.sm-large.icon-right .icon:last-of-type{margin-right:12px}}.tag{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;user-select:none;white-space:nowrap;color:rgba(22,24,29,.7);box-shadow:0 0 0 1px #e2e5ea inset;border-radius:20px}.tag .icon{background-color:rgba(22,24,29,.7)}.tag:hover{color:#0a66c2}.tag:hover .icon{background-color:#0a66c2}.tag.active{color:#0d80f2;background-color:#f0f7fe;box-shadow:0 0 0 1px #0d80f2 inset}.tag.active .icon{background-color:#0d80f2}.tag[disabled]{cursor:default;pointer-events:none;opacity:.5}.tag.medium{font-weight:400;font-size:16px;line-height:20px;padding:4px 12px}.tag.medium .icon{width:16px;height:16px}body.is-ltr .tag.medium.icon-left .icon:first-of-type{margin-right:6px}body.is-rtl .tag.medium.icon-left .icon:first-of-type{margin-left:6px}body.is-ltr .tag.medium.icon-right .icon:last-of-type{margin-left:6px}body.is-rtl .tag.medium.icon-right .icon:last-of-type{margin-right:6px}.tag.small{font-weight:400;font-size:14px;line-height:16px;padding:4px 10px}.tag.small .icon{width:14px;height:14px}body.is-ltr .tag.small.icon-left .icon:first-of-type{margin-right:4px}body.is-rtl .tag.small.icon-left .icon:first-of-type{margin-left:4px}body.is-ltr .tag.small.icon-right .icon:last-of-type{margin-left:4px}body.is-rtl .tag.small.icon-right .icon:last-of-type{margin-right:4px}.tag.xsmall{font-weight:400;font-size:12px;line-height:16px;padding:2px 8px}.tag.xsmall .icon{width:12px;height:12px}body.is-ltr .tag.xsmall.icon-left .icon:first-of-type{margin-right:2px}body.is-rtl .tag.xsmall.icon-left .icon:first-of-type{margin-left:2px}body.is-ltr .tag.xsmall.icon-right .icon:last-of-type{margin-left:2px}body.is-rtl .tag.xsmall.icon-right .icon:last-of-type{margin-right:2px}.tab{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;user-select:none;white-space:nowrap;color:rgba(22,24,29,.7);cursor:pointer}.tab>*{pointer-events:none}.tab .icon{background-color:rgba(22,24,29,.7)}.tab:hover{color:#0a66c2}.tab:hover .icon{background-color:#0a66c2}.tab.active{color:#0d80f2;background-color:rgba(13,128,242,.05)}.tab.active .icon{background-color:#0d80f2}.tab[disabled]{cursor:default;pointer-events:none;opacity:.5}.tab.medium{font-weight:700;font-size:16px;line-height:20px;padding:10px 20px;border-radius:40px}.tab.medium .icon{width:20px;height:20px}body.is-ltr .tab.medium.icon-left .icon:first-of-type{margin-right:8px}body.is-rtl .tab.medium.icon-left .icon:first-of-type{margin-left:8px}.tab.small{font-weight:700;font-size:14px;line-height:16px;padding:8px 16px;border-radius:32px}.tab.small .icon{width:16px;height:16px}body.is-ltr .tab.small.icon-left .icon:first-of-type{margin-right:6px}body.is-rtl .tab.small.icon-left .icon:first-of-type{margin-left:6px}.tab.xsmall{font-weight:700;font-size:12px;line-height:16px;padding:5px 10px;border-radius:24px}.tab.xsmall .icon{width:14px;height:14px}body.is-ltr .tab.xsmall.icon-left .icon:first-of-type{margin-right:4px}body.is-rtl .tab.xsmall.icon-left .icon:first-of-type{margin-left:4px}@media(min-width:580px){.tab.sm-medium{font-weight:700;font-size:16px;line-height:20px;padding:10px 20px;border-radius:40px}.tab.sm-medium .icon{width:20px;height:20px}body.is-ltr .tab.sm-medium.icon-left .icon:first-of-type{margin-right:8px}body.is-rtl .tab.sm-medium.icon-left .icon:first-of-type{margin-left:8px}}.labelTag{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;user-select:none;white-space:nowrap;color:rgba(22,24,29,.7);box-shadow:0 0 0 1px #e2e5ea inset}.labelTag .icon{background-color:rgba(22,24,29,.7)}.labelTag.medium{font-weight:400;font-size:16px;line-height:20px;padding:4px 10px;border-radius:8px}.labelTag.medium .icon{width:16px;height:16px}body.is-ltr .labelTag.medium.icon-left .icon:first-of-type{margin-right:6px}body.is-rtl .labelTag.medium.icon-left .icon:first-of-type{margin-left:6px}body.is-ltr .labelTag.medium.icon-right .icon:last-of-type{margin-left:6px}body.is-rtl .labelTag.medium.icon-right .icon:last-of-type{margin-right:6px}.labelTag.small{font-weight:700;font-size:14px;line-height:16px;padding:4px 8px;border-radius:6px}.labelTag.small .icon{width:14px;height:14px}body.is-ltr .labelTag.small.icon-left .icon:first-of-type{margin-right:4px}body.is-rtl .labelTag.small.icon-left .icon:first-of-type{margin-left:4px}body.is-ltr .labelTag.small.icon-right .icon:last-of-type{margin-left:4px}body.is-rtl .labelTag.small.icon-right .icon:last-of-type{margin-right:4px}.labelTag.xsmall{font-weight:700;font-size:12px;line-height:16px;padding:2px 6px;border-radius:4px}.labelTag.xsmall .icon{width:12px;height:12px}body.is-ltr .labelTag.xsmall.icon-left .icon:first-of-type{margin-right:4px}body.is-rtl .labelTag.xsmall.icon-left .icon:first-of-type{margin-left:4px}body.is-ltr .labelTag.xsmall.icon-right .icon:last-of-type{margin-left:4px}body.is-rtl .labelTag.xsmall.icon-right .icon:last-of-type{margin-right:4px}input[type=radio]{-webkit-appearance:none;appearance:none;background-color:#fff;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1px #a7afbe;flex:none}input[type=radio]:checked{background-color:#0d80f2}input[type=radio]:checked+label{color:#0b0c0f}.radio{display:flex;align-items:center;color:rgba(22,24,29,.7)}.radio input[type=radio]{flex-shrink:0}.radio.large label{font-weight:400;font-size:18px;line-height:24px}body.is-ltr .radio.large label{padding-left:8px}body.is-rtl .radio.large label{padding-right:8px}.radio.large input[type=radio]{width:18px;height:18px}.radio.large input[type=radio]:checked+label{font-weight:700;font-size:18px;line-height:24px}.radio.medium label{font-weight:400;font-size:16px;line-height:20px}body.is-ltr .radio.medium label{padding-left:6px}body.is-rtl .radio.medium label{padding-right:6px}.radio.medium input[type=radio]{width:16px;height:16px}.radio.medium input[type=radio]:checked+label{font-weight:700;font-size:16px;line-height:20px}.radio.small label{font-weight:400;font-size:14px;line-height:16px}body.is-ltr .radio.small label{padding-left:4px}body.is-rtl .radio.small label{padding-right:4px}.radio.small input[type=radio]{width:14px;height:14px}.radio.small input[type=radio]:checked+label{font-weight:700;font-size:14px;line-height:16px}@media(min-width:992px){.radio.md-large label{font-weight:400;font-size:18px;line-height:24px}body.is-ltr .radio.md-large label{padding-left:8px}body.is-rtl .radio.md-large label{padding-right:8px}.radio.md-large input[type=radio]{width:18px;height:18px}.radio.md-large input[type=radio]:checked+label{font-weight:700;font-size:18px;line-height:24px}}.radio:focus-within{color:#0d80f2}.radio:hover{color:#0d80f2}.radio:hover input[type=radio]{box-shadow:0 0 0 1px #0d80f2}.check input[type=checkbox],.check-compare input[type=checkbox]{-webkit-appearance:none;appearance:none;background-color:#fff;border-radius:4px;border:1px solid #a7afbe;width:16px;height:16px;flex:none}.check input[type=checkbox]:checked,.check-compare input[type=checkbox]:checked{background-color:#0d80f2;border-color:#0d80f2}.check input[type=checkbox]:checked+label,.check-compare input[type=checkbox]:checked+label{color:#0b0c0f}.check input[type=checkbox]:checked:before,.check-compare input[type=checkbox]:checked:before{content:"";display:block;height:12px;width:12px;margin:1px auto 0;-webkit-mask-size:cover;mask-size:cover;background-color:#fff}.check{display:flex;align-items:center;color:rgba(22,24,29,.7)}.check label{font-weight:400;font-size:16px;line-height:20px}body.is-ltr .check label{padding-left:8px}body.is-rtl .check label{padding-right:8px}.check input[type=checkbox]:checked:before{-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/check.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/check.svg)}.check input[type=checkbox]:checked+label{font-weight:700;font-size:16px;line-height:20px}.check:focus-within{color:#0d80f2}.check:hover{color:#0d80f2}.check:hover input[type=checkbox]{border-color:#0d80f2}.check-compare{display:flex;align-items:center;color:rgba(22,24,29,.7)}.check-compare label{font-weight:400;font-size:16px;line-height:20px}body.is-ltr .check-compare label{padding-left:8px}body.is-rtl .check-compare label{padding-right:8px}.check-compare input[type=checkbox]:checked:before{-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/plus.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/plus.svg)}.check-compare input[type=checkbox]:checked+label{font-weight:700;font-size:16px;line-height:20px}.check-compare:focus-within{color:#0d80f2}.check-compare:hover{color:#0d80f2}.check-compare:hover input[type=checkbox]{border-color:#0d80f2}.check-compare:hover input[type=checkbox]:checked{border-color:#f0f2f4;background-color:#f0f2f4}.check-compare:hover input[type=checkbox]:checked+label{color:rgba(22,24,29,.7)}.check-compare:hover input[type=checkbox]:checked:before{-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/minus.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/minus.svg);background-color:rgba(22,24,29,.7)}input[type=range]{-webkit-appearance:none;appearance:none;width:100%;background-color:#e2e5ea;border-radius:8px;height:6px}input[type=range]:focus{outline:none}input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:24px;height:24px;border-radius:50%;background:#fff;border:3px solid #0d80f2;cursor:pointer}.toggle{position:relative}.toggle input[type=checkbox]{height:0;width:0;opacity:0;visibility:hidden;position:absolute;pointer-events:none}.toggle label{cursor:pointer;text-indent:-9999px;width:40px;height:24px;background:#fff;display:block;border-radius:30px;position:relative;box-shadow:0 0 0 1px #a7afbe inset;transition:all .1s ease-in-out}.toggle label:after{content:"";display:block;position:absolute;top:4px;left:4px;width:16px;height:16px;background:#0d80f2;border-radius:50%;transition:all .1s ease-in-out}.toggle input:checked+label{background:#0d80f2;box-shadow:0 0 0 1px #0d80f2 inset}.toggle input:checked+label:after{left:calc(100% - 4px);transform:translateX(-100%);background:#fff}.toggle input:disabled+label{opacity:.64}.switchers{display:inline-flex;border:1px solid #e2e5ea}.switchers a{text-decoration:none;user-select:none;white-space:nowrap;display:inline-flex;align-items:center;vertical-align:middle;color:rgba(22,24,29,.7)}body.is-ltr .switchers a{border-right:1px solid #e2e5ea}body.is-rtl .switchers a{border-left:1px solid #e2e5ea}body.is-ltr .switchers a:last-child{border-right:none}body.is-rtl .switchers a:last-child{border-left:none}.switchers a.active{background-color:#0d80f2;color:#f6f7f8}.switchers a .icon{background-color:currentColor}.switchers-medium{border-radius:40px}.switchers-medium a{font-weight:400;font-size:16px;line-height:20px;padding:10px 20px}body.is-ltr .switchers-medium a.with-icon{padding-left:18px}body.is-rtl .switchers-medium a.with-icon{padding-right:18px}body.is-ltr .switchers-medium a.only-icon{padding-right:18px}body.is-rtl .switchers-medium a.only-icon{padding-left:18px}body.is-ltr .switchers-medium a.only-icon .icon{margin-right:0}body.is-rtl .switchers-medium a.only-icon .icon{margin-left:0}.switchers-medium .icon{width:20px;height:20px}body.is-ltr .switchers-medium .icon{margin-right:8px}body.is-rtl .switchers-medium .icon{margin-left:8px}.switchers-small{border-radius:32px}.switchers-small a{font-weight:400;font-size:14px;line-height:16px;padding:8px 16px}body.is-ltr .switchers-small a.with-icon{padding-left:14px}body.is-rtl .switchers-small a.with-icon{padding-right:14px}body.is-ltr .switchers-small a.only-icon{padding-right:14px}body.is-rtl .switchers-small a.only-icon{padding-left:14px}body.is-ltr .switchers-small a.only-icon .icon{margin-right:0}body.is-rtl .switchers-small a.only-icon .icon{margin-left:0}.switchers-small .icon{width:16px;height:16px}body.is-ltr .switchers-small .icon{margin-right:6px}body.is-rtl .switchers-small .icon{margin-left:6px}.noUi-target,.noUi-target *{touch-action:none;user-select:none;box-sizing:border-box}.noUi-target{position:relative}.noUi-base,.noUi-connects{width:100%;height:100%;position:relative;z-index:1}.noUi-connects{overflow:hidden;z-index:0}.noUi-connect,.noUi-origin{will-change:transform;position:absolute;z-index:1;top:0;height:100%;width:100%;transform-origin:0 0;transform-style:flat}body.is-ltr .noUi-connect,body.is-ltr .noUi-origin{right:0}body.is-rtl .noUi-connect,body.is-rtl .noUi-origin{left:0}body.is-ltr .noUi-txt-dir-rtl.noUi-horizontal .noUi-origin{left:0}body.is-rtl .noUi-txt-dir-rtl.noUi-horizontal .noUi-origin{right:0}body.is-ltr .noUi-txt-dir-rtl.noUi-horizontal .noUi-origin{right:auto}body.is-rtl .noUi-txt-dir-rtl.noUi-horizontal .noUi-origin{left:auto}.noUi-horizontal .noUi-origin{height:0}.noUi-handle{backface-visibility:hidden;position:absolute}.noUi-touch-area{height:100%;width:100%}.noUi-state-tap .noUi-connect,.noUi-state-tap .noUi-origin{transition:transform .3s}.noUi-state-drag *{cursor:inherit !important}.noUi-horizontal{height:6px}.noUi-horizontal .noUi-handle{width:24px;height:24px;top:-9px}body.is-ltr .noUi-horizontal .noUi-handle{right:-12px}body.is-rtl .noUi-horizontal .noUi-handle{left:-12px}body.is-ltr .noUi-txt-dir-rtl.noUi-horizontal .noUi-handle{left:-12px}body.is-rtl .noUi-txt-dir-rtl.noUi-horizontal .noUi-handle{right:-12px}body.is-ltr .noUi-txt-dir-rtl.noUi-horizontal .noUi-handle{right:auto}body.is-rtl .noUi-txt-dir-rtl.noUi-horizontal .noUi-handle{left:auto}.noUi-target{background:#e2e5ea;border-radius:8px;padding:0 12px;margin:12px 0}.noUi-connects{border-radius:8px}.noUi-connect{background:#0d80f2}.noUi-draggable{cursor:ew-resize}.noUi-handle{border:3px solid #0d80f2;border-radius:50%;background:#fff;cursor:pointer}[disabled].noUi-target,[disabled].noUi-handle,[disabled] .noUi-handle{cursor:not-allowed}.progress{width:100%;background-color:#f0f2f4;border-radius:8px}.progress .progress-bar{height:100%;background-color:#0d80f2;border-radius:8px}.progress.large{height:10px}.progress.medium{height:8px}.progress.small{height:6px}input[type=text],input[type=email],input[type=tel],input[type=date],input[type=number]{-webkit-appearance:none;appearance:none;display:block;width:100%;border:1px solid #e2e5ea}input[type=text]:focus,input[type=email]:focus,input[type=tel]:focus,input[type=date]:focus,input[type=number]:focus{border-color:#0d80f2;outline:none;color:#0b0c0f !important}input[type=text].positive,input[type=email].positive,input[type=tel].positive,input[type=date].positive,input[type=number].positive{border-color:#55b946}input[type=text].negative,input[type=email].negative,input[type=tel].negative,input[type=date].negative,input[type=number].negative{border-color:#ff4d00;color:rgba(22,24,29,.4)}input::placeholder,textarea::placeholder{color:rgba(22,24,29,.4)}input:disabled,textarea:disabled{background-color:#f0f2f4;border-color:#f0f2f4;color:rgba(22,24,29,.7)}.inputWrap{position:relative;display:flex;flex-wrap:wrap}.inputWrap .btn{margin:24px auto 0}@media(min-width:580px){.inputWrap .btn{position:absolute;top:50%;transform:translateY(-50%);margin:0}body.is-ltr .inputWrap .btn{right:0}body.is-rtl .inputWrap .btn{left:0}}.textInput~.icon{display:none;position:absolute;top:50%;transform:translateY(-50%)}.textInput~.icon.icon-check-circle{background-color:#55b946}.textInput~.icon.icon-alert-circle{background-color:#ff4d00}.textInput.large{border-radius:48px;font-weight:400;font-size:18px;line-height:28px}body.is-ltr .textInput.large{padding:9px 47px 9px 19px}body.is-rtl .textInput.large{padding:9px 19px 9px 47px}.textInput.large~.icon{width:28px;height:28px}body.is-ltr .textInput.large~.icon{right:9px}body.is-rtl .textInput.large~.icon{left:9px}.textInput.medium{border-radius:40px;font-weight:400;font-size:16px;line-height:24px}body.is-ltr .textInput.medium{padding:7px 39px 7px 15px}body.is-rtl .textInput.medium{padding:7px 15px 7px 39px}.textInput.medium~.icon{width:24px;height:24px}body.is-ltr .textInput.medium~.icon{right:7px}body.is-rtl .textInput.medium~.icon{left:7px}.textInput.small{border-radius:40px;font-weight:400;font-size:14px;line-height:20px}body.is-ltr .textInput.small{padding:5px 31px 5px 11px}body.is-rtl .textInput.small{padding:5px 11px 5px 31px}.textInput.small~.icon{width:20px;height:20px}body.is-ltr .textInput.small~.icon{right:5px}body.is-rtl .textInput.small~.icon{left:5px}@media(min-width:580px){.textInput.sm-medium{border-radius:40px;font-weight:400;font-size:16px;line-height:24px}body.is-ltr .textInput.sm-medium{padding:7px 39px 7px 15px}body.is-rtl .textInput.sm-medium{padding:7px 15px 7px 39px}.textInput.sm-medium~.icon{width:24px;height:24px}body.is-ltr .textInput.sm-medium~.icon{right:7px}body.is-rtl .textInput.sm-medium~.icon{left:7px}}@media(min-width:992px){.textInput.md-large{border-radius:48px;font-weight:400;font-size:18px;line-height:28px}body.is-ltr .textInput.md-large{padding:9px 47px 9px 19px}body.is-rtl .textInput.md-large{padding:9px 19px 9px 47px}.textInput.md-large~.icon{width:28px;height:28px}body.is-ltr .textInput.md-large~.icon{right:9px}body.is-rtl .textInput.md-large~.icon{left:9px}}@media(min-width:1200px){.textInput.lg-large{border-radius:48px;font-weight:400;font-size:18px;line-height:28px}body.is-ltr .textInput.lg-large{padding:9px 47px 9px 19px}body.is-rtl .textInput.lg-large{padding:9px 19px 9px 47px}.textInput.lg-large~.icon{width:28px;height:28px}body.is-ltr .textInput.lg-large~.icon{right:9px}body.is-rtl .textInput.lg-large~.icon{left:9px}}.textInput.positive~.icon-check-circle{display:block}.textInput.negative~.icon-alert-circle{display:block}.searchInput~.clear{display:none;position:absolute;top:50%;transform:translateY(-50%);cursor:pointer}.searchInput~.clear .icon{background-color:rgba(22,24,29,.4)}.searchInput~.icon-search{position:absolute;top:50%;transform:translateY(-50%);background-color:rgba(22,24,29,.4)}.searchInput:not(:placeholder-shown)~.clear{display:flex}.searchInput:focus~.icon-search{background-color:#0b0c0f}.searchInput.large{font-weight:400;font-size:18px;line-height:28px;border-radius:48px}body.is-ltr .searchInput.large{padding:9px 47px 9px 49px}body.is-rtl .searchInput.large{padding:9px 49px 9px 47px}.searchInput.large~.icon{width:28px;height:28px}body.is-ltr .searchInput.large~.icon-search{left:11px}body.is-rtl .searchInput.large~.icon-search{right:11px}body.is-ltr .searchInput.large~.clear{right:9px}body.is-rtl .searchInput.large~.clear{left:9px}.searchInput.large~.clear .icon{width:28px;height:28px;pointer-events:none}.searchInput.medium{font-weight:400;font-size:16px;line-height:24px;border-radius:40px}body.is-ltr .searchInput.medium{padding:7px 39px 7px 41px}body.is-rtl .searchInput.medium{padding:7px 41px 7px 39px}.searchInput.medium~.icon{width:24px;height:24px}body.is-ltr .searchInput.medium~.icon-search{left:9px}body.is-rtl .searchInput.medium~.icon-search{right:9px}body.is-ltr .searchInput.medium~.clear{right:7px}body.is-rtl .searchInput.medium~.clear{left:7px}.searchInput.small{font-weight:400;font-size:14px;line-height:20px;border-radius:40px}body.is-ltr .searchInput.small{padding:5px 31px 5px 33px}body.is-rtl .searchInput.small{padding:5px 33px 5px 31px}.searchInput.small~.icon{width:20px;height:20px}body.is-ltr .searchInput.small~.icon-search{left:7px}body.is-rtl .searchInput.small~.icon-search{right:7px}body.is-ltr .searchInput.small~.clear{right:5px}body.is-rtl .searchInput.small~.clear{left:5px}.searchInput.small~.clear .icon{width:20px;height:20px}@media(min-width:992px){.searchInput.md-large{font-weight:400;font-size:18px;line-height:28px;border-radius:48px}body.is-ltr .searchInput.md-large{padding:9px 47px 9px 49px}body.is-rtl .searchInput.md-large{padding:9px 49px 9px 47px}.searchInput.md-large~.icon{width:28px;height:28px}body.is-ltr .searchInput.md-large~.icon-search{left:11px}body.is-rtl .searchInput.md-large~.icon-search{right:11px}body.is-ltr .searchInput.md-large~.clear{right:9px}body.is-rtl .searchInput.md-large~.clear{left:9px}.searchInput.md-large~.clear .icon{width:28px;height:28px;pointer-events:none}}@media(min-width:1200px){.searchInput.lg-large{font-weight:400;font-size:18px;line-height:28px;border-radius:48px}body.is-ltr .searchInput.lg-large{padding:9px 47px 9px 49px}body.is-rtl .searchInput.lg-large{padding:9px 49px 9px 47px}.searchInput.lg-large~.icon{width:28px;height:28px}body.is-ltr .searchInput.lg-large~.icon-search{left:11px}body.is-rtl .searchInput.lg-large~.icon-search{right:11px}body.is-ltr .searchInput.lg-large~.clear{right:9px}body.is-rtl .searchInput.lg-large~.clear{left:9px}.searchInput.lg-large~.clear .icon{width:28px;height:28px;pointer-events:none}}.numberInput::-webkit-outer-spin-button,.numberInput::-webkit-inner-spin-button{-webkit-appearance:none;-moz-appearance:none;appearance:none;margin:0}.numberInput~.up,.numberInput~.down{display:block;position:absolute;cursor:pointer}.numberInput:disabled~.up,.numberInput:disabled~.down{display:none}.numberInput~.up{width:24px;height:24px;background:rgba(22,24,29,.4);-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/chevron-up.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/chevron-up.svg);-webkit-mask-size:cover;mask-size:cover;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:top;mask-position:top}.numberInput~.down{width:24px;height:24px;background:rgba(22,24,29,.4);-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/chevron-down.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/chevron-down.svg);-webkit-mask-size:cover;mask-size:cover;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:bottom;mask-position:bottom}.numberInput.large{border-radius:48px;font-weight:400;font-size:18px;line-height:28px}body.is-ltr .numberInput.large{padding:9px 47px 9px 19px}body.is-rtl .numberInput.large{padding:9px 19px 9px 47px}.numberInput.large~.icon{width:28px;height:28px}.numberInput.large~.up{top:8px}.numberInput.large~.down{bottom:8px}.numberInput.large~.up,.numberInput.large~.down{width:20px;height:14px}body.is-ltr .numberInput.large~.up,body.is-ltr .numberInput.large~.down{right:12px}body.is-rtl .numberInput.large~.up,body.is-rtl .numberInput.large~.down{left:12px}.numberInput.medium{border-radius:40px;font-weight:400;font-size:16px;line-height:24px}body.is-ltr .numberInput.medium{padding:7px 39px 7px 15px}body.is-rtl .numberInput.medium{padding:7px 15px 7px 39px}.numberInput.medium~.icon{width:24px;height:24px}.numberInput.medium~.up{top:6px}.numberInput.medium~.down{bottom:6px}.numberInput.medium~.up,.numberInput.medium~.down{width:18px;height:12px}body.is-ltr .numberInput.medium~.up,body.is-ltr .numberInput.medium~.down{right:10px}body.is-rtl .numberInput.medium~.up,body.is-rtl .numberInput.medium~.down{left:10px}.numberInput.small{border-radius:40px;font-weight:400;font-size:14px;line-height:20px}body.is-ltr .numberInput.small{padding:5px 31px 5px 11px}body.is-rtl .numberInput.small{padding:5px 11px 5px 31px}.numberInput.small~.icon{width:20px;height:20px}.numberInput.small~.up{top:4px}.numberInput.small~.down{bottom:4px}.numberInput.small~.up,.numberInput.small~.down{width:16px;height:10px}body.is-ltr .numberInput.small~.up,body.is-ltr .numberInput.small~.down{right:7px}body.is-rtl .numberInput.small~.up,body.is-rtl .numberInput.small~.down{left:7px}.textarea{-webkit-appearance:none;appearance:none;display:block;width:100%;border:1px solid #e2e5ea}.textarea:focus{border-color:#0d80f2;outline:none}.textarea.positive{border-color:#55b946}.textarea.negative{border-color:#ff4d00;color:rgba(22,24,29,.4)}.textarea:disabled{resize:none}.textarea.large{font-weight:400;font-size:18px;line-height:28px;border-radius:24px;padding:9px 19px;min-height:48px}.textarea.medium{font-weight:400;font-size:16px;line-height:24px;border-radius:20px;padding:7px 15px;min-height:40px}.textarea.small{font-weight:400;font-size:14px;line-height:20px;border-radius:16px;padding:5px 11px;min-height:32px}@media(min-width:992px){.textarea.md-large{font-weight:400;font-size:18px;line-height:28px;border-radius:24px;padding:9px 19px;min-height:48px}}.select{position:relative}.select .current{display:flex;align-items:center;width:100%;border:1px solid #e2e5ea;color:rgba(22,24,29,.4);cursor:pointer;background-color:#fff}.select .current:after{content:"";display:block;width:24px;height:24px;background:rgba(22,24,29,.4);-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/chevron-down.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/chevron-down.svg);-webkit-mask-size:cover;mask-size:cover;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;transition:all .1s ease-in-out}body.is-ltr .select .current:after{margin-left:auto}body.is-rtl .select .current:after{margin-right:auto}.select .dropdown{display:none;padding:16px;border-radius:12px;background-color:#fff;position:absolute;z-index:2;width:100%}.select .dropdown .item{cursor:pointer}.select .dropdown .item.item-selected{color:#0d80f2}.select.active .current{border-color:#0d80f2;color:#0b0c0f}.select.active .current:after{rotate:180deg}.select.active .dropdown{display:flex;flex-direction:column;gap:8px}.select.selected .current{color:#0b0c0f}.select.positive .current{border-color:#55b946;color:#0b0c0f}.select.negative .current{border-color:#ff4d00;color:rgba(22,24,29,.4)}.select[disabled] .current{border:none;color:rgba(22,24,29,.7);pointer-events:none}.select.large{font-weight:400;font-size:18px;line-height:28px}.select.large .current{border-radius:48px}body.is-ltr .select.large .current{padding:9px 19px 9px 19px}body.is-rtl .select.large .current{padding:9px 19px 9px 19px}.select.large .current:after{width:28px;height:28px}.select.medium{font-weight:400;font-size:16px;line-height:24px}.select.medium .current{border-radius:40px}body.is-ltr .select.medium .current{padding:7px 15px 7px 15px}body.is-rtl .select.medium .current{padding:7px 15px 7px 15px}.select.small{font-weight:400;font-size:14px;line-height:20px}.select.small .current{border-radius:32px}body.is-ltr .select.small .current{padding:5px 11px 5px 11px}body.is-rtl .select.small .current{padding:5px 11px 5px 11px}.select.small .current:after{width:20px;height:20px}@media(min-width:992px){.select.md-large{font-weight:400;font-size:18px;line-height:28px}.select.md-large .current{border-radius:48px}body.is-ltr .select.md-large .current{padding:9px 19px 9px 19px}body.is-rtl .select.md-large .current{padding:9px 19px 9px 19px}.select.md-large .current:after{width:28px;height:28px}}.upload-box input[type=file]{width:.1px;height:.1px;opacity:0;overflow:hidden;position:absolute;z-index:-1}.upload-box.disabled label{border:none;background-color:#f0f2f4}.upload-box label{width:100%;cursor:pointer;text-align:center;margin-bottom:0;display:block;border:1px dashed #e2e5ea;border-radius:20px;padding:16px;background-color:#fff;color:rgba(22,24,29,.4)}.upload-box label:hover{border-color:#0d80f2}.upload-box label .icon{background-color:rgba(22,24,29,.4);margin-bottom:8px;width:28px;height:28px}.upload-box label span{display:block;margin:auto}.upload-box label span.extensions{font-weight:400;font-size:16px;line-height:24px}.upload-box label span.max-size{font-weight:400;font-size:14px;line-height:20px}.input-error{margin-top:8px;color:#ff4d00;font-weight:400;font-size:14px;line-height:16px;display:flex;align-items:center;gap:4px}.input-error:before{content:"";display:block;width:20px;height:20px;background:#ff4d00;-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/x-circle.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/x-circle.svg);-webkit-mask-size:cover;mask-size:cover;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}.labelBadge{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;user-select:none;white-space:nowrap;color:rgba(22,24,29,.7);background-color:#f0f2f4}.labelBadge .icon{background-color:rgba(22,24,29,.7)}.labelBadge.medium{font-weight:700;font-size:16px;line-height:20px;gap:6px;border-radius:8px;padding:4px 10px}.labelBadge.medium .icon{width:16px;height:16px}.labelBadge.small{font-weight:700;font-size:14px;line-height:16px;gap:4px;border-radius:6px;padding:4px 8px}.labelBadge.small .icon{width:14px;height:14px}.labelBadge.xsmall{font-weight:700;font-size:12px;line-height:16px;gap:4px;border-radius:4px;padding:2px 6px}.labelBadge.xsmall .icon{width:12px;height:12px}.iconBadge{display:inline-flex;align-items:center;justify-content:center;background-color:#f0f2f4;padding:2px}.iconBadge .icon{background-color:rgba(22,24,29,.7)}.iconBadge.medium{border-radius:6px;width:20px;height:20px}.iconBadge.small{border-radius:4px;width:16px;height:16px}.iconBadge.xsmall{border-radius:3px;width:12px;height:12px}.badgeScore span{display:inline-block;color:#f6f7f8}.badgeScore.medium span{font-weight:700;font-size:16px;line-height:20px;padding:4px 12px;border-radius:8px}.badgeScore.small span{font-weight:700;font-size:14px;line-height:16px;padding:4px 10px;border-radius:6px}.badgeScore.xsmall span{font-weight:700;font-size:12px;line-height:16px;padding:1px 6px 3px;border-radius:4px}.badgeScore .excellent{background-color:#55b946}.badgeScore .good{background-color:#77c76b}.badgeScore .decent{background-color:#fa0}.badgeScore .poor{background-color:#f80}.badgeScore .terrible{background-color:#ff4d00}.scoreStars{display:flex;align-items:center}.scoreStars.large strong{font-weight:700;font-size:32px;line-height:40px}body.is-ltr .scoreStars.large strong{margin-right:6px}body.is-rtl .scoreStars.large strong{margin-left:6px}.scoreStars.medium strong{font-weight:700;font-size:24px;line-height:32px}body.is-ltr .scoreStars.medium strong{margin-right:6px}body.is-rtl .scoreStars.medium strong{margin-left:6px}.scoreStars.small strong{font-weight:700;font-size:16px;line-height:20px}body.is-ltr .scoreStars.small strong{margin-right:4px}body.is-rtl .scoreStars.small strong{margin-left:4px}.scoreStars.xsmall strong{font-weight:700;font-size:14px;line-height:16px}body.is-ltr .scoreStars.xsmall strong{margin-right:4px}body.is-rtl .scoreStars.xsmall strong{margin-left:4px}.scoreStar{display:inline-flex;align-items:center}.scoreStar:before{content:"";display:inline-block}body.is-ltr .scoreStar:before{margin-right:6px}body.is-rtl .scoreStar:before{margin-left:6px}.scoreStar.medium strong{font-weight:700;font-size:32px;line-height:40px}.scoreStar.medium:before{width:28px;height:28px;background:url(/wp-content/themes/bestwh/v3/dist/img/star-yellow.svg) no-repeat;background-size:contain}.scoreStar.small strong{font-weight:700;font-size:24px;line-height:32px}.scoreStar.small:before{width:22px;height:22px;background:url(/wp-content/themes/bestwh/v3/dist/img/star-yellow.svg) no-repeat;background-size:contain}.scoreStar.xsmall strong{font-weight:700;font-size:18px;line-height:24px}.scoreStar.xsmall:before{width:16px;height:16px;background:url(/wp-content/themes/bestwh/v3/dist/img/star-yellow.svg) no-repeat;background-size:contain}body.is-ltr .scoreStar.xsmall:before{margin-right:4px}body.is-rtl .scoreStar.xsmall:before{margin-left:4px}.avatar{position:relative;margin-bottom:0;border:2px solid #e2e5ea;border-radius:50%}.avatar.with-country{border-color:#f6f7f8}.avatar img{border-radius:50%;width:100%;height:100%;display:block}.avatar .flag{border:2px solid #f6f7f8;position:absolute;bottom:-2px;border-radius:50%}body.is-ltr .avatar .flag{right:-2px}body.is-rtl .avatar .flag{left:-2px}.avatar.xlarge{width:80px;height:80px}.avatar.xlarge .flag{width:24px;height:24px}.avatar.large{width:64px;height:64px}.avatar.large .flag{width:20px;height:20px}.avatar.medium{width:52px;height:52px}.avatar.medium .flag{border-width:1px;width:16px;height:16px}.avatar.small{width:40px;height:40px}.avatar.small .flag{border-width:1px;bottom:-1px;width:14px;height:14px}body.is-ltr .avatar.small .flag{right:-1px}body.is-rtl .avatar.small .flag{left:-1px}.avatar.xsmall{width:32px;height:32px}.avatar.xsmall .flag{border-width:1px;bottom:-1px;width:12px;height:12px}body.is-ltr .avatar.xsmall .flag{right:-1px}body.is-rtl .avatar.xsmall .flag{left:-1px}.icon{display:inline-block;-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;width:24px;height:24px;background:#000;pointer-events:none}.flag{display:inline-block;width:24px;height:24px;pointer-events:none;background-position:center;background-size:contain;background-repeat:no-repeat;overflow:hidden}.icon-colored{display:inline-block;background-position:center;background-size:contain;background-repeat:no-repeat;width:24px;height:24px;pointer-events:none}.tns-outer{padding:0 !important;position:relative}.tns-outer [hidden]{display:none !important}.tns-outer [aria-controls],.tns-outer [data-action]{cursor:pointer}.tns-slider{-webkit-transition:all 0s;-moz-transition:all 0s;transition:all 0s}.tns-slider>.tns-item{box-sizing:border-box}.tns-horizontal.tns-subpixel{white-space:nowrap}.tns-horizontal.tns-subpixel>.tns-item{display:inline-block;vertical-align:top;white-space:normal}.tns-horizontal.tns-no-subpixel:after{content:"";display:table;clear:both}.tns-horizontal.tns-no-subpixel>.tns-item{float:left}.tns-horizontal.tns-carousel.tns-no-subpixel>.tns-item{margin-right:-100%}.tns-no-calc{position:relative;left:0}.tns-gallery{position:relative;left:0;min-height:1px}.tns-gallery>.tns-item{position:absolute;left:-100%;transition:transform 0s,opacity 0s}.tns-gallery>.tns-slide-active{position:relative;left:auto !important}.tns-gallery>.tns-moving{transition:all .25s}.tns-autowidth{display:inline-block}.tns-lazy-img{transition:opacity .6s;opacity:.6}.tns-lazy-img.tns-complete{opacity:1}.tns-ah{transition:height 0s}.tns-ovh{overflow:hidden}.tns-visually-hidden{position:absolute;left:-10000em}.tns-transparent{opacity:0;visibility:hidden}.tns-fadeIn{opacity:1;filter:alpha(opacity=100);z-index:0}.tns-normal,.tns-fadeOut{opacity:0;filter:alpha(opacity=0);z-index:-1}.tns-vpfix{white-space:nowrap}.tns-vpfix>div,.tns-vpfix>li{display:inline-block}.tns-t-subp2{margin:0 auto;width:310px;position:relative;height:10px;overflow:hidden}.tns-t-ct{width:calc(100%*70/3);position:absolute;right:0}.tns-t-ct:after{content:"";display:table;clear:both}.tns-t-ct>div{width:calc(100%/70);height:10px;float:left}body.main-nav-active,body.main-search-active{position:relative;overflow:hidden}@media(min-width:580px){body.main-nav-active,body.main-search-active{overflow:initial}}body.main-nav-active:after,body.main-search-active:after{content:"";display:block;position:absolute;background-color:rgba(11,12,15,.2);top:0;left:0;right:0;bottom:0;z-index:10}body.main-nav-active .main-nav,body.main-search-active .main-nav{height:calc(100vh - var(--header-only-height))}@supports(height:100dvh){body.main-nav-active .main-nav,body.main-search-active .main-nav{height:calc(100dvh - var(--header-only-height))}}@media(min-width:580px){body.main-nav-active .main-nav,body.main-search-active .main-nav{height:auto}}#main_header{position:relative;z-index:1}#main_header .inner-header{background-color:#fff;border-bottom:1px solid #e2e5ea;padding:8px 0 7px;position:relative;z-index:1}@media(min-width:1200px){#main_header .inner-header{padding:16px 0 15px}}#main_header .inner-header>.container{display:flex;align-items:center;position:relative}#main_header .inner-header .current-currency,#main_header .inner-header .current-language{display:none}@media(min-width:1200px){#main_header .inner-header .current-currency,#main_header .inner-header .current-language{display:flex}}@media(min-width:1200px){body.is-ltr #main_header .logo{margin-right:24px}body.is-rtl #main_header .logo{margin-left:24px}}#main_header .logo img{display:block;max-width:164px;max-height:32px;height:auto}#main_header .desktop-menu{display:none}body.is-ltr #main_header .desktop-menu{margin-right:16px}body.is-rtl #main_header .desktop-menu{margin-left:16px}@media(min-width:1200px){#main_header .desktop-menu{display:flex}}body.is-ltr #main_header .desktop-menu a{padding-right:10px}body.is-rtl #main_header .desktop-menu a{padding-left:10px}#main_header .desktop-menu a.active{color:#0b0c0f}#main_header .desktop-menu a.active .icon{background-color:#0b0c0f}#main_header .desktop-menu a .icon{pointer-events:none}#main_header .btn-coupon .icon-chevron-down{width:16px;height:16px;background-color:rgba(22,24,29,.4)}body.is-ltr #main_header .btn-coupon .icon-chevron-down{margin-left:6px}body.is-rtl #main_header .btn-coupon .icon-chevron-down{margin-right:6px}#main_header .btn-coupon .count{pointer-events:none}#main_header .btn-coupon.active .icon-chevron-down{rotate:180deg}#main_header .main-search-desktop{display:none;justify-content:center;align-items:center;border-radius:32px;border:1px solid #eef2f6;cursor:pointer;overflow:hidden;position:relative;transition:all .3s ease-in-out}body.is-ltr #main_header .main-search-desktop{margin-left:auto}body.is-rtl #main_header .main-search-desktop{margin-right:auto}body.is-ltr #main_header .main-search-desktop{padding-right:16px}body.is-rtl #main_header .main-search-desktop{padding-left:16px}@media(min-width:1440px){#main_header .main-search-desktop{display:flex}}#main_header .main-search-desktop:hover{border-color:#0c5fab}#main_header .main-search-desktop .search-icon-wrapper{padding:8px;display:flex}#main_header .main-search-desktop .icon-search{background-color:#0b0c0f;width:16px;height:16px}#main_header .main-search-desktop #main-search{border:0;-webkit-appearance:none;appearance:none;max-width:170px;padding:0;transition:all .3s ease-in-out;font-weight:400;font-size:14px;line-height:20px}#main_header .main-search-desktop input:not(:placeholder-shown)~.clear{display:flex}#main_header .main-search-desktop .clear{display:none;position:absolute}body.is-ltr #main_header .main-search-desktop .clear{right:2px}body.is-rtl #main_header .main-search-desktop .clear{left:2px}#main_header .main-search-desktop .clear i{width:20px;height:20px;background-color:rgba(22,24,29,.4)}body.is-ltr #main_header .main-search-desktop.with-monthly-pick{padding-right:0}body.is-rtl #main_header .main-search-desktop.with-monthly-pick{padding-left:0}#main_header .main-search-desktop.with-monthly-pick #main-search{max-width:0}#main_header .monthly-pick{display:none;align-items:center;justify-content:flex-end;position:relative;width:228px;transition:width .5s cubic-bezier(0.18,0.89,0.32,1.18)}body.is-ltr #main_header .monthly-pick{margin-right:16px}body.is-rtl #main_header .monthly-pick{margin-left:16px}@media(min-width:1440px){#main_header .monthly-pick{display:flex}}#main_header .monthly-pick .monthly-icon-note{display:flex;align-items:center;gap:4px;white-space:nowrap;font-weight:700;font-size:12px;line-height:16px;transition:all .3s ease-in-out;opacity:1;position:absolute}body.is-ltr #main_header .monthly-pick .monthly-icon-note{left:0}body.is-rtl #main_header .monthly-pick .monthly-icon-note{right:0}#main_header .monthly-pick .monthly-icon-note .icon{width:16px;height:16px;flex-shrink:0}#main_header .monthly-pick .monthly-pick-link{border-radius:24px;border:1px solid #eef2f6;padding:6px 12px;flex-shrink:0;box-shadow:0 2px 6px 3px rgba(6,49,89,.1);background-color:#fff;position:relative;z-index:1}#main_header .monthly-pick .monthly-pick-link img{width:102px;height:20px;object-fit:contain;display:block}#main_header .monthly-pick.search-opened{width:128px}body.is-ltr #main_header .monthly-pick.search-opened~.main-search-desktop{padding-right:16px}body.is-rtl #main_header .monthly-pick.search-opened~.main-search-desktop{padding-left:16px}#main_header .monthly-pick.search-opened~.main-search-desktop #main-search{max-width:128px}#main_header .monthly-pick.search-opened .monthly-icon-note{opacity:0}#main_header .current-currency,#main_header .current-language{border:none;background-color:rgba(0,0,0,0)}#main_header .current-currency .icon,#main_header .current-language .icon{pointer-events:none}#main_header .current-currency{cursor:pointer;position:relative;color:rgba(22,24,29,.4)}#main_header .current-currency:hover{color:#0a66c2}#main_header .current-currency:hover .symbol{color:#0a66c2;pointer-events:none}#main_header .current-currency:hover .symbol:before{background-color:#0a66c2}#main_header .current-currency .symbol{color:rgba(22,24,29,.7);position:relative}body.is-ltr #main_header .current-currency .symbol{padding-right:5px}body.is-rtl #main_header .current-currency .symbol{padding-left:5px}body.is-ltr #main_header .current-currency .symbol{margin-right:4px}body.is-rtl #main_header .current-currency .symbol{margin-left:4px}#main_header .current-currency .symbol:before{display:inline-block;content:"";width:1px;height:12px;position:absolute;top:2px;background-color:rgba(22,24,29,.4)}body.is-ltr #main_header .current-currency .symbol:before{right:0}body.is-rtl #main_header .current-currency .symbol:before{left:0}#main_header .current-language{cursor:pointer}#main_header .current-language .flag{width:16px;height:16px}body.is-ltr #main_header .current-language .flag{margin-right:6px}body.is-rtl #main_header .current-language .flag{margin-left:6px}#main_header .mobile-buttons{display:flex;align-items:center}body.is-ltr #main_header .mobile-buttons{margin-left:auto}body.is-rtl #main_header .mobile-buttons{margin-right:auto}@media(min-width:1440px){#main_header .mobile-buttons{display:none}}#main_header .search-toggle,#main_header .navbar-toggle,#main_header .close-btn{border:none;background-color:#fff;box-shadow:none;width:32px;height:32px;display:block}@media(min-width:1440px){#main_header .search-toggle{display:none}}.main-nav-active #main_header .search-toggle,.main-search-active #main_header .search-toggle{display:none}#main_header .search-toggle:before{display:block;content:"";width:22px;height:22px;background:rgba(22,24,29,.7);-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/search.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/search.svg);-webkit-mask-size:cover;mask-size:cover;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}body.is-ltr #main_header .navbar-toggle{margin-left:4px}body.is-rtl #main_header .navbar-toggle{margin-right:4px}@media(min-width:1200px){#main_header .navbar-toggle{display:none}}.main-nav-active #main_header .navbar-toggle,.main-search-active #main_header .navbar-toggle{display:none}#main_header .navbar-toggle:before{display:block;content:"";width:22px;height:22px;background:rgba(22,24,29,.7);-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/menu.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/menu.svg);-webkit-mask-size:cover;mask-size:cover;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}#main_header .close-btn{display:none}body.is-ltr #main_header .close-btn{margin-left:4px}body.is-rtl #main_header .close-btn{margin-right:4px}.main-nav-active #main_header .close-btn,.main-search-active #main_header .close-btn{display:block}@media(min-width:1440px){.main-nav-active #main_header .close-btn,.main-search-active #main_header .close-btn{display:none}}#main_header .close-btn:before{display:block;content:"";width:22px;height:22px;background:rgba(22,24,29,.7);-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/x-close.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/x-close.svg);-webkit-mask-size:cover;mask-size:cover;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}@media(min-width:1200px){body:not(.main-nav-submenu-active) #main_header .main-nav>ul.container{display:none}}.main-nav{position:absolute;width:100%;display:none;background-color:#fff;flex-direction:column}.main-nav>ul.container{display:flex;flex-direction:column;gap:8px;margin-top:8px;margin-bottom:8px}@media(min-width:580px){.main-nav>ul.container{margin-top:16px;margin-bottom:16px}}.main-nav-submenu-active .main-nav>ul.container{margin-top:0;margin-bottom:0}.main-nav-active .main-nav{display:flex}.main-nav hr{margin:auto 0 0}.main-nav-submenu-active .main-nav hr{display:none}@media(min-width:1200px){.main-nav hr{display:none}}.main-nav ul{list-style:none;margin-bottom:0}.main-nav li{margin:0;padding:0;background-color:#fff}.main-nav li:not(.opened)[data-id=languages],.main-nav li:not(.opened)[data-id=currencies]{display:none}.main-nav .sub-menu{display:none;padding:0;max-height:calc(100vh - var(--header-only-height) - 100px);margin-top:12px;margin-bottom:12px}@media(min-width:580px){.main-nav .sub-menu{margin-top:16px;margin-bottom:16px}}.main-nav .sub-menu a{font-weight:normal;gap:8px;padding:8px 16px !important;margin-bottom:16px}@media(min-width:580px){.main-nav .sub-menu a{width:100%;justify-content:initial;margin-bottom:8px}}@media(min-width:580px){.main-nav .sub-menu a{width:auto}}.main-nav .sub-menu a.lobby-link{gap:0;font-weight:700;font-size:16px;line-height:20px}.main-nav li.has-children>a{width:100%;gap:8px}body.is-ltr .main-nav li.has-children>a.btn-coupon{padding-right:20px}body.is-rtl .main-nav li.has-children>a.btn-coupon{padding-left:20px}body.is-ltr .main-nav li.has-children>a.btn-coupon .count{margin-left:0}body.is-rtl .main-nav li.has-children>a.btn-coupon .count{margin-right:0}.main-nav li.has-children>a:after{content:"";display:inline-block;width:20px;height:20px;background:rgba(22,24,29,.7);-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/chevron-right.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/chevron-right.svg);-webkit-mask-size:cover;mask-size:cover;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}body.is-ltr .main-nav li.has-children>a:after{margin-left:auto}body.is-rtl .main-nav li.has-children>a:after{margin-right:auto}@media(min-width:1200px){.main-nav li.has-children>a{display:none}}@media(min-width:580px){.main-nav li.has-children[data-id=currencies] .sub-menu{column-count:2}}@media(min-width:1200px){.main-nav li.has-children[data-id=currencies] .sub-menu{column-count:4}}.main-nav li.has-children[data-id=currencies] .sub-menu a strong{pointer-events:none}body.is-ltr .main-nav li.has-children[data-id=currencies] .sub-menu a strong{margin-right:4px}body.is-rtl .main-nav li.has-children[data-id=currencies] .sub-menu a strong{margin-left:4px}@media(min-width:580px){.main-nav li.has-children[data-id=languages] .sub-menu{column-count:2}}@media(min-width:1200px){.main-nav li.has-children[data-id=languages] .sub-menu{column-count:4}}.main-nav li.has-children[data-id=languages] .sub-menu .btn-icon-left .flag{width:20px;height:20px}body.is-ltr .main-nav li.has-children[data-id=languages] .sub-menu .btn-icon-left .flag{margin-right:0}body.is-rtl .main-nav li.has-children[data-id=languages] .sub-menu .btn-icon-left .flag{margin-left:0}.main-nav li.opened>a{flex-direction:row-reverse;justify-content:flex-end;border-radius:0;background-color:#fff;padding-left:12px}.main-nav li.opened>a:hover{background-color:rgba(0,0,0,0)}.main-nav li.opened>a:after{rotate:180deg}body.is-ltr .main-nav li.opened>a:after{margin-left:0}body.is-rtl .main-nav li.opened>a:after{margin-right:0}body.is-ltr .main-nav li.opened>a:after{margin-right:8px}body.is-rtl .main-nav li.opened>a:after{margin-left:8px}.main-nav li.opened:after{content:"";display:block;width:100%;height:1px;background-color:#e2e5ea;left:0;right:0;top:40px;position:absolute}@media(min-width:1200px){.main-nav li.opened:after{display:none}}.main-nav li.opened .sub-menu{display:block}@media(min-width:1200px){.main-nav li.opened[data-id=hosting-types],.main-nav li.opened[data-id=reviews],.main-nav li.opened[data-id=resources],.main-nav li.opened[data-id=comparisons],.main-nav li.opened[data-id=coupons]{max-width:864px;margin-top:16px;margin-bottom:16px}body.is-ltr .main-nav li.opened[data-id=hosting-types],body.is-ltr .main-nav li.opened[data-id=reviews],body.is-ltr .main-nav li.opened[data-id=resources],body.is-ltr .main-nav li.opened[data-id=comparisons],body.is-ltr .main-nav li.opened[data-id=coupons]{margin-left:188px}body.is-rtl .main-nav li.opened[data-id=hosting-types],body.is-rtl .main-nav li.opened[data-id=reviews],body.is-rtl .main-nav li.opened[data-id=resources],body.is-rtl .main-nav li.opened[data-id=comparisons],body.is-rtl .main-nav li.opened[data-id=coupons]{margin-right:188px}}@media(min-width:580px){.main-nav li.opened[data-id=hosting-types] .sub-menu,.main-nav li.opened[data-id=reviews] .sub-menu,.main-nav li.opened[data-id=resources] .sub-menu,.main-nav li.opened[data-id=comparisons] .sub-menu,.main-nav li.opened[data-id=coupons] .sub-menu{column-count:2;column-gap:32px}}@media(min-width:992px){.main-nav li.opened[data-id=hosting-types] .sub-menu,.main-nav li.opened[data-id=reviews] .sub-menu,.main-nav li.opened[data-id=resources] .sub-menu,.main-nav li.opened[data-id=comparisons] .sub-menu,.main-nav li.opened[data-id=coupons] .sub-menu{column-count:3}}.main-nav .labelBadge{padding:1px 6px 3px}.main-nav .labelBadge.blue{background-color:#e7f2fe;color:#0d80f2}.main-nav .labelBadge.red{background-color:#ffede6;color:#ff4d00}.main-nav .labelBadge.green{background-color:#eef8ed;color:#55b946}.main-nav .labelBadge.gray{color:#6c7993}.main-nav .nav-bottom{display:flex;flex-direction:column;align-items:center;padding:8px;margin-top:0;margin-bottom:0}.main-nav-submenu-active .main-nav .nav-bottom{display:none}@media(min-width:580px){.main-nav .nav-bottom{flex-direction:row;padding:16px}}@media(min-width:1200px){.main-nav .nav-bottom{display:none}}.main-nav .nav-bottom .curr-lang{display:flex;justify-content:space-around;width:100%}@media(min-width:580px){.main-nav .nav-bottom .curr-lang{width:auto;justify-content:normal}body.is-ltr .main-nav .nav-bottom .curr-lang{margin-left:auto}body.is-rtl .main-nav .nav-bottom .curr-lang{margin-right:auto}}.main-mobile-search{display:none;background-color:#fff;padding:12px 0;max-width:580px;margin:0 auto;position:absolute;width:100%;left:50%;transform:translateX(-50%)}@media(min-width:992px){.main-mobile-search .inputWrap{max-width:500px;margin:auto}}.main-search-active .main-mobile-search{display:block;border-bottom:1px solid #e2e5ea}.mobile-search-results-wrap{max-width:580px;margin:0 auto}@media(max-height:650px){.mobile-search-results-wrap{max-height:calc(100vh - 112px)}}#main-search-results{background-color:#fff;list-style:none;margin:0;padding:0;overflow:hidden;position:absolute;width:100%;top:113px;left:0;right:0}@media(min-width:1440px){#main-search-results{max-width:520px;position:absolute;top:50px;box-shadow:0 4px 12px 6px rgba(6,49,89,.1);z-index:1;border-radius:8px}body.is-ltr #main-search-results{right:16px}body.is-rtl #main-search-results{left:16px}body.is-ltr #main-search-results{left:initial}body.is-rtl #main-search-results{right:initial}}#main-search-results li{white-space:normal;padding:0;border-bottom:1px solid #e2e5ea}#main-search-results li:last-child{border-bottom:0}#main-search-results a{display:grid;grid-auto-flow:column;align-items:start;padding:12px 24px;border-radius:6px;text-decoration:none;gap:8px;color:#0b0c0f}@media(min-width:580px){#main-search-results a{padding:16px 40px}}@media(min-width:992px){#main-search-results a{padding:16px 52px}}@media(min-width:1440px){#main-search-results a{padding:12px 24px}}#main-search-results a:hover{background:#f6f7f8;color:#0d80f2}#main-search-results a .match{font-weight:700;font-size:16px;line-height:20px;display:inline-block}#main-search-results a .type{background-color:rgba(0,0,0,0);font-weight:400;font-size:12px;line-height:16px;border:1px solid #e2e5ea}body.is-ltr #main-search-results a .type{margin-left:auto}body.is-rtl #main-search-results a .type{margin-right:auto}#main-search-results a .type.brand{color:#0d80f2;border-color:#6eb3f7}#main-search-results a .recommends{font-weight:700;font-size:12px;line-height:16px;grid-row:2/3;grid-column:1/2;display:flex;gap:12px}#main-search-results a .recommended,#main-search-results a .not-recommended{display:flex;align-items:center}#main-search-results a .recommended:before,#main-search-results a .not-recommended:before{content:"";display:inline-block}body.is-ltr #main-search-results a .recommended:before,body.is-ltr #main-search-results a .not-recommended:before{margin-right:4px}body.is-rtl #main-search-results a .recommended:before,body.is-rtl #main-search-results a .not-recommended:before{margin-left:4px}#main-search-results a .recommended{color:#55b946}#main-search-results a .recommended:before{width:16px;height:16px;background:#55b946;-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/thumb-up.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/thumb-up.svg);-webkit-mask-size:cover;mask-size:cover;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}#main-search-results a .not-recommended{color:#ff4d00}#main-search-results a .not-recommended:before{width:16px;height:16px;background:#ff4d00;-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/thumb-down.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/thumb-down.svg);-webkit-mask-size:cover;mask-size:cover;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}#main-search-results a.more{font-weight:700;font-size:16px;line-height:20px;text-align:center;display:block;color:#3d99f5;padding:10px;margin-bottom:0}.breadcrumbs-wrap{padding:12px 0}.breadcrumbs-wrap .container{display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;gap:12px}.breadcrumbs-wrap .breadcrumbs{display:flex;text-overflow:ellipsis;flex-wrap:wrap;font-weight:400;font-size:14px;line-height:16px}.breadcrumbs-wrap .breadcrumbs .divider{color:rgba(22,24,29,.4);margin:0 4px}.breadcrumbs-wrap .breadcrumbs a{color:rgba(22,24,29,.4);display:inline-block}.breadcrumbs-wrap .breadcrumbs a.home{color:#0d80f2}.breadcrumbs-wrap .breadcrumbs a.home:hover{color:#0a66c2}.breadcrumbs-wrap .breadcrumbs a.last{pointer-events:none}.breadcrumbs-wrap .disclosure-top>a{color:#0d80f2}.breadcrumbs-wrap .disclosure-top>a:hover{color:#0a66c2}.breadcrumbs-wrap.dark .breadcrumbs .divider{color:rgba(246,247,248,.4)}.breadcrumbs-wrap.dark .breadcrumbs a{color:rgba(246,247,248,.7)}.breadcrumbs-wrap.dark .breadcrumbs a.home{color:#f6f7f8}.breadcrumbs-wrap.dark .breadcrumbs a.home:hover{color:#0d80f2}.breadcrumbs-wrap.dark .disclosure-top>a{color:#f6f7f8}.breadcrumbs-wrap.dark .disclosure-top>a:hover{color:#0d80f2}.disclosure-top{display:flex;gap:12px}body.is-ltr .disclosure-top{margin-left:auto}body.is-rtl .disclosure-top{margin-right:auto}.disclosure-top>a{font-weight:400;font-size:14px;line-height:16px;display:block}@media(max-width:880px){.disclosure-top [data-tippy-root]{display:none !important}}.popup-active [data-tippy-root]{display:none !important}.share-socials{display:flex;justify-content:center;gap:8px}.share-socials a{background-color:#fff !important;padding:0 !important}.share-socials a .icon{background-color:#0b0c0f !important}@media(min-width:580px){.share-socials a .icon{width:30px !important;height:30px !important}}.company-card-label{background-color:#f0f2f4;border-radius:0 8px 8px 0;color:rgba(22,24,29,.4);display:flex;align-items:center;gap:8px;position:absolute;top:16px}body.is-ltr .company-card-label{padding:8px 8px 8px 16px}body.is-rtl .company-card-label{padding:8px 16px 8px 8px}body.is-ltr .company-card-label{left:0}body.is-rtl .company-card-label{right:0}body.is-rtl .company-card-label{border-radius:8px 0 0 8px}.company-card-label.yellow,.company-card-label.blue,.company-card-label.green,.company-card-label.red{color:#f6f7f8;border-radius:0}body.is-ltr .company-card-label.yellow,body.is-ltr .company-card-label.blue,body.is-ltr .company-card-label.green,body.is-ltr .company-card-label.red{left:-10px}body.is-rtl .company-card-label.yellow,body.is-rtl .company-card-label.blue,body.is-rtl .company-card-label.green,body.is-rtl .company-card-label.red{right:-10px}body.is-rtl .company-card-label.yellow,body.is-rtl .company-card-label.blue,body.is-rtl .company-card-label.green,body.is-rtl .company-card-label.red{border-radius:0}.company-card-label.yellow:before,.company-card-label.blue:before,.company-card-label.green:before,.company-card-label.red:before{display:block;content:"";position:absolute;top:-7px;width:0;height:0;border-bottom:7px solid red;border-left:10px solid rgba(0,0,0,0)}body.is-ltr .company-card-label.yellow:before,body.is-ltr .company-card-label.blue:before,body.is-ltr .company-card-label.green:before,body.is-ltr .company-card-label.red:before{left:0}body.is-rtl .company-card-label.yellow:before,body.is-rtl .company-card-label.blue:before,body.is-rtl .company-card-label.green:before,body.is-rtl .company-card-label.red:before{right:0}body.is-rtl .company-card-label.yellow:before,body.is-rtl .company-card-label.blue:before,body.is-rtl .company-card-label.green:before,body.is-rtl .company-card-label.red:before{transform:scaleX(-1)}.company-card-label.yellow{background-color:#f80}.company-card-label.yellow .int{color:#f80}.company-card-label.yellow:before{border-bottom-color:#cc6d00}.company-card-label.blue{background-color:#172075}.company-card-label.blue .int{color:#172075}.company-card-label.blue:before{border-bottom-color:#0a66c2}.company-card-label.green{background-color:#55b946}.company-card-label.green .int{color:#55b946}.company-card-label.green:before{border-bottom-color:#336f2a}.company-card-label.red{background-color:#ff4d00}.company-card-label.red .int{color:#ff4d00}.company-card-label.red:before{border-bottom-color:#992e00}.company-card-label .int{height:18px;min-width:18px;border-radius:9px;font-size:10px;line-height:12px;font-weight:bold;color:rgba(22,24,29,.7);background-color:#fff;display:flex;align-items:center;justify-content:center;padding:0 6px}.company-card-label .label{font-weight:700;font-size:16px;line-height:20px}body.is-ltr .company-card-label .label{margin-right:16px}body.is-rtl .company-card-label .label{margin-left:16px}.card-rating-component{position:relative;padding:70px 0 0;width:165px;min-height:74px}@media(min-width:580px){.card-rating-component{width:200px}}.card-rating-component .score-top{position:absolute;top:0;padding:12px;left:50%;transform:translateX(-50%);width:100%;background-color:#fff;border:1px solid rgba(0,0,0,0);box-shadow:none;border-radius:12px}.card-rating-component .score-top:hover{cursor:pointer;z-index:3;animation:score-description-animation .6s ease forwards}.card-rating-component .score-top:hover .overall-score{scale:1.2}body.is-ltr .card-rating-component .score-top:hover .overall-score{right:41px}body.is-rtl .card-rating-component .score-top:hover .overall-score{left:41px}.card-rating-component .score-top:hover .description-stars{opacity:0;translate:30% 0}.card-rating-component .score-top:hover .details-tooltip-holder{animation:score-details-animation .55s linear forwards}.card-rating-component .score-visible-block{position:relative;display:flex;align-items:center;justify-content:center;max-width:148px;margin:auto;gap:8px;min-height:48px}.card-rating-component .description-stars{display:inline-flex;flex-direction:column;align-items:center;gap:4px;font-size:14px;line-height:16px;font-weight:700;color:rgba(22,24,29,.7);transition:all .5s cubic-bezier(0.34,-0.53,0.53,1.63);position:relative;opacity:1;translate:0 0}.card-rating-component .overall-score{font-weight:900;line-height:36px;padding:2px 8px;background-color:#f0f7fe;color:rgba(22,24,29,.7);border-radius:6px;font-size:26px;transition:scale .5s ease,translate .5s cubic-bezier(0.34,-0.53,0.53,1.63),right .5s cubic-bezier(0.34,-0.53,0.53,1.63),left .5s cubic-bezier(0.34,-0.53,0.53,1.63);display:inline-flex;gap:4px;align-items:center;position:relative}body.is-ltr .card-rating-component .overall-score{right:0}body.is-rtl .card-rating-component .overall-score{left:0}.card-rating-component .reviews-link-holder{display:flex;flex-direction:column;align-items:center;text-align:center}.card-rating-component .reviews-link-holder .user-reviews-link{font-weight:400;font-size:16px;line-height:20px;margin-bottom:2px}.card-rating-component .incl{font-weight:400;font-size:14px;line-height:16px;color:rgba(22,24,29,.7)}.card-rating-component .details-tooltip-holder{text-align:center;height:0;visibility:hidden}.card-rating-component .details-tooltip-holder .based-on{font-weight:400;font-size:12px;line-height:16px;text-align:center;display:inline-block;margin:12px 0}.card-rating-component .details-tooltip-holder .rating-info{margin-bottom:12px;display:flex;flex-wrap:wrap;text-align:center;align-items:center;justify-content:center}.card-rating-component .details-tooltip-holder .rating-info .score{font-weight:700;font-size:24px;line-height:32px}body.is-ltr .card-rating-component .details-tooltip-holder .rating-info .score{margin-right:8px}body.is-rtl .card-rating-component .details-tooltip-holder .rating-info .score{margin-left:8px}.card-rating-component .details-tooltip-holder .rating-info .based-on{color:rgba(22,24,29,.7);font-weight:400;font-size:12px;line-height:16px;flex-basis:100%}.card-rating-component .details-tooltip-holder .rating-details{padding:0;margin-bottom:12px}.card-rating-component .details-tooltip-holder .rating-details li{display:flex;justify-content:space-between;align-items:center;font-weight:400;font-size:14px;line-height:16px;padding:8px 0;border-bottom:1px solid #e2e5ea}.card-rating-component .details-tooltip-holder .rating-details li:first-child{border-top:1px solid #e2e5ea}.card-rating-component .details-tooltip-holder .rating-details li .label{display:flex;align-items:center;color:rgba(22,24,29,.7)}body.is-ltr .card-rating-component .details-tooltip-holder .rating-details li .label{margin-right:8px}body.is-rtl .card-rating-component .details-tooltip-holder .rating-details li .label{margin-left:8px}.card-rating-component .details-tooltip-holder .rating-details li .label .icon{width:20px;height:20px}body.is-ltr .card-rating-component .details-tooltip-holder .rating-details li .label .icon{margin-right:4px}body.is-rtl .card-rating-component .details-tooltip-holder .rating-details li .label .icon{margin-left:4px}.card-rating-component .details-tooltip-holder .rating-view-site{width:100%}@media(min-width:580px){.card-rating-component.variant-2{min-height:85px}}body.is-ltr .card-rating-component.variant-2 .overall-score{left:0}body.is-rtl .card-rating-component.variant-2 .overall-score{right:0}@media(min-width:580px){.card-rating-component.variant-2 .overall-score{font-size:36px;padding:8px 12px}}.card-rating-component.variant-2 .description-stars .score-name{color:rgba(11,12,15,.7)}@media(min-width:580px){.card-rating-component.variant-2 .description-stars .score-name{font-size:20px;line-height:normal}}@media(min-width:580px){.card-rating-component.variant-2 .description-stars .stars{--size:20 !important}}.card-rating-component.variant-2 .description-stars .review-count{color:#acadae;font-weight:400;font-size:12px;line-height:16px;white-space:nowrap}.card-rating-component.variant-2 .score-top:hover .overall-score{scale:1}body.is-ltr .card-rating-component.variant-2 .score-top:hover .overall-score{right:initial}body.is-rtl .card-rating-component.variant-2 .score-top:hover .overall-score{left:initial}body.is-ltr .card-rating-component.variant-2 .score-top:hover .overall-score{left:41px}body.is-rtl .card-rating-component.variant-2 .score-top:hover .overall-score{right:41px}@media(min-width:580px){body.is-ltr .card-rating-component.variant-2 .score-top:hover .overall-score{left:56px}body.is-rtl .card-rating-component.variant-2 .score-top:hover .overall-score{right:56px}}.card-rating-component.variant-2 .score-top:hover .description-stars{translate:-30% 0}@keyframes score-description-animation{0%{border-color:rgba(0,0,0,0);box-shadow:none}99%{border-color:rgba(0,0,0,0);box-shadow:none}100%{border-color:#e3e8f1;box-shadow:0 0 8px 0 rgba(13,24,50,.08)}}@keyframes score-details-animation{0%{height:0;visibility:hidden}99%{height:0;visibility:hidden}100%{height:auto;visibility:visible}}.go-top{position:fixed;bottom:16px;z-index:9999;transition:all .3s ease-in-out;visibility:hidden;opacity:0}body.is-ltr .go-top{right:16px}body.is-rtl .go-top{left:16px}.go-top.show{opacity:1;visibility:visible}.go-top.livechat-minimized{bottom:65px}.go-top.livechat-maximized{bottom:715px}.go-top a{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background-color:#fff;border:1px solid rgba(13,128,242,.05);margin-top:2px}body.is-ltr .go-top a{margin-left:auto}body.is-rtl .go-top a{margin-right:auto}.go-top a img{pointer-events:none}.go-top .note{padding:8px;background-color:#fff;border-radius:12px;font-weight:400;font-size:12px;line-height:16px;display:none;cursor:pointer}@media(min-width:992px){.go-top .note{opacity:0;display:block}}.go-top:hover a{background-color:rgba(13,128,242,.05)}.go-top:hover .note{opacity:1}#coupons-feed{background-color:#fff;padding:18px 0;position:relative}#coupons-feed .coupons-carousel-wrap{position:relative;padding:0 40px;direction:ltr}@media(min-width:1200px){body.is-ltr #coupons-feed .coupons-carousel-wrap{padding:0 72px 0 16px}body.is-rtl #coupons-feed .coupons-carousel-wrap{padding:0 16px 0 72px}}#coupons-feed .coupons-carousel-wrap .coupons-carousel{padding:0;margin:0;list-style:none;display:flex;align-items:center;overflow:hidden}#coupons-feed .coupons-carousel-wrap .coupons-carousel li:not(.tns-item):not(:first-child){display:none}#coupons-feed .coupons-carousel-wrap a{display:flex;align-items:center;justify-content:center;gap:16px;color:#0b0c0f;overflow:hidden}@media(min-width:580px){#coupons-feed .coupons-carousel-wrap a{justify-content:flex-start}}@media(min-width:580px){body.is-rtl #coupons-feed .coupons-carousel-wrap a{flex-direction:row-reverse}}#coupons-feed .coupons-carousel-wrap a:hover .coupon-title{color:#0a66c2}#coupons-feed .coupons-carousel-wrap a picture{display:flex;align-items:center;height:40px}#coupons-feed .coupons-carousel-wrap a img{max-width:140px;height:auto}#coupons-feed .coupons-carousel-wrap a .divider{display:block;width:2px;height:23px;background-color:#d0cfcf;flex-shrink:0}@media(min-width:1200px){#coupons-feed .coupons-carousel-wrap a .divider:first-of-type{order:-1}}#coupons-feed .coupons-carousel-wrap a .score-star{align-items:center;gap:4px;display:none}@media(min-width:580px){#coupons-feed .coupons-carousel-wrap a .score-star{display:flex}}#coupons-feed .coupons-carousel-wrap a .score-star strong{font-size:22px;line-height:36px}#coupons-feed .coupons-carousel-wrap a .promo-text,#coupons-feed .coupons-carousel-wrap a .coupon-title{white-space:nowrap;font-weight:700;font-size:18px;line-height:24px}#coupons-feed .coupons-carousel-wrap a .promo-text{display:none}@media(min-width:580px){#coupons-feed .coupons-carousel-wrap a .promo-text{display:block}}@media(min-width:1200px){#coupons-feed .coupons-carousel-wrap a .promo-text{order:-2}}#coupons-feed .coupons-carousel-wrap a .claim-deal{display:block}@media(min-width:580px){#coupons-feed .coupons-carousel-wrap a .claim-deal{display:none}}#coupons-feed .coupons-carousel-wrap a .coupon-title,#coupons-feed .coupons-carousel-wrap a .divider-2{display:none}@media(min-width:992px){#coupons-feed .coupons-carousel-wrap a .coupon-title,#coupons-feed .coupons-carousel-wrap a .divider-2{display:block}}@media(min-width:1200px){#coupons-feed .coupons-carousel-controls{position:absolute;top:50%;transform:translateY(-50%);display:flex;gap:8px}body.is-ltr #coupons-feed .coupons-carousel-controls{right:0}body.is-rtl #coupons-feed .coupons-carousel-controls{left:0}}#coupons-feed .coupons-carousel-controls>*{position:absolute;top:50%;transform:translateY(-50%)}@media(min-width:1200px){#coupons-feed .coupons-carousel-controls>*{position:static;transform:translateY(0)}}#coupons-feed .coupons-carousel-controls>*:first-child{left:0}#coupons-feed .coupons-carousel-controls>*:last-child{right:0}:root{--header-height:48px;--header-only-height:48px;scroll-behavior:auto}@media(min-width:1200px){:root{--header-height:64px;--header-only-height:64px}}:target{scroll-margin-top:calc(var(--header-only-height) + 12px)}body{display:flex;flex-direction:column;min-height:100vh;overflow-x:hidden}@supports(min-height:100dvh){body{min-height:100dvh}}.is-rtl{direction:rtl}.sticky-top-container{position:sticky;top:0;z-index:20}.admin-bar .sticky-top-container{top:32px}@media all and (max-width:782px){.admin-bar .sticky-top-container{top:46px}}#body-content{position:relative}.shadow-tooltip{box-shadow:0 12px 16px -4px rgba(16,24,40,.08)}.shadow-card{box-shadow:0 2px 4px -2px rgba(16,24,40,.06),0 4px 8px -2px rgba(16,24,40,.1);transition:box-shadow .15s ease-in-out}.shadow-card:hover{box-shadow:0 12px 16px -4px rgba(16,24,40,.08)}.shadow-modal{box-shadow:0 20px 48px 4px rgba(16,24,40,.18)}.shadow-modal:hover{box-shadow:0 20px 64px 14px rgba(16,24,40,.16)}.stars{--percent:calc(var(--rating) / 5 * 100%);display:inline-block}.stars:before{display:block;content:"";-webkit-mask-image:url(/wp-content/themes/bestwh/v3/dist/img/star-gray.svg);mask-image:url(/wp-content/themes/bestwh/v3/dist/img/star-gray.svg);-webkit-mask-repeat:repeat-x;mask-repeat:repeat-x;-webkit-mask-size:contain;mask-size:contain;background:linear-gradient(90deg,#FFAA00 var(--percent),#F0F2F4 var(--percent));width:calc(var(--size)*5px);height:calc(var(--size)*1px)}.scrollVertical{overflow:hidden;overflow-y:auto;overflow-y:overlay;scrollbar-width:thin;scrollbar-color:#e2e5ea rgba(0,0,0,0)}.scrollVertical::-webkit-scrollbar{width:16px;background-color:rgba(0,0,0,0)}.scrollVertical::-webkit-scrollbar-thumb{background-color:#e2e5ea;height:40%;border-radius:8px;background-clip:padding-box;border:6px solid rgba(0,0,0,0)}.scrollVertical::-webkit-scrollbar-thumb:hover{background-color:#0d80f2;border:4px solid rgba(0,0,0,0)}.scrollHorizontal{overflow:hidden;overflow-x:auto;overflow-x:overlay;scrollbar-width:thin;scrollbar-color:#e2e5ea rgba(0,0,0,0)}.scrollHorizontal::-webkit-scrollbar{width:16px;background-color:rgba(0,0,0,0)}.scrollHorizontal::-webkit-scrollbar-thumb{background-color:#e2e5ea;height:40%;border-radius:8px;background-clip:padding-box;border:6px solid rgba(0,0,0,0)}.scrollHorizontal::-webkit-scrollbar-thumb:hover{background-color:#0d80f2;border:4px solid rgba(0,0,0,0)}hr{margin:24px 0;opacity:1;border-top:1px solid #e2e5ea}.hr-dashed{display:block;height:1px;width:100%;background:linear-gradient(to right,transparent 50%,#E2E5EA 50%);background-size:8px 1px,100% 1px;margin:24px 0}.hidden{display:none !important}.section-divider{padding:24px 0}@media(min-width:992px){.section-divider{padding:32px 0}}.section-divider:before{content:"";display:block;height:2px;width:100%;background-color:#e2e5ea}#gtx-trans{display:none}<!-- default.css Size:98 KB -->
+    </style>
+    <script>
+     const ajaxUrl = "https://hostadvice.com/wp-admin/admin-ajax.php";
+    </script>
+    <link as="font" crossorigin="" href="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/fonts/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2" rel="preload"/>
+    <link as="font" crossorigin="" href="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/fonts/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2" rel="preload"/>
+    <link as="font" crossorigin="" href="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/fonts/S6uyw4BMUTPHjx4wXiWtFCc.woff2" rel="preload"/>
+    <meta content="C4F6A1BBB5956A1836B318D53BE7A586" name="msvalidate.01">
+     <meta content="C328ADBA2532CD540C812CADFE347783" name="msvalidate.01">
+      <meta content="67c5af431830df7d" name="yandex-verification">
+       <meta content="5d0fe21e91" name="verify-admitad"/>
+      </meta>
+     </meta>
+    </meta>
+   </link>
+  </meta>
+ </head>
+ <body class="wp-singular page-template-default page page-id-15 wp-theme-bestwh language-en is-ltr" data-page-type="information">
+  <div id="fb-root">
+  </div>
+  <div class="sticky-top-container">
+   <header id="main_header">
+    <div class="inner-header">
+     <div class="container">
+      <a class="logo" data-ga-event="site logo" href="https://hostadvice.com" rel="home" title="HostAdvice - Web Hosting User Reviews and Expert Opinions">
+       <img alt="HostAdvice" fetchpriority="high" height="44" loading="eager" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/img/logo-fox.png" srcset="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/img/logo-fox2x.png 2x, https://hostadvice.com/wp-content/themes/bestwh/v3/dist/img/logo-fox3x.png 3x" width="220"/>
+      </a>
+      <div class="desktop-menu">
+       <a class="btn btn-pulldown btn-icon-right ghost-gray small" data-target="hosting-types" href="javascript:void(0)" onclick="this.classList.toggle('active')">
+        Hosting types
+        <i class="icon icon-chevron-down" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-down.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-down.svg);">
+        </i>
+       </a>
+       <a class="btn btn-pulldown btn-icon-right ghost-gray small" data-target="reviews" href="javascript:void(0)" onclick="this.classList.toggle('active')">
+        Reviews
+        <i class="icon icon-chevron-down" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-down.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-down.svg);">
+        </i>
+       </a>
+       <a class="btn btn-pulldown btn-icon-right ghost-gray small" data-target="comparisons" href="javascript:void(0)" onclick="this.classList.toggle('active')">
+        Comparisons
+        <i class="icon icon-chevron-down" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-down.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-down.svg);">
+        </i>
+       </a>
+       <a class="btn btn-pulldown btn-icon-right ghost-gray small" data-target="resources" href="javascript:void(0)" onclick="this.classList.toggle('active')">
+        Resources
+        <i class="icon icon-chevron-down" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-down.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-down.svg);">
+        </i>
+       </a>
+       <a class="btn-coupon ghost small" data-target="coupons" href="/web-hosting-coupons/">
+        Hosting Coupons
+        <i class="icon icon-chevron-down" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-down.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-down.svg);">
+        </i>
+        <span class="count">
+         607
+        </span>
+       </a>
+      </div>
+      <div class="monthly-pick">
+       <div class="monthly-icon-note">
+        <i class="icon icon-trophy" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/trophy.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/trophy.svg);">
+        </i>
+        Monthly Pick:
+       </div>
+       <a class="monthly-pick-link" data-exit-el="header:monthly-pick" data-ga-event="monthly pick" data-slug="" href="https://hostadvice.com/go/host/318915/" rel="nofollow" target="_blank">
+        <picture class="attachment-logo size-logo wp-post-image webpexpress-processed">
+         <source sizes="auto, (max-width: 156px) 100vw, 156px" srcset="https://cdn.hostadvice.com/2025/05/Full-Logo-Gradient-Black-Text_Landscape-1-156x39.png.webp 156w, https://cdn.hostadvice.com/2025/05/Full-Logo-Gradient-Black-Text_Landscape-1-300x75.png.webp 300w, https://cdn.hostadvice.com/2025/05/Full-Logo-Gradient-Black-Text_Landscape-1-1024x256.png.webp 1024w, https://cdn.hostadvice.com/2025/05/Full-Logo-Gradient-Black-Text_Landscape-1-768x192.png.webp 768w, https://cdn.hostadvice.com/2025/05/Full-Logo-Gradient-Black-Text_Landscape-1-624x156.png.webp 624w, https://cdn.hostadvice.com/2025/05/Full-Logo-Gradient-Black-Text_Landscape-1.png.webp 1200w" type="image/webp"/>
+         <img alt="Hosting.com Logo" class="attachment-logo size-logo wp-post-image webpexpress-processed" decoding="async" height="39" loading="lazy" sizes="auto, (max-width: 156px) 100vw, 156px" src="https://cdn.hostadvice.com/2025/05/Full-Logo-Gradient-Black-Text_Landscape-1-156x39.png" srcset="https://cdn.hostadvice.com/2025/05/Full-Logo-Gradient-Black-Text_Landscape-1-156x39.png 156w, https://cdn.hostadvice.com/2025/05/Full-Logo-Gradient-Black-Text_Landscape-1-300x75.png 300w, https://cdn.hostadvice.com/2025/05/Full-Logo-Gradient-Black-Text_Landscape-1-1024x256.png 1024w, https://cdn.hostadvice.com/2025/05/Full-Logo-Gradient-Black-Text_Landscape-1-768x192.png 768w, https://cdn.hostadvice.com/2025/05/Full-Logo-Gradient-Black-Text_Landscape-1-624x156.png 624w, https://cdn.hostadvice.com/2025/05/Full-Logo-Gradient-Black-Text_Landscape-1.png 1200w" width="156"/>
+        </picture>
+       </a>
+      </div>
+      <div class="main-search-desktop with-monthly-pick">
+       <span class="search-icon-wrapper">
+        <i class="icon icon-search" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/search.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/search.svg);">
+        </i>
+       </span>
+       <input autocomplete="off" id="main-search" placeholder="Search" type="text"/>
+       <span class="clear">
+        <i class="icon icon-x" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/x.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/x.svg);">
+        </i>
+       </span>
+      </div>
+      <div class="mobile-buttons">
+       <button aria-label="Search" class="search-toggle" type="button">
+       </button>
+       <button aria-label="Menu" class="navbar-toggle" type="button">
+       </button>
+       <button aria-label="Close" class="close-btn" type="button">
+       </button>
+      </div>
+      <a class="btn btn-push ghost-gray small current-currency" data-target="currencies" href="javascript:void(0)">
+       <span class="symbol">
+        $
+       </span>
+       USD
+      </a>
+      <a class="btn btn-push ghost-gray small current-language" data-target="languages" href="javascript:void(0)">
+       <i class="flag flag-gb" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/gb.svg);">
+       </i>
+       EN
+      </a>
+     </div>
+    </div>
+    <nav class="main-nav shadow-tooltip">
+     <ul class="container">
+      <li class="has-children" data-id="hosting-types">
+       <a class="btn btn-push ghost-gray medium" href="#">
+        Hosting types
+       </a>
+       <ul class="sub-menu scrollVertical">
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/web-hosting/">
+          Web Hosting
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/shared-hosting/">
+          Shared Hosting
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/wordpress-hosting/">
+          WordPress Hosting
+          <span class="labelBadge xsmall green">
+           Trendy
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/cloud-hosting/">
+          Cloud Hosting
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/vps/">
+          VPS Hosting
+          <span class="labelBadge xsmall red">
+           Hot
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/dedicated-servers/">
+          Dedicated Servers
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/vps/cheap-vps/">
+          Cheap VPS
+          <span class="labelBadge xsmall blue">
+           Popular
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/reseller/">
+          Reseller Hosting
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/website-builders/">
+          Website Builders
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/cheap-web-hosting/">
+          Cheap Web Hosting
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/offshore-hosting/">
+          Offshore Hosting
+         </a>
+        </li>
+        <li>
+         <a class="link color medium icon-right lobby-link" href="/hosting-categories/">
+          See All Hosting Types
+          <i class="icon icon-arrow-right" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/arrow-right.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/arrow-right.svg);">
+          </i>
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="has-children" data-id="reviews">
+       <a class="btn btn-push ghost-gray medium" href="#">
+        Reviews
+       </a>
+       <ul class="sub-menu scrollVertical">
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/hosting-company/hostinger-reviews/">
+          Hostinger
+          <span class="labelBadge xsmall green">
+           Best Overall
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/hosting-company/ultahost-reviews/">
+          Ultahost
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/hosting-company/hostarmada-reviews/">
+          HostArmada
+          <span class="labelBadge xsmall blue">
+           Most Affordable
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/hosting-company/fastcomet-reviews/">
+          FastComet
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/hosting-company/webdock-reviews/">
+          Webdock
+          <span class="labelBadge xsmall red">
+           Best VPS Hosting
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/hosting-company/interserver-reviews/">
+          InterServer
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/hosting-company/ionos-reviews/">
+          IONOS
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/hosting-company/verpex-hosting-reviews/">
+          Verpex Hosting
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/hosting-company/kamatera-reviews/">
+          Kamatera
+          <span class="labelBadge xsmall red">
+           Best Value
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/hosting-company/chemicloud-reviews/">
+          ChemiCloud
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/hosting-company/hosting-com-reviews/">
+          Hosting.com
+          <span class="labelBadge xsmall green">
+           Most Trusted Hosting
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="link color medium icon-right lobby-link" href="/hosting-company/">
+          See All Hosting Providers
+          <i class="icon icon-arrow-right" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/arrow-right.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/arrow-right.svg);">
+          </i>
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="has-children" data-id="comparisons">
+       <a class="btn btn-push ghost-gray medium" href="#">
+        Comparisons
+       </a>
+       <ul class="sub-menu scrollVertical">
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/tools/web-hosting-comparison/hostinger-vs-ionos/">
+          Hostinger vs IONOS
+          <span class="labelBadge xsmall green">
+           Most searched
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/tools/web-hosting-comparison/a2-hosting-vs-hostinger/">
+          Hostinger vs A2 Hosting
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/tools/web-hosting-comparison/godaddy-vs-hosting-com/">
+          GoDaddy vs Hosting.com
+          <span class="labelBadge xsmall blue">
+           Trendy
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/tools/web-hosting-comparison/hosting-com-vs-siteground/">
+          SiteGround vs Hosting.com
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/tools/web-hosting-comparison/hostgator-vs-hostinger/">
+          Hostinger vs HostGator
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/tools/web-hosting-comparison/blue-host-vs-hostinger/">
+          Hostinger vs Bluehost
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/tools/web-hosting-comparison/hosting-com-vs-siteground/">
+          SiteGround vs Hosting.com
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/tools/web-hosting-comparison/fastcomet-vs-ionos/">
+          IONOS vs FastComet
+         </a>
+        </li>
+        <li>
+         <a class="link color medium icon-right lobby-link" href="/tools/web-hosting-comparison/">
+          See All Comparisons
+          <i class="icon icon-arrow-right" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/arrow-right.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/arrow-right.svg);">
+          </i>
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="has-children" data-id="resources">
+       <a class="btn btn-push ghost-gray medium" href="#">
+        Resources
+       </a>
+       <ul class="sub-menu scrollVertical">
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/web-hosting-advisor/">
+          Web Hosting Advisor
+          <span class="labelBadge xsmall red">
+           Hot
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/tools/whois/">
+          Who Is Hosting?
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/marketshare/">
+          MarketShare
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/tools/plans-search/">
+          Plans Search
+          <span class="labelBadge xsmall green">
+           Trendy
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/tools/web-hosting-comparison/">
+          Web hosting comparison
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="/awards/">
+          Awards
+          <span class="labelBadge xsmall blue">
+           2025
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="link color medium icon-right lobby-link" href="/resources/">
+          Articles and Blogs
+          <i class="icon icon-arrow-right" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/arrow-right.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/arrow-right.svg);">
+          </i>
+         </a>
+        </li>
+        <li>
+         <a class="link color medium icon-right lobby-link" href="/tools/">
+          See All Tools
+          <i class="icon icon-arrow-right" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/arrow-right.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/arrow-right.svg);">
+          </i>
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="has-children" data-id="coupons">
+       <a class="btn-coupon ghost medium" data-target="coupons" href="/web-hosting-coupons/">
+        Hosting Coupons
+        <span class="count">
+         607
+        </span>
+       </a>
+       <ul class="sub-menu scrollVertical">
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/hosting-company/hostinger-coupons/">
+          Hostinger coupon codes
+          <span class="labelBadge xsmall red">
+           Hot
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/hosting-company/hosting-com-coupons/">
+          Hosting.com coupon codes
+          <span class="labelBadge xsmall green">
+           Recommended
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-right" href="https://hostadvice.com/hosting-company/kamatera-coupons/">
+          Kamatera coupon codes
+          <span class="labelBadge xsmall blue">
+           Most Popular
+          </span>
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/hosting-company/webdock-coupons/">
+          Webdock coupon codes
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" href="https://hostadvice.com/hosting-company/verpex-hosting-coupons/">
+          Verpex Hosting coupon codes
+         </a>
+        </li>
+        <li>
+         <a class="link color medium icon-right lobby-link" href="/web-hosting-coupons/">
+          See All Coupons
+          <i class="icon icon-arrow-right" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/arrow-right.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/arrow-right.svg);">
+          </i>
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="has-children" data-id="currencies">
+       <a class="btn btn-push ghost-gray medium" href="javascript:void(0)">
+        Currency
+       </a>
+       <ul class="sub-menu scrollVertical">
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="USD" href="javascript:void(0)">
+          <strong>
+           $ |
+          </strong>
+          United States dollar
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="EUR" href="javascript:void(0)">
+          <strong>
+           € |
+          </strong>
+          Euro
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="GBP" href="javascript:void(0)">
+          <strong>
+           £ |
+          </strong>
+          British pound
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="AED" href="javascript:void(0)">
+          <strong>
+           AED |
+          </strong>
+          UAE dirham
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="ARS" href="javascript:void(0)">
+          <strong>
+           ARS |
+          </strong>
+          Argentine peso
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="AUD" href="javascript:void(0)">
+          <strong>
+           AU$ |
+          </strong>
+          Australian dollar
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="BGN" href="javascript:void(0)">
+          <strong>
+           BGN |
+          </strong>
+          Bulgarian lev
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="BRL" href="javascript:void(0)">
+          <strong>
+           R$ |
+          </strong>
+          Brazilian real
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="CAD" href="javascript:void(0)">
+          <strong>
+           CA$ |
+          </strong>
+          Canadian dollar
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="CHF" href="javascript:void(0)">
+          <strong>
+           CHF |
+          </strong>
+          Swiss franc
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="CLP" href="javascript:void(0)">
+          <strong>
+           CLP |
+          </strong>
+          Chilean peso
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="CNY" href="javascript:void(0)">
+          <strong>
+           CN¥ |
+          </strong>
+          Chinese yuan
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="COP" href="javascript:void(0)">
+          <strong>
+           COP |
+          </strong>
+          Colombian peso
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="CZK" href="javascript:void(0)">
+          <strong>
+           CZK |
+          </strong>
+          Czech koruna
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="DKK" href="javascript:void(0)">
+          <strong>
+           DKK |
+          </strong>
+          Danish krone
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="EGP" href="javascript:void(0)">
+          <strong>
+           EGP |
+          </strong>
+          Egyptian pound
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="HKD" href="javascript:void(0)">
+          <strong>
+           HK$ |
+          </strong>
+          Hong Kong dollar
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="HUF" href="javascript:void(0)">
+          <strong>
+           HUF |
+          </strong>
+          Hungarian forint
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="IDR" href="javascript:void(0)">
+          <strong>
+           IDR |
+          </strong>
+          Indonesian rupiah
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="ILS" href="javascript:void(0)">
+          <strong>
+           ₪ |
+          </strong>
+          Israeli new shekel
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="INR" href="javascript:void(0)">
+          <strong>
+           INR |
+          </strong>
+          Indian rupee
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="JPY" href="javascript:void(0)">
+          <strong>
+           ¥ |
+          </strong>
+          Japanese yen
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="LKR" href="javascript:void(0)">
+          <strong>
+           LKR |
+          </strong>
+          Sri Lankan Rupee
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="KRW" href="javascript:void(0)">
+          <strong>
+           ₩ |
+          </strong>
+          South Korean won
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="MXN" href="javascript:void(0)">
+          <strong>
+           MX$ |
+          </strong>
+          Mexican peso
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="MYR" href="javascript:void(0)">
+          <strong>
+           MYR |
+          </strong>
+          Malaysian ringgit
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="NOK" href="javascript:void(0)">
+          <strong>
+           NOK |
+          </strong>
+          Norwegian krone
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="NZD" href="javascript:void(0)">
+          <strong>
+           NZ$ |
+          </strong>
+          New Zealand dollar
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="PLN" href="javascript:void(0)">
+          <strong>
+           PLN |
+          </strong>
+          Polish złoty
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="RON" href="javascript:void(0)">
+          <strong>
+           RON |
+          </strong>
+          Romanian leu
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="RUB" href="javascript:void(0)">
+          <strong>
+           RUB |
+          </strong>
+          Russian ruble
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="SAR" href="javascript:void(0)">
+          <strong>
+           SAR |
+          </strong>
+          Saudi riyal
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="SEK" href="javascript:void(0)">
+          <strong>
+           SEK |
+          </strong>
+          Swedish krona
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="SGD" href="javascript:void(0)">
+          <strong>
+           SGD |
+          </strong>
+          Singapore dollar
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="THB" href="javascript:void(0)">
+          <strong>
+           ฿ |
+          </strong>
+          Thai baht
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="TRY" href="javascript:void(0)">
+          <strong>
+           TRY |
+          </strong>
+          Turkish lira
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="TWD" href="javascript:void(0)">
+          <strong>
+           NT$ |
+          </strong>
+          New Taiwan dollar
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="UAH" href="javascript:void(0)">
+          <strong>
+           UAH |
+          </strong>
+          Ukrainian hryvnia
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium" data-currency="ZAR" href="javascript:void(0)">
+          <strong>
+           ZAR |
+          </strong>
+          South African rand
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="has-children" data-id="languages">
+       <a class="btn btn-push ghost-gray medium" href="javascript:void(0)">
+        Language
+       </a>
+       <ul class="sub-menu scrollVertical">
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="javascript:void(0)">
+          <i class="flag flag-gb" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/gb.svg);">
+          </i>
+          English
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://ar.hostadvice.com/faq/">
+          <i class="flag flag-arl" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/arl.svg);">
+          </i>
+          العربية
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://bg.hostadvice.com/faq/">
+          <i class="flag flag-bg" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/bg.svg);">
+          </i>
+          Български
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://cs.hostadvice.com/faq/">
+          <i class="flag flag-cz" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/cz.svg);">
+          </i>
+          Česky
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://da.hostadvice.com/faq/">
+          <i class="flag flag-dk" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/dk.svg);">
+          </i>
+          Dansk
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://de.hostadvice.com/faq/">
+          <i class="flag flag-de" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/de.svg);">
+          </i>
+          Deutsch
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://el.hostadvice.com/faq/">
+          <i class="flag flag-gr" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/gr.svg);">
+          </i>
+          Ελληνικά
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://et.hostadvice.com/faq/">
+          <i class="flag flag-ee" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/ee.svg);">
+          </i>
+          Eesti
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://es.hostadvice.com/faq/">
+          <i class="flag flag-es" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/es.svg);">
+          </i>
+          Español
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://fi.hostadvice.com/faq/">
+          <i class="flag flag-fi" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/fi.svg);">
+          </i>
+          Suomi
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://fr.hostadvice.com/faq/">
+          <i class="flag flag-fr" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/fr.svg);">
+          </i>
+          Français
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://he.hostadvice.com/faq/">
+          <i class="flag flag-il" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/il.svg);">
+          </i>
+          עברית
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://hk.hostadvice.com/faq/">
+          <i class="flag flag-hk" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/hk.svg);">
+          </i>
+          粵語
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://hr.hostadvice.com/faq/">
+          <i class="flag flag-hr" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/hr.svg);">
+          </i>
+          Hrvatski
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://hu.hostadvice.com/faq/">
+          <i class="flag flag-hu" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/hu.svg);">
+          </i>
+          Magyar
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://id.hostadvice.com/faq/">
+          <i class="flag flag-id" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/id.svg);">
+          </i>
+          Bahasa Indonesia
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://it.hostadvice.com/faq/">
+          <i class="flag flag-it" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/it.svg);">
+          </i>
+          Italiano
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://ja.hostadvice.com/faq/">
+          <i class="flag flag-jp" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/jp.svg);">
+          </i>
+          日本語
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://ko.hostadvice.com/faq/">
+          <i class="flag flag-kr" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/kr.svg);">
+          </i>
+          한국어
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://lt.hostadvice.com/faq/">
+          <i class="flag flag-lt" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/lt.svg);">
+          </i>
+          Lietuvių
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://lv.hostadvice.com/faq/">
+          <i class="flag flag-lv" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/lv.svg);">
+          </i>
+          Latviešu
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://nl.hostadvice.com/faq/">
+          <i class="flag flag-nl" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/nl.svg);">
+          </i>
+          Nederlands
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://no.hostadvice.com/faq/">
+          <i class="flag flag-no" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/no.svg);">
+          </i>
+          Norsk
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://pl.hostadvice.com/faq/">
+          <i class="flag flag-pl" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/pl.svg);">
+          </i>
+          Polski
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://pt.hostadvice.com/faq/">
+          <i class="flag flag-pt" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/pt.svg);">
+          </i>
+          Português
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://ro.hostadvice.com/faq/">
+          <i class="flag flag-ro" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/ro.svg);">
+          </i>
+          Română
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://ru.hostadvice.com/faq/">
+          <i class="flag flag-ru" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/ru.svg);">
+          </i>
+          Русский
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://sk.hostadvice.com/faq/">
+          <i class="flag flag-sk" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/sk.svg);">
+          </i>
+          Slovenčina
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://sr.hostadvice.com/faq/">
+          <i class="flag flag-rs" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/rs.svg);">
+          </i>
+          Srpski
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://sv.hostadvice.com/faq/">
+          <i class="flag flag-se" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/se.svg);">
+          </i>
+          Svenska
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://th.hostadvice.com/faq/">
+          <i class="flag flag-th" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/th.svg);">
+          </i>
+          ไทย
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://tr.hostadvice.com/faq/">
+          <i class="flag flag-tr" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/tr.svg);">
+          </i>
+          Türkçe
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://zh.hostadvice.com/faq/">
+          <i class="flag flag-cn" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/cn.svg);">
+          </i>
+          中文
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://uk.hostadvice.com/faq/">
+          <i class="flag flag-ua" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/ua.svg);">
+          </i>
+          Українська
+         </a>
+        </li>
+        <li>
+         <a class="btn btn-push ghost-gray medium btn-icon-left" href="https://vi.hostadvice.com/faq/">
+          <i class="flag flag-vn" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/vn.svg);">
+          </i>
+          Việtnam
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <hr class="solid"/>
+     <div class="container nav-bottom">
+      <div class="curr-lang">
+       <a class="btn btn-push ghost-gray small current-currency" data-target="currencies" href="javascript:void(0)">
+        <span class="symbol">
+         $
+        </span>
+        USD
+       </a>
+       <a class="btn btn-push ghost-gray small current-language" data-target="languages" href="javascript:void(0)">
+        <i class="flag flag-gb" style="background-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/flags/gb.svg);">
+        </i>
+        EN
+       </a>
+      </div>
+     </div>
+    </nav>
+    <div class="main-mobile-search shadow-tooltip">
+     <div class="container">
+      <div class="inputWrap">
+       <input autocomplete="off" class="searchInput medium" id="main-mobile-search" name="" placeholder="Search" type="text" value=""/>
+       <i class="icon icon-search" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/search.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/search.svg);">
+       </i>
+       <span class="clear" onclick="this.parentNode.querySelector('input').value = ''">
+        <i class="icon icon-x" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/x.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/x.svg);">
+        </i>
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="mobile-search-results-wrap scrollVertical">
+    </div>
+   </header>
+  </div>
+  <div id="body-content">
+   <div class="breadcrumbs-wrap">
+    <div class="container">
+     <nav class="breadcrumbs">
+      <a class="home" href="https://hostadvice.com" rel="index up" title="Go to HostAdvice">
+       <span>
+        HostAdvice
+       </span>
+      </a>
+      <div class="divider">
+       /
+      </div>
+      <a class="current-item last" href="javascript:void(0);" rel="" title="Go to FAQ">
+       <span>
+        FAQ
+       </span>
+      </a>
+     </nav>
+     <div class="disclosure-top">
+      <a data-popup-target="rating-methodology-popup" data-tippy-content='&lt;p&gt;Our Expert Hosting Rating Methodology assesses support quality, pricing, features, performance, user-friendliness and more key factors to help you choose the best hosting provider for your needs.&lt;/p&gt;&lt;p&gt;Learn more on our detailed rating &lt;a target="_blank" href="/rating-methodology/hosting-rating-methodology/"&gt;methodology page&lt;/a&gt;&lt;/p&gt;
+' data-tippy-interactive="true" data-tippy-maxwidth="400" href="javascript:void(0)">
+       Rating Methodology
+      </a>
+      <a data-popup-target="disclosure-popup" data-tippy-content="&lt;p&gt;Every service that we recommend here at Host Advice has been thoroughly researched and personally tried out by out team. It&amp;rsquo;s our pledge to offer the most credible, accountable and reliable information to you. Your experience, as-well as your trust in us, is extremely important to us and we will nev&amp;hellip;&lt;/p&gt; &lt;a href=&quot;javascript:void(0)&quot; class=&quot;link medium color&quot; data-popup-target='disclosure-popup'&gt;Read more&lt;/a&gt;
+" data-tippy-interactive="true" data-tippy-maxwidth="400" href="javascript:void(0)">
+       Advertising disclosure
+      </a>
+     </div>
+     <script id="disclosure-popup" type="text/template">
+      <div class="popup shadow-modal" id="disclosure-popup-popup">
+<header class="popup-header">
+<h2>Advertising disclosure</h2>
+<i class="close"></i>
+</header>
+<div class="inner-popup scrollVertical">
+<p>Every service that we recommend here at Host Advice has been thoroughly researched and personally tried out by out team. It&rsquo;s our pledge to offer the most credible, accountable and reliable information to you. Your experience, as-well as your trust in us, is extremely important to us and we will never compromise that.<br />
+This is how we make our living: we participate in affiliate programs as a part of our funding. In other words, when you click on links to the services&rsquo; sites and make a purchase, it may result in a commission that is credited to Host Advice. This is how we are able to finance this website, keep it running at full capacity and continually provide you with the most reliable, relevant, thorough and up-to-date reviews information about dozens of web-hosting services around the world.<br />
+However, quality &amp; accuracy comes first. This is something that we will never jeopardize &ndash; if we ever did, we might as-well find ourselves another job.<br />
+Please feel free to <a target="_blank" href="/contact-us/">contact us</a> any time. It is our top mission to provide you with accurate, reliable information and full answers to any questions you might have.</p>
+</div>
+</div>
+     </script>
+     <script id="rating-methodology-popup" type="text/template">
+      <div class="popup shadow-modal" id="rating-methodology-popup-popup">
+<header class="popup-header">
+<h2>Rating Methodology</h2>
+<i class="close"></i>
+</header>
+<div class="inner-popup scrollVertical">
+<p>Our Expert Hosting Rating Methodology assesses support quality, pricing, features, performance, user-friendliness and more key factors to help you choose the best hosting provider for your needs.</p><p>Learn more on our detailed rating <a target="_blank" href="/rating-methodology/hosting-rating-methodology/">methodology page</a></p>
+</div>
+</div>
+     </script>
+    </div>
+   </div>
+   <div class="common-page">
+    <div class="container main-container">
+     <aside class="sidebar-wrap">
+      <div class="sidebar-inner">
+       <nav class="sidebar-menu shadow-card">
+        <a class="" href="https://hostadvice.com/about-us/">
+         About Us
+        </a>
+        <a class="active" href="https://hostadvice.com/faq/">
+         FAQ
+        </a>
+        <a class="" href="https://hostadvice.com/contact-us/">
+         Contact Us
+        </a>
+        <a class="" href="https://hostadvice.com/write-for-us/">
+         Become an Author
+        </a>
+        <a class="" href="https://hostadvice.com/affiliate-program/">
+         Affiliate Program
+        </a>
+        <a class="" href="https://hostadvice.com/terms-of-service/">
+         Terms Of Service
+        </a>
+        <a class="" href="https://hostadvice.com/privacy-policy/">
+         Privacy Policy
+        </a>
+        <a class="" href="https://hostadvice.com/disclosure/">
+         Disclosure
+        </a>
+        <a class="" href="https://hostadvice.com/human-sitemap/">
+         Human Sitemap
+        </a>
+        <a class="" href="https://hostadvice.com/submit-web-host/">
+         Submit Your Web Host
+        </a>
+        <a class="" href="https://hostadvice.com/rating-methodology/hosting-rating-methodology/">
+         Hosting Rating Methodology
+        </a>
+       </nav>
+       <section class="tools">
+        <a class="tool shadow-card" href="https://hostadvice.com/tools/whois/">
+         <div class="tool-content">
+          <h2>
+           Who Is Hosting This Site? Free Tool
+          </h2>
+          <div class="description">
+           Enter any website URL to find out which hosting service they are using
+          </div>
+         </div>
+         <img alt="Who Is Hosting This Site? Free Tool" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/img/foxes/Business.png"/>
+        </a>
+        <a class="tool shadow-card" href="https://hostadvice.com/marketshare/">
+         <div class="tool-content">
+          <h2>
+           Market Share 2025
+          </h2>
+          <div class="description">
+           See the 2025 market share of each hosting company divided by countries
+          </div>
+         </div>
+         <img alt="Market Share 2025" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/img/foxes/Marketing.png"/>
+        </a>
+        <a class="tool shadow-card" href="https://hostadvice.com/tools/web-hosting-comparison/">
+         <div class="tool-content">
+          <h2>
+           Web Hosting side by side comparison
+          </h2>
+          <div class="description">
+           Easily compare up to 3 web hosting companies and see which one is better for you
+          </div>
+         </div>
+         <img alt="Web Hosting side by side comparison" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/img/foxes/VPS.png"/>
+        </a>
+       </section>
+      </div>
+     </aside>
+     <main>
+      <div class="menu-carousel">
+       <ul>
+        <li>
+         <a class="tab small" href="https://hostadvice.com/about-us/">
+          About Us
+         </a>
+        </li>
+        <li>
+         <a class="tab small active" href="https://hostadvice.com/faq/">
+          FAQ
+         </a>
+        </li>
+        <li>
+         <a class="tab small" href="https://hostadvice.com/contact-us/">
+          Contact Us
+         </a>
+        </li>
+        <li>
+         <a class="tab small" href="https://hostadvice.com/write-for-us/">
+          Become an Author
+         </a>
+        </li>
+        <li>
+         <a class="tab small" href="https://hostadvice.com/affiliate-program/">
+          Affiliate Program
+         </a>
+        </li>
+        <li>
+         <a class="tab small" href="https://hostadvice.com/terms-of-service/">
+          Terms Of Service
+         </a>
+        </li>
+        <li>
+         <a class="tab small" href="https://hostadvice.com/privacy-policy/">
+          Privacy Policy
+         </a>
+        </li>
+        <li>
+         <a class="tab small" href="https://hostadvice.com/disclosure/">
+          Disclosure
+         </a>
+        </li>
+        <li>
+         <a class="tab small" href="https://hostadvice.com/human-sitemap/">
+          Human Sitemap
+         </a>
+        </li>
+        <li>
+         <a class="tab small" href="https://hostadvice.com/submit-web-host/">
+          Submit Your Web Host
+         </a>
+        </li>
+        <li>
+         <a class="tab small" href="https://hostadvice.com/rating-methodology/hosting-rating-methodology/">
+          Hosting Rating Methodology
+         </a>
+        </li>
+       </ul>
+       <div class="menu-carousel-controls">
+        <div class="menu-prev">
+         <a class="btn btn-icon small ghost-gray" href="javascript:void(0)">
+          <i class="icon icon-chevron-left" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-left.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-left.svg);">
+          </i>
+         </a>
+        </div>
+        <div class="menu-next">
+         <a class="btn btn-icon small ghost-gray" href="javascript:void(0)">
+          <i class="icon icon-chevron-right" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-right.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/chevron-right.svg);">
+          </i>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="main-content shadow-card">
+       <article class="article">
+        <section id="faq">
+         <h2>
+          Frequently Asked Questions
+         </h2>
+         <details open="">
+          <summary>
+           What is Web Hosting?
+          </summary>
+          <div class="answer">
+           <p>
+            Web hosting is the service of storing data that keeps websites up and running for users. Every single website that is online has a host server, and almost all use a web host to manage that storage. Not all web hosts provide the same level of quality, though. Uptime, and data speed and quantity of transfer are the best measures of a host’s success. You can often pay more to get data transferred in higher quantities, faster. Most web hosts offer unlimited bandwidth and disk space at a speed that is perfectly fine for small-to-moderate sized businesses or individuals. For companies with burdensome websites, they may need to seek out a more advanced web host.
+           </p>
+          </div>
+         </details>
+         <details>
+          <summary>
+           What is shared web hosting?
+          </summary>
+          <div class="answer">
+           <p>
+            A shared web hosting service is an agreement whereby each user gets a certain portion of total available resources. Multiple domains are hosted by the same server, which means that the server’s capabilities are split between multiple domains. This means that these websites will not experience as robust of performance as a website that has a dedicated server applying all of its resources solely to one website. If requests come in for multiple websites on the same server simultaneously, the server will only be able to transfer so much information at a single time. For low-bandwidth websites, the delays will often be unnoticeable, but for more burdensome websites, the delay can be significant.
+           </p>
+          </div>
+         </details>
+         <details>
+          <summary>
+           What is a domain name?
+          </summary>
+          <div class="answer">
+           <p>
+            A domain name is the actual name of a website, and every single website has a domain name. To obtain one, you need to purchase it through a domain registrar. Domains can cost anywhere from a few dollars a year to hundreds of thousands of dollars a year, based on the contract and popularity of the domain. Every domain name is actually pointing to an IP (Internet Protocol) address, which is a series of numbers. Because most people can’t remember 10 digits in perfect order, domain names serve as easily-remembered alias for visitors. Probably the best known domain name is google.com, and Google’s IP address is 173.194.79.99… which is easier for you to remember?
+           </p>
+          </div>
+         </details>
+         <details>
+          <summary>
+           What is bandwidth and how much do you need?
+          </summary>
+          <div class="answer">
+           <p>
+            Bandwidth is the amount of data that is accessed while viewing a website. Every time a user views a website, data is transferred, and the measurement of that transfer is bandwidth. In general, images, audio files and video files are higher in bandwidth than text. That means that if you have a more burdensome website in terms of bandwidth – if you have lots of video or streaming audio, for example – you have a higher bandwidth requirement than someone with a simple text-only website, or someone with only a few low-resolution images. Some web hosts offer unlimited bandwidth, and some place a cap on it.
+           </p>
+          </div>
+         </details>
+         <details>
+          <summary>
+           What is disk space and how much do I need?
+          </summary>
+          <div class="answer">
+           <p>
+            Disk space refers to the total space available for a user to store files on at any time. Files may be any type – HTML, images, videos – and at any single given time, the total file size may not exceed the disk space. How much disk space you need is dependent on what type of media and interactions you’ll be hosting through your site. Your email account’s storage is also counted in disk space, so if you have large files that will sit in the account, that will boost your disk space needs. Remember that although you might not need much space now, you want wiggle room to expand and grow in the future, without switching hosts.
+           </p>
+          </div>
+         </details>
+         <details>
+          <summary>
+           How will I know how many people visited my site?
+          </summary>
+          <div class="answer">
+           <p>
+            You can find out how many people visited your site through a number of different third party resources, such as Google Analytics or StatCounter. Some hosts provide easy ways to incorporate these tools into your website to start tracking, but some don’t give you any help in setup at all. It’s important that businesses install some sort of traffic counting tool on every page of a site and regularly decipher the data to make improvements to marketing and sales plans. For personal websites, traffic counters are merely tools of curiosity, but the numbers certainly are fun to keep an eye on!
+           </p>
+          </div>
+         </details>
+         <details>
+          <summary>
+           How do I obtain a dedicated email account? (me@mywebsite.com)
+          </summary>
+          <div class="answer">
+           <p>
+            When you purchase an account with a web host, one of the services you receive is a certain number of dedicated email accounts for any domain hosted on that account. Some web hosts give you one email account, or 20 email accounts, or unlimited email accounts. Those email accounts are managed from the control panel of the web host and you can set up email accounts, change their passwords, and set up email forwarders, all from that control panel. You can also set up a dedicated email account to send from a web-based email service like gMail or an offline service like Outlook.
+           </p>
+          </div>
+         </details>
+         <details>
+          <summary>
+           What is SSL security?
+          </summary>
+          <div class="answer">
+           <p>
+            This is an abbreviation for Secure Sockets Layer. This is a common protocol used to communicate information securely online. This protocol provides a safe path that runs between two Internet-connected machines or two machines on the same internal network. It is an extremely handy tool used by web browsers who need to connect securely to a web server, given the wild insecurity inherent in the Internet. SSL usually operates and sets up a secure session with little or no interaction from the person actually visiting the web site. You may notice the browser displaying a padlock or the address showing a padlock and a green bar – those are the hallmarks of SSL doing its magic.
+           </p>
+          </div>
+         </details>
+         <details>
+          <summary>
+           Is my website protected from hackers?
+          </summary>
+          <div class="answer">
+           <p>
+            Unfortunately, the short answer is that without adding in some level of protection, your site is probably not protected from hackers. Some web hosts give you that added protection, and some don’t. For example, some web hosts provide SiteLock Security, which works hard to block hackers and spammers. If you are using WordPress, your site is inherently more secure than many, but it is still extremely important to install plugins focused on boosting security.
+           </p>
+          </div>
+         </details>
+         <details>
+          <summary>
+           How do I back up my site?
+          </summary>
+          <div class="answer">
+           <p>
+            You can – and should! – back up your website regularly. From the control panel, there should be a Backup function, and with one click, you can save all of your files, if they are under 500 MB. If they total more than that, you will need to save your databases in partitions. To back up your website, is also as simple as through FTP simply dragging your PUBLIC.html folder over to your computer and copying the files in that way. You will not back up your email accounts like that, though. If you have doubts about your web host’s security, you can set up an email forwarder and have everything duplicated in an online email service like gMail or an offline one like Outlook.
+           </p>
+          </div>
+         </details>
+         <details>
+          <summary>
+           How do I remove a listing from HostAdvice?
+          </summary>
+          <div class="answer">
+           <p>
+            We understand that some web hosting companies might want to remove their company’s listing from HostAdvice for different reasons. However, we only remove listings from HostAdvice if the hosting company has been permanently closed.
+           </p>
+           <p>
+            We do recommend that you make sure that your company information is up to date. In order to claim and edit your company profile please visit: https://hostadvice.com/claim-web-hosting/
+           </p>
+           <p>
+            If your company has been permanently closed and you want to remove it from the site, please contact us with a document that proves that and we will delete it from the site.
+           </p>
+          </div>
+         </details>
+        </section>
+       </article>
+      </div>
+     </main>
+    </div>
+    <div class="container">
+     <div class="section-divider">
+     </div>
+    </div>
+   </div>
+  </div>
+  <script id="image" type="text/template">
+   <div class="popup shadow-modal" id="image-popup">
+<i class="close"></i>
+<figure>
+
+<img src="{{src}}" alt="{{alt}}">
+<figcaption>{{description}}</figcaption>
+</figure>
+</div>
+  </script>
+  <div id="disclosure">
+   <div class="container">
+    <em>
+     HostAdvice.com provides professional web hosting reviews fully independent of any other entity. Our reviews are unbiased, honest, and apply the same evaluation standards to all those reviewed.
+    </em>
+    <em>
+     While monetary compensation is received from a few of the companies listed on this site, compensation of services and products have no influence on the direction or conclusions of our reviews. Nor does the compensation influence our rankings for certain host companies.
+    </em>
+    <em>
+     This compensation covers account purchasing costs, testing costs and royalties paid to reviewers.
+    </em>
+   </div>
+  </div>
+  <div class="go-top">
+   <div class="note shadow-card">
+    Click to go to the top of the page
+   </div>
+   <a href="javascript:void(0)">
+    <img alt="Go To Top" height="14px" loading="lazy" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/img/go-top.svg" width="14px"/>
+   </a>
+  </div>
+  <footer id="main_footer">
+   <div class="container">
+    <div class="row">
+     <div class="ha-info col-12 col-lg-3">
+      <div class="row">
+       <div class="col-12 col-sm-6 col-lg-12">
+        <a class="logo" href="https://hostadvice.com">
+         <img alt="HostAdvice" height="30" loading="lazy" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/img/logo_white.svg" width="192"/>
+        </a>
+        <div class="social">
+         <a class="btn btn-icon" href="https://www.facebook.com/hostadvice" rel="nofollow" target="_blank">
+          <i class="icon icon-facebook-circle" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/facebook-circle.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/facebook-circle.svg);">
+          </i>
+         </a>
+         <a class="btn btn-icon" href="https://www.linkedin.com/company/host-advice" rel="nofollow" target="_blank">
+          <i class="icon icon-linkedin-circle" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/linkedin-circle.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/linkedin-circle.svg);">
+          </i>
+         </a>
+         <a class="btn btn-icon" href="https://discord.gg/u5rdXpeNy5" rel="nofollow" target="_blank">
+          <i class="icon icon-discord-circle" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/discord-circle.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/discord-circle.svg);">
+          </i>
+         </a>
+         <a class="btn btn-icon" href="https://twitter.com/hostadvicecom" rel="nofollow" target="_blank">
+          <i class="icon icon-twitter-circle" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/twitter-circle.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/twitter-circle.svg);">
+          </i>
+         </a>
+         <a class="btn btn-icon" href="/blog/feed/" rel="nofollow">
+          <i class="icon icon-rss-circle" style="-webkit-mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/rss-circle.svg); mask-image: url(https://hostadvice.com/wp-content/themes/bestwh/v3/dist/icons/rss-circle.svg);">
+          </i>
+         </a>
+        </div>
+       </div>
+       <div class="col-12 col-sm-6 col-lg-12 dashboard-affiliate-program">
+        <div class="dashboard">
+         <h2>
+          Are You a Hosting Owner?
+         </h2>
+         <p>
+          Sign in or register to manage your hosting account
+         </p>
+         <div class="actions">
+          <a class="btn btn-push medium sm-small lg-medium fill" href="/claim-web-hosting/">
+           Register
+          </a>
+          <a class="btn btn-push medium sm-small lg-medium stroke log-in" href="/company-dashboard/">
+           Log In
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="menus col-12 col-lg-8">
+      <div class="row">
+       <div class="col-12 col-sm-6 col-md-3">
+        <h3>
+         General
+        </h3>
+        <a href="/about-us/">
+         About Us
+        </a>
+        <a href="/contact-us/">
+         Contact Us
+        </a>
+        <a href="/human-sitemap/">
+         Human Sitemap
+        </a>
+        <a href="/affiliate-program/">
+         Affiliate Program
+        </a>
+        <a href="/submit-web-host/">
+         Submit Your Web Host
+        </a>
+        <a href="/claim-web-hosting/">
+         Claim Web Hosting
+        </a>
+        <a href="/disclosure/">
+         Disclosure
+        </a>
+        <a href="/personal-data-removal-request/">
+         Personal Data Removal Request
+        </a>
+        <a href="/privacy-policy/">
+         Privacy Policy
+        </a>
+        <a href="/terms-of-service/">
+         Terms Of Service
+        </a>
+       </div>
+       <div class="col-12 col-sm-6 col-md-3">
+        <h3>
+         Hosting types
+        </h3>
+        <a href="/hosting-categories/">
+         All Hosting Types
+        </a>
+        <a href="https://hostadvice.com/web-hosting/">
+         Web Hosting
+        </a>
+        <a href="https://hostadvice.com/shared-hosting/">
+         Shared Hosting
+        </a>
+        <a href="https://hostadvice.com/wordpress-hosting/">
+         WordPress Hosting
+        </a>
+        <a href="https://hostadvice.com/cloud-hosting/">
+         Cloud Hosting
+        </a>
+        <a href="https://hostadvice.com/vps/">
+         VPS Hosting
+        </a>
+        <a href="https://hostadvice.com/dedicated-servers/">
+         Dedicated Servers
+        </a>
+        <a href="https://hostadvice.com/vps/cheap-vps/">
+         Cheap VPS
+        </a>
+        <a href="https://hostadvice.com/reseller/">
+         Reseller Hosting
+        </a>
+        <a href="https://hostadvice.com/website-builders/">
+         Website Builders
+        </a>
+        <a href="https://hostadvice.com/cheap-web-hosting/">
+         Cheap Web Hosting
+        </a>
+       </div>
+       <div class="col-12 col-sm-6 col-md-3">
+        <h3>
+         Hosting Coupons
+        </h3>
+        <a href="/web-hosting-coupons/">
+         Web Hosting Coupons
+        </a>
+        <a href="/hosting-company/kamatera-coupons/">
+         Kamatera Coupons
+        </a>
+        <a href="/hosting-company/hostarmada-coupons/">
+         HostArmada Coupons
+        </a>
+        <a href="/hosting-company/hostinger-coupons/">
+         Hostinger Coupons
+        </a>
+        <a href="/hosting-company/ultahost-coupons/">
+         Ultahost Coupons
+        </a>
+        <a href="/hosting-company/verpex-hosting-coupons/">
+         Verpex Coupons
+        </a>
+       </div>
+       <div class="col-12 col-sm-6 col-md-3">
+        <h3>
+         Knowledge
+        </h3>
+        <a href="/resources/">
+         Resources
+        </a>
+        <a href="/blog/">
+         Blog
+        </a>
+        <a href="/tools/">
+         Tools
+        </a>
+        <a href="/tools/web-hosting-comparison/">
+         Web Hosting Comparison Side by Side
+        </a>
+        <a href="/tools/whois/">
+         Who Is Hosting?
+        </a>
+        <a href="/hosting-company/">
+         Web Hosting Companies
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="container">
+    <div class="copyright col-12">
+     © 2025 | HostAdvice.com
+    </div>
+   </div>
+  </footer>
+  <script type="speculationrules">
+   {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/bestwh\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+  </script>
+  <script defer="" src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js">
+  </script>
+  <script>
+   window.OneSignalDeferred = window.OneSignalDeferred || [];
+window.OneSignalDeferred.push(async function(OneSignal) {
+await OneSignal.init({
+appId: "775ebba5-606e-4437-88a3-4d6caaa40207",
+serviceWorkerPath: "https://hostadvice.com/wp-content/themes/bestwh/v3/assets/vendors/OneSignalSDKWorker.js",
+});
+});
+  </script>
+  <script type="text/javascript">
+   // don't show chatbot on mobile
+if (window.innerWidth > 768) {
+(function (d) {
+var js, id = 'aitechly', ref = d.getElementsByTagName('script')[0];
+if (d.getElementById(id)) { return; }
+js = d.createElement('script'); js.id= id; js.defer = true;
+js.dataset.name = "aitechly";
+js.dataset.address = "https://aitechly.com";
+js.dataset.id = "655b966bee7297cb0d76083c";
+js.dataset.position = "right";
+js.dataset.serverAddress = "https://aitechly.com/api/";
+js.dataset.widgetSize = "normal";
+js.dataset.widgetButtonSize = "normal";
+js.src = "https://aitechly.com/scripts/chatbot_wrapper.js";
+ref.parentNode.insertBefore(js, ref);
+}(document));
+}
+  </script>
+  <script defer="defer" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/js/vendors/tiny-slider.js?ver=0.2.92" type="text/javascript">
+  </script>
+  <script defer="defer" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/js/common-page.js?ver=0.2.92" type="text/javascript">
+  </script>
+  <script defer="defer" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/js/vendors/autocomplete.js?ver=0.2.92" type="text/javascript">
+  </script>
+  <script defer="defer" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/js/vendors/clipboard.js?ver=0.2.92" type="text/javascript">
+  </script>
+  <script defer="defer" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/js/vendors/js-cookie.js?ver=0.2.92" type="text/javascript">
+  </script>
+  <script defer="defer" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/js/vendors/tippy.js.js?ver=0.2.92" type="text/javascript">
+  </script>
+  <script defer="defer" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/js/vendors/popperjs.js?ver=0.2.92" type="text/javascript">
+  </script>
+  <script defer="defer" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/js/vendors/ouibounce.js?ver=0.2.92" type="text/javascript">
+  </script>
+  <script defer="defer" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/js/vendors/lazyframe.js?ver=0.2.92" type="text/javascript">
+  </script>
+  <script defer="defer" src="https://hostadvice.com/wp-content/themes/bestwh/v3/dist/js/default.js?ver=0.2.92" type="text/javascript">
+  </script>
+  <script type="application/ld+json">
+   {
+"@context": "https:\/\/schema.org",
+"@type": "FAQPage",
+"name": "FAQ",
+"headline": "FAQ",
+"url": "https:\/\/hostadvice.com\/faq\/",
+"description": "What is Web Hosting?Web hosting is the service of storing data that keeps websites up and running for users. Every single website that is online has a host server, and almost all use a web host to manage that storage. Not all web hosts provide the same level of quality, though. Uptime, and data speed [&hellip;]",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "What is Web Hosting?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Web hosting is the service of storing data that keeps websites up and running for users. Every single website that is online has a host server, and almost all use a web host to manage that storage. Not all web hosts provide the same level of quality, though. Uptime, and data speed and quantity of transfer are the best measures of a host\u2019s success. You can often pay more to get data transferred in higher quantities, faster. Most web hosts offer unlimited bandwidth and disk space at a speed that is perfectly fine for small-to-moderate sized businesses or individuals. For companies with burdensome websites, they may need to seek out a more advanced web host."
+}
+},
+{
+"@type": "Question",
+"name": "What is shared web hosting?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "A shared web hosting service is an agreement whereby each user gets a certain portion of total available resources. Multiple domains are hosted by the same server, which means that the server\u2019s capabilities are split between multiple domains. This means that these websites will not experience as robust of performance as a website that has a dedicated server applying all of its resources solely to one website. If requests come in for multiple websites on the same server simultaneously, the server will only be able to transfer so much information at a single time. For low-bandwidth websites, the delays will often be unnoticeable, but for more burdensome websites, the delay can be significant."
+}
+},
+{
+"@type": "Question",
+"name": "What is a domain name?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "A domain name is the actual name of a website, and every single website has a domain name. To obtain one, you need to purchase it through a domain registrar. Domains can cost anywhere from a few dollars a year to hundreds of thousands of dollars a year, based on the contract and popularity of the domain. Every domain name is actually pointing to an IP (Internet Protocol) address, which is a series of numbers. Because most people can\u2019t remember 10 digits in perfect order, domain names serve as easily-remembered alias for visitors. Probably the best known domain name is google.com, and Google\u2019s IP address is 173.194.79.99\u2026 which is easier for you to remember?"
+}
+},
+{
+"@type": "Question",
+"name": "What is bandwidth and how much do you need?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Bandwidth is the amount of data that is accessed while viewing a website. Every time a user views a website, data is transferred, and the measurement of that transfer is bandwidth. In general, images, audio files and video files are higher in bandwidth than text. That means that if you have a more burdensome website in terms of bandwidth \u2013 if you have lots of video or streaming audio, for example \u2013 you have a higher bandwidth requirement than someone with a simple text-only website, or someone with only a few low-resolution images. Some web hosts offer unlimited bandwidth, and some place a cap on it."
+}
+},
+{
+"@type": "Question",
+"name": "What is disk space and how much do I need?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Disk space refers to the total space available for a user to store files on at any time. Files may be any type \u2013 HTML, images, videos \u2013 and at any single given time, the total file size may not exceed the disk space. How much disk space you need is dependent on what type of media and interactions you\u2019ll be hosting through your site. Your email account\u2019s storage is also counted in disk space, so if you have large files that will sit in the account, that will boost your disk space needs. Remember that although you might not need much space now, you want wiggle room to expand and grow in the future, without switching hosts."
+}
+},
+{
+"@type": "Question",
+"name": "How will I know how many people visited my site?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "You can find out how many people visited your site through a number of different third party resources, such as Google Analytics or StatCounter. Some hosts provide easy ways to incorporate these tools into your website to start tracking, but some don\u2019t give you any help in setup at all. It\u2019s important that businesses install some sort of traffic counting tool on every page of a site and regularly decipher the data to make improvements to marketing and sales plans. For personal websites, traffic counters are merely tools of curiosity, but the numbers certainly are fun to keep an eye on!"
+}
+},
+{
+"@type": "Question",
+"name": "How do I obtain a dedicated email account? (me@mywebsite.com)",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "When you purchase an account with a web host, one of the services you receive is a certain number of dedicated email accounts for any domain hosted on that account. Some web hosts give you one email account, or 20 email accounts, or unlimited email accounts. Those email accounts are managed from the control panel of the web host and you can set up email accounts, change their passwords, and set up email forwarders, all from that control panel. You can also set up a dedicated email account to send from a web-based email service like gMail or an offline service like Outlook."
+}
+},
+{
+"@type": "Question",
+"name": "What is SSL security?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "This is an abbreviation for Secure Sockets Layer. This is a common protocol used to communicate information securely online. This protocol provides a safe path that runs between two Internet-connected machines or two machines on the same internal network. It is an extremely handy tool used by web browsers who need to connect securely to a web server, given the wild insecurity inherent in the Internet. SSL usually operates and sets up a secure session with little or no interaction from the person actually visiting the web site. You may notice the browser displaying a padlock or the address showing a padlock and a green bar \u2013 those are the hallmarks of SSL doing its magic."
+}
+},
+{
+"@type": "Question",
+"name": "Is my website protected from hackers?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Unfortunately, the short answer is that without adding in some level of protection, your site is probably not protected from hackers. Some web hosts give you that added protection, and some don\u2019t. For example, some web hosts provide SiteLock Security, which works hard to block hackers and spammers. If you are using WordPress, your site is inherently more secure than many, but it is still extremely important to install plugins focused on boosting security."
+}
+},
+{
+"@type": "Question",
+"name": "How do I back up my site?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "You can \u2013 and should! \u2013 back up your website regularly. From the control panel, there should be a Backup function, and with one click, you can save all of your files, if they are under 500 MB. If they total more than that, you will need to save your databases in partitions. To back up your website, is also as simple as through FTP simply dragging your PUBLIC.html folder over to your computer and copying the files in that way. You will not back up your email accounts like that, though. If you have doubts about your web host\u2019s security, you can set up an email forwarder and have everything duplicated in an online email service like gMail or an offline one like Outlook."
+}
+},
+{
+"@type": "Question",
+"name": "How do I remove a listing from HostAdvice?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "We understand that some web hosting companies might want to remove their company\u2019s listing from HostAdvice for different reasons. However, we only remove listings from HostAdvice if the hosting company has been permanently closed.We do recommend that you make sure that your company information is up to date. In order to claim and edit your company profile please visit: https:\/\/hostadvice.com\/claim-web-hosting\/If your company has been permanently closed and you want to remove it from the site, please contact us with a document that proves that and we will delete it from the site."
+}
+}
+]
+}
+  </script>
+  <script id="tr-js">
+   window['translations']={};window['translations']["Read More"]='Read More';
+window['translations']["Less"]='Less';
+window['translations']["More"]='More';
+window['translations']["See More"]='See More';
+window['translations']["See Less"]='See Less';
+window['translations']["Hide Scores"]='Hide Scores';
+window['translations']["More results"]='More results';
+window['translations']["No matches found"]='No matches found';
+window['translations']["Detailed Scores"]='Detailed Scores';
+window['translations']["Please select at least 1 option"]='Please select at least 1 option';
+window['translations']["Please select address, by moving red marker on the map"]='Please select address, by moving red marker on the map';
+window['translations']["Please add at least 1 hosting plan!"]='Please add at least 1 hosting plan!';
+window['translations']["Please select at least 1 location"]='Please select at least 1 location';
+window['translations']["You must enter your email"]='You must enter your email';
+window['translations']["You must enter your name"]='You must enter your name';
+window['translations']["This field is required."]='This field is required.';
+window['translations']["Please fix this field."]='Please fix this field.';
+window['translations']["Please enter a valid email address."]='Please enter a valid email address.';
+window['translations']["Please enter a valid URL."]='Please enter a valid URL.';
+window['translations']["Please enter a valid date."]='Please enter a valid date.';
+window['translations']["Please enter a valid date ( ISO )."]='Please enter a valid date ( ISO ).';
+window['translations']["Please enter a valid number."]='Please enter a valid number.';
+window['translations']["Please enter only digits."]='Please enter only digits.';
+window['translations']["Please enter no more than {0} characters."]='Please enter no more than {0} characters.';
+window['translations']["Please enter at least {0} characters."]='Please enter at least {0} characters.';
+window['translations']["Please enter a value between {0} and {1} characters long."]='Please enter a value between {0} and {1} characters long.';
+window['translations']["Please enter a value between {0} and {1}."]='Please enter a value between {0} and {1}.';
+window['translations']["Please enter a value less than or equal to {0}."]='Please enter a value less than or equal to {0}.';
+window['translations']["Please enter a value greater than or equal to {0}."]='Please enter a value greater than or equal to {0}.';
+window['translations']["{{n}} Screenshot Explanation"]='{{n}} Screenshot Explanation';
+window['translations']["$/month"]='$/month';
+window['translations']["Core"]='Core';
+window['translations']["Cores"]='Cores';
+window['translations']["GHz"]='GHz';
+window['translations']["GB"]='GB';
+window['translations']["MB"]='MB';
+window['translations']["TB"]='TB';
+window['translations']["Any"]='Any';
+window['translations']["Try Again"]='Try Again';
+window['translations']["Unlimited"]='Unlimited';
+window['translations']["Not Rated Yet"]='Not Rated Yet';
+window['translations']["Sorted by Recommendations"]='Sorted by Recommendations';
+window['translations']["Sorted by Web Host"]='Sorted by Web Host';
+window['translations']["Sorted by Name"]='Sorted by Name';
+window['translations']["Sorted by Price"]='Sorted by Price';
+window['translations']["Sorted by Money Back"]='Sorted by Money Back';
+window['translations']["Sorted by Support"]='Sorted by Support';
+window['translations']["Sorted by Recommendations"]='Sorted by Recommendations';
+window['translations']["Sorted by User's Score"]='Sorted by User\'s Score';
+window['translations']["Sorted by Users Rating"]='Sorted by Users Rating';
+window['translations']["Please enter at least 2 words"]='Please enter at least 2 words';
+window['translations']["At least 1 record required"]='At least 1 record required';
+window['translations']["Please enter all scores"]='Please enter all scores';
+window['translations']["Select score"]='Select score';
+window['translations']["Cancel"]='Cancel';
+window['translations']["ad_topbar_text"]='ad_topbar_text';
+window['translations']["ad_topbar_button_text"]='ad_topbar_button_text';
+window['translations']["Exclude from Comparison"]='Exclude from Comparison';
+window['translations']["sites count:"]='sites count:';
+window['translations']["SUPERB!"]='SUPERB!';
+window['translations']["GOOD"]='Good';
+window['translations']["DECENT"]='DECENT';
+window['translations']["POOR"]='POOR';
+window['translations']["TERRIBLE"]='TERRIBLE';
+window['translations']["Describe the screenshot..."]='Describe the screenshot...';
+function tr_key($key, $default) {
+return window['translations'][$key] ? window['translations'][$key] : $default;
+}
+function tr($string) {
+return tr_key($string, $string);
+}
+window['translations_current_language'] = "en";
+window['translations_current_fb_locale'] = "en_US";
+  </script>
+ </body>
+</html>
