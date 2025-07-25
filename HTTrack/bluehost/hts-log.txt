@@ -1,0 +1,19 @@
+HTTrack3.49-2 launched on Fri, 25 Jul 2025 01:33:28 at https://www.bluehost.com/help 1 +*.html -*
+(winhttrack https://www.bluehost.com/help -W -O "/Users/jami/Documents/Internships/springmicro/HTTrack/bluehost" -%v -r 1 +*.html -* )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+01:34:44	Warning: 	Unexpected socket error during pre-loop
+01:35:49	Warning: 	Unexpected socket error during pre-loop
+01:35:50	Error: 	"Receive Error" (-4) after 2 retries at link 1/robots.txt (from primary/primary)
+01:35:50	Warning: 	Retry after error -4 (Receive Error) at link 1/ (from primary/primary)
+01:37:05	Warning: 	Unexpected socket error during pre-loop
+01:37:06	Warning: 	Retry after error -4 (Receive Error) at link 1/ (from primary/primary)
+01:38:21	Warning: 	Unexpected socket error during pre-loop
+01:38:22	Error: 	"Receive Error" (-4) after 2 retries at link 1/ (from primary/primary)
+
+HTTrack Website Copier/3.49-2 mirror complete in 4 minutes 54 seconds : 6 links scanned, 1 files written (93807 bytes overall) [23131 bytes received at 78 bytes/sec], 93967 bytes transferred using HTTP compression in 2 files, ratio 22%
+(2 errors, 6 warnings, 0 messages)

@@ -2,126 +2,118 @@ import cloudscraper
 import json
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
-import re
-import requests # Import at the top
-import certifi # Import certifi to provide SSL certificates
+import requests 
+import certifi
 from urllib.parse import urljoin
 
-def scrape_and_add_faqs():
+def scrape_bluehost_help_center():
     """
-    Scrapes web hosting articles from the GoDaddy Help Center and adds them to the database via the API.
-    Uses cloudscraper to bypass anti-bot measures.
+    Scrapes articles from the Bluehost Help Center by first finding all categories,
+    then scraping all articles within each category.
     """
-    # --- Target URL for scraping: GoDaddy's cPanel Hosting Help section ---
-    base_url = "https://www.godaddy.com"
-    # The URL now includes a region code, which can help with access.
-    scrape_url = urljoin(base_url, "/en-in/help/web-hosting-cpanel-1000006")
+    base_url = "https://www.bluehost.com"
+    main_help_url = urljoin(base_url, "/help")
     
-    # --- Create a cloudscraper instance configured to mimic a real browser ---
-    # This helps bypass more advanced anti-bot measures that cause 403 errors.
-    scraper = cloudscraper.create_scraper(
-        browser={
-            'browser': 'chrome',
-            'platform': 'windows',
-            'mobile': False
-        }
-    )
+    scraper = cloudscraper.create_scraper()
     
-    print(f"Attempting to scrape article links from: {scrape_url}")
+    print(f"--- Starting Bluehost Scraper ---")
+    print(f"Fetching categories from: {main_help_url}")
 
+    # --- 1. Get the main help page to find all category links ---
     try:
-        # --- Fetch the HTML content of the main help page ---
-        page = scraper.get(scrape_url, timeout=20, verify=certifi.where())
-        page.raise_for_status()
+        main_page = scraper.get(main_help_url, timeout=30, verify=certifi.where())
+        main_page.raise_for_status()
     except Exception as e:
-        print(f"❌ Error fetching the main help page URL: {e}")
+        print(f"❌ Error fetching the main help page: {e}")
         return
 
-    # --- Parse the HTML to find article links ---
-    soup = BeautifulSoup(page.content, "html.parser")
+    main_soup = BeautifulSoup(main_page.content, "html.parser")
     
-    # --- GoDaddy Selector: Find all links within the main article list ---
-    # The links are inside a div with the class 'article-list-container'
-    article_list_container = soup.find("div", class_="article-list-container")
-    if not article_list_container:
-        print("❌ Could not find the article list container. GoDaddy's website structure may have changed.")
+    # --- 2. Find all category links ---
+    # Based on inspection, category links are within a div with class 'wh-categories'
+    category_container = main_soup.find("div", class_="wh-categories")
+    if not category_container:
+        print("❌ Could not find category container. Bluehost's website structure may have changed.")
         return
         
-    article_links = article_list_container.find_all("a")
+    category_links = [urljoin(base_url, a['href']) for a in category_container.find_all("a", href=True)]
 
-    if not article_links:
-        print("❌ Could not find any article links on the page.")
+    if not category_links:
+        print("❌ Could not find any category links.")
         return
 
-    print(f"Found {len(article_links)} articles to process.")
+    print(f"Found {len(category_links)} categories to process.")
 
     # --- API Configuration ---
     api_url = "http://127.0.0.1:8000/items/"
     api_post_headers = {"Content-Type": "application/json"}
-    web_hosting_category_id = 2 # Using a new category ID for GoDaddy articles
+    bluehost_category_id = 3 # Using a new category ID for Bluehost articles
 
-    for link in article_links:
-        article_title = link.get_text(strip=True)
-        article_href = link.get('href')
-
-        if not article_title or not article_href:
-            continue
-
-        # --- Construct the full URL for the article page ---
-        article_url = urljoin(base_url, article_href)
-        print(f"\nScraping article: '{article_title}'")
-        print(f"  -> from {article_url}")
-
+    # --- 3. Loop through each category to get article links ---
+    for category_url in category_links:
+        print(f"\nProcessing Category: {category_url}")
         try:
-            # --- Scrape the individual article page ---
-            article_page = scraper.get(article_url, timeout=20, verify=certifi.where())
-            article_page.raise_for_status()
-            article_soup = BeautifulSoup(article_page.content, "html.parser")
+            category_page = scraper.get(category_url, timeout=30, verify=certifi.where())
+            category_page.raise_for_status()
+            category_soup = BeautifulSoup(category_page.content, "html.parser")
 
-            # --- Extract the main content of the article ---
-            # The content is within a div with the class 'article-body'
-            content_element = article_soup.find("div", class_="article-body")
-            if not content_element:
-                print(f"   ⚠️ Could not find content for '{article_title}'. Skipping.")
+            # --- Find all article links within this category ---
+            # Articles are in a div with class 'wh-articles-list'
+            article_list_div = category_soup.find("div", class_="wh-articles-list")
+            if not article_list_div:
+                print(f"  -> No article list found in this category. Skipping.")
                 continue
-            
-            # Get all text from the article body, separating paragraphs with newlines
-            answer_text = content_element.get_text(strip=True, separator='\n')
 
-            # --- Prepare the data payload for the API ---
-            item_data = {
-                "title": article_title,
-                "question": article_title, # Using the article title as the "question"
-                "answer": answer_text,
-                "votes": 0,
-                "recommendations": 0,
-                "last_updated": datetime.now(timezone.utc).isoformat(),
-                "category_id": web_hosting_category_id,
-                "enabled": True,
-                "team_id": None,
-                "order": None
-            }
+            articles_to_scrape = [urljoin(base_url, a['href']) for a in article_list_div.find_all("a", href=True)]
+            print(f"  -> Found {len(articles_to_scrape)} articles in this category.")
 
-            # --- Send the POST request to the API ---
-            response = requests.post(api_url, data=json.dumps(item_data), headers=api_post_headers)
+            # --- 4. Loop through each article and scrape its content ---
+            for article_url in articles_to_scrape:
+                try:
+                    article_page = scraper.get(article_url, timeout=20, verify=certifi.where())
+                    article_page.raise_for_status()
+                    article_soup = BeautifulSoup(article_page.content, "html.parser")
 
-            if response.status_code == 200:
-                print(f"   ✅ Successfully added to database.")
-            else:
-                print(f"   ❌ Failed to add to database.")
-                print(f"      Status Code: {response.status_code}")
-                print(f"      Response: {response.text}")
+                    # Extract title and content
+                    title_element = article_soup.find("h1", class_="wh-article-title")
+                    content_element = article_soup.find("div", class_="wh-article-content")
 
-        except requests.exceptions.ConnectionError:
-            print("❌ Connection Error: Could not connect to the API. Halting script.")
-            print("   Please ensure the FastAPI server is running.")
-            return
+                    if not title_element or not content_element:
+                        print(f"    - ⚠️ Could not find title/content for {article_url}. Skipping.")
+                        continue
+                    
+                    article_title = title_element.get_text(strip=True)
+                    answer_text = content_element.get_text(strip=True, separator='\n')
+
+                    # --- Prepare data and POST to your API ---
+                    item_data = {
+                        "title": article_title,
+                        "question": article_title,
+                        "answer": answer_text,
+                        "votes": 0, "recommendations": 0,
+                        "last_updated": datetime.now(timezone.utc).isoformat(),
+                        "category_id": bluehost_category_id,
+                        "enabled": True, "team_id": None, "order": None
+                    }
+
+                    response = requests.post(api_url, data=json.dumps(item_data), headers=api_post_headers)
+
+                    if response.status_code == 200:
+                        print(f"    - ✅ Successfully added '{article_title}'")
+                    else:
+                        print(f"    - ❌ Failed to add '{article_title}' (Status: {response.status_code})")
+
+                except requests.exceptions.ConnectionError:
+                    print("❌ Connection Error: Could not connect to the API. Halting script.")
+                    return
+                except Exception as e:
+                    print(f"    - ❌ Error processing article {article_url}: {e}")
+
         except Exception as e:
-            print(f"   ❌ An unexpected error occurred while processing this article: {e}")
+            print(f"  -> ❌ Error processing category {category_url}: {e}")
 
 
 if __name__ == "__main__":
     # You will need to install the required libraries:
     # pip install cloudscraper beautifulsoup4 requests certifi
-    scrape_and_add_faqs()
-
+    scrape_bluehost_help_center()

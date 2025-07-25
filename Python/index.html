@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpdesk Knowledge Base</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* A little bit of custom CSS for scrollbars and layout */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .main-content {
+            height: calc(100vh - 120px);
+            /* Full height minus header */
+        }
+
+        /* Custom scrollbar for a better look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm p-4 sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-2xl font-bold text-gray-800 mb-4">Helpdesk Knowledge Base</h1>
+            <form id="search-form" class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="text-gray-400 h-5 w-5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+                <input type="search" id="search-input" placeholder="Search articles..."
+                    class="block w-full p-3 pl-12 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500">
+                <button type="submit"
+                    class="text-white absolute right-2.5 bottom-2.5 bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-1.5">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="max-w-7xl mx-auto mt-4">
+        <main class="main-content flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden">
+
+            <!-- Sidebar for Article List -->
+            <aside id="sidebar"
+                class="w-full md:w-1/3 lg:w-1/4 h-full overflow-y-auto bg-gray-50 border-r border-gray-200">
+                <div class="p-4 border-b border-gray-200">
+                    <h2 id="list-title" class="text-lg font-semibold text-gray-700 cursor-pointer hover:text-blue-600">
+                        All Articles</h2>
+                </div>
+                <ul id="item-list">
+                    <!-- JS will populate this list -->
+                </ul>
+            </aside>
+
+            <!-- Main view for selected article -->
+            <section id="article-detail" class="w-full md:w-2/3 lg:w-3/4 h-full p-6 md:p-8 overflow-y-auto">
+                <!-- JS will populate this area -->
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // --- DOM Element References ---
+        const itemList = document.getElementById('item-list');
+        const articleDetail = document.getElementById('article-detail');
+        const searchForm = document.getElementById('search-form');
+        const searchInput = document.getElementById('search-input');
+        const listTitle = document.getElementById('list-title');
+
+        // --- State Management ---
+        let allItems = [];
+        let selectedItemId = null;
+        const API_BASE_URL = 'http://127.0.0.1:8000';
+
+        // --- Helper Functions ---
+        const showLoader = (element) => {
+            element.innerHTML = `
+                <div class="flex justify-center items-center p-8 h-full">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+                </div>`;
+        };
+
+        const showError = (element, message) => {
+            element.innerHTML = `
+                <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 m-4 rounded-md" role="alert">
+                    <p class="font-bold">Error</p>
+                    <p>${message}</p>
+                </div>`;
+        };
+
+        // --- Rendering Functions ---
+        const renderItemList = (items) => {
+            itemList.innerHTML = ''; // Clear previous list
+            if (items.length === 0) {
+                itemList.innerHTML = `<li class="p-4 text-gray-500">No articles found.</li>`;
+                return;
+            }
+            items.forEach(item => {
+                const li = document.createElement('li');
+                li.className = `p-4 border-b border-gray-200 cursor-pointer hover:bg-blue-100 ${selectedItemId === item.id ? 'bg-blue-100 border-l-4 border-blue-500' : ''}`;
+                li.innerHTML = `<h3 class="font-semibold text-gray-800">${item.title}</h3>`;
+                li.addEventListener('click', () => {
+                    selectedItemId = item.id;
+                    renderItemList(items); // Re-render to show selection
+                    renderArticleDetail(item);
+                });
+                itemList.appendChild(li);
+            });
+        };
+
+        const renderArticleDetail = (item) => {
+            if (!item) {
+                articleDetail.innerHTML = `
+                    <div class="flex flex-col justify-center items-center h-full text-center p-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500 h-12 w-12"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        <h2 class="mt-4 text-2xl font-semibold text-gray-700">Welcome!</h2>
+                        <p class="mt-2 text-gray-500">Select an article from the list or use the search bar to find help.</p>
+                    </div>`;
+                return;
+            }
+            // Format answer text with paragraph breaks
+            const formattedAnswer = item.answer.split(/\n+/).map(p => `<p class="mb-4">${p}</p>`).join('');
+            articleDetail.innerHTML = `
+                <h1 class="text-3xl font-bold text-gray-900 mb-4">${item.title}</h1>
+                <div class="prose max-w-none text-gray-700">${formattedAnswer}</div>`;
+        };
+
+        // --- API Functions ---
+        const fetchAllItems = async () => {
+            showLoader(itemList);
+            renderArticleDetail(null);
+            try {
+                const response = await fetch(`${API_BASE_URL}/items/`);
+                if (!response.ok) throw new Error('Network response was not ok');
+                const data = await response.json();
+                allItems = data;
+                renderItemList(allItems);
+            } catch (err) {
+                console.error(err);
+                showError(itemList, 'Failed to fetch articles. Please ensure the FastAPI server is running.');
+            }
+        };
+
+        const handleSearch = async (query) => {
+            if (!query) {
+                clearSearch();
+                return;
+            }
+            showLoader(itemList);
+            renderArticleDetail(null);
+            listTitle.textContent = `Search Results for "${query}"`;
+            try {
+                const response = await fetch(`${API_BASE_URL}/search/?phrase=${encodeURIComponent(query)}`);
+                if (!response.ok) throw new Error('Search request failed');
+                const data = await response.json();
+                renderItemList(data);
+            } catch (err) {
+                console.error(err);
+                showError(itemList, 'Failed to perform search. Please try again.');
+            }
+        };
+
+        const clearSearch = () => {
+            renderItemList(allItems);
+            searchInput.value = '';
+            selectedItemId = null;
+            listTitle.textContent = "All Articles";
+            renderArticleDetail(null);
+        };
+
+        // --- Event Listeners ---
+        document.addEventListener('DOMContentLoaded', fetchAllItems);
+
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            handleSearch(searchInput.value.trim());
+        });
+
+        listTitle.addEventListener('click', clearSearch);
+
+    </script>
+</body>
+
+</html>
