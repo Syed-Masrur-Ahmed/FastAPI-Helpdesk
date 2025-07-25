@@ -4,6 +4,7 @@
 # Docker volumes/data
 db-data/
 pgadmin-data/
+HTTrack/
 
 # Python virtual environment
 venv/
